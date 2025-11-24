@@ -1346,29 +1346,31 @@
 <p><strong>학습 목표:</strong>
 - OpenStack을 이용한 클라우드 서비스 개발/운영
 - 퍼블릭/프라이빗 클라우드 서비스 개발/운영</p>
-<p><strong>학습 내용:</strong>
-- [ ] OpenStack 기초
-  - OpenStack 아키텍처 이해
-  - 주요 서비스 컴포넌트
-  - OpenStack API 사용법
-- [ ] Nova (Compute Service)
-  - Nova 아키텍처
-  - 인스턴스 생성 및 관리
-  - 하이퍼바이저 통합 (KVM, QEMU 등)
-  - 스케줄러 (Filter Scheduler, Chance Scheduler 등)
-  - Nova API 확장
-- [ ] Cinder (Block Storage Service)
-  - 볼륨 생성 및 관리
-  - 스토리지 백엔드 (LVM, Ceph 등)
-  - 볼륨 스냅샷 및 백업
-- [ ] Glance (Image Service)
-  - 이미지 업로드 및 관리
-  - 이미지 포맷 (QCOW2, RAW 등)
-  - 이미지 메타데이터 관리
-- [ ] Ironic (Bare Metal Provisioning)
-  - Bare Metal 서버 프로비저닝
-  - PXE Boot 구성
-  - 하드웨어 인벤토리 관리</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OpenStack 기초</li>
+<li>OpenStack 아키텍처 이해</li>
+<li>주요 서비스 컴포넌트</li>
+<li>OpenStack API 사용법</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Nova (Compute Service)</li>
+<li>Nova 아키텍처</li>
+<li>인스턴스 생성 및 관리</li>
+<li>하이퍼바이저 통합 (KVM, QEMU 등)</li>
+<li>스케줄러 (Filter Scheduler, Chance Scheduler 등)</li>
+<li>Nova API 확장</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cinder (Block Storage Service)</li>
+<li>볼륨 생성 및 관리</li>
+<li>스토리지 백엔드 (LVM, Ceph 등)</li>
+<li>볼륨 스냅샷 및 백업</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Glance (Image Service)</li>
+<li>이미지 업로드 및 관리</li>
+<li>이미지 포맷 (QCOW2, RAW 등)</li>
+<li>이미지 메타데이터 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ironic (Bare Metal Provisioning)</li>
+<li>Bare Metal 서버 프로비저닝</li>
+<li>PXE Boot 구성</li>
+<li>하드웨어 인벤토리 관리</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - OpenStack 환경 구축
 - Nova API를 활용한 인스턴스 관리 도구 개발
@@ -1382,24 +1384,26 @@
 <p><strong>학습 목표:</strong>
 - Linux Kernel 및 Hypervisor 기술에 대한 깊은 이해
 - 가상화 관련 이슈 발굴 및 해결</p>
-<p><strong>학습 내용:</strong>
-- [ ] 가상화 기초
-  - 가상화 유형 (Full Virtualization, Para-virtualization)
-  - 하이퍼바이저 유형 (Type 1, Type 2)
-- [ ] KVM/QEMU
-  - KVM 아키텍처
-  - QEMU 에뮬레이터
-  - libvirt를 통한 가상머신 관리
-  - CPU, Memory, I/O 가상화
-- [ ] Linux Kernel 가상화
-  - Kernel 모듈 이해
-  - Namespace 및 Cgroups
-  - 가상화 관련 Kernel 기능
-- [ ] 성능 최적화
-  - CPU 핀닝
-  - NUMA 최적화
-  - I/O 성능 튜닝
-  - 메모리 오버커밋</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 가상화 기초</li>
+<li>가상화 유형 (Full Virtualization, Para-virtualization)</li>
+<li>하이퍼바이저 유형 (Type 1, Type 2)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> KVM/QEMU</li>
+<li>KVM 아키텍처</li>
+<li>QEMU 에뮬레이터</li>
+<li>libvirt를 통한 가상머신 관리</li>
+<li>CPU, Memory, I/O 가상화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Linux Kernel 가상화</li>
+<li>Kernel 모듈 이해</li>
+<li>Namespace 및 Cgroups</li>
+<li>가상화 관련 Kernel 기능</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 성능 최적화</li>
+<li>CPU 핀닝</li>
+<li>NUMA 최적화</li>
+<li>I/O 성능 튜닝</li>
+<li>메모리 오버커밋</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - KVM 기반 가상머신 생성 및 관리
 - 가상머신 성능 모니터링 및 최적화
@@ -1413,23 +1417,25 @@
 <p><strong>학습 목표:</strong>
 - 효율적인 리소스 제공을 위한 스케줄링 최적화
 - 가상화 관련 이슈 발굴 및 연구/개발</p>
-<p><strong>학습 내용:</strong>
-- [ ] 스케줄링 알고리즘
-  - CPU 스케줄링 (CFS, Real-time)
-  - I/O 스케줄링
-  - 가상머신 스케줄링 전략
-- [ ] 리소스 할당
-  - CPU 할당 및 제한
-  - 메모리 할당 및 제한
-  - 스토리지 할당
-  - 네트워크 대역폭 관리
-- [ ] 오버커밋 관리
-  - CPU 오버커밋
-  - 메모리 오버커밋
-  - 리소스 회수 (Reclamation)
-- [ ] 스케줄러 개발
-  - OpenStack Nova 스케줄러 커스터마이징
-  - 커스텀 필터 및 웨이터 개발</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스케줄링 알고리즘</li>
+<li>CPU 스케줄링 (CFS, Real-time)</li>
+<li>I/O 스케줄링</li>
+<li>가상머신 스케줄링 전략</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 리소스 할당</li>
+<li>CPU 할당 및 제한</li>
+<li>메모리 할당 및 제한</li>
+<li>스토리지 할당</li>
+<li>네트워크 대역폭 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 오버커밋 관리</li>
+<li>CPU 오버커밋</li>
+<li>메모리 오버커밋</li>
+<li>리소스 회수 (Reclamation)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스케줄러 개발</li>
+<li>OpenStack Nova 스케줄러 커스터마이징</li>
+<li>커스텀 필터 및 웨이터 개발</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - 커스텀 스케줄러 구현
 - 리소스 모니터링 및 최적화 도구</p>
@@ -1441,19 +1447,21 @@
 <p><strong>학습 목표:</strong>
 - Kubernetes-Native한 선언적 IaaS 서비스 개발
 - 모든 마이크로서비스를 컨테이너화하여 운영</p>
-<p><strong>학습 내용:</strong>
-- [ ] Kubernetes 기반 서비스 개발
-  - Kubernetes Operator 패턴
-  - Custom Resource Definition (CRD)
-  - Controller 개발
-- [ ] 컨테이너화된 서비스 운영
-  - 마이크로서비스 아키텍처
-  - 서비스 간 통신
-  - 서비스 디스커버리
-- [ ] 선언적 관리
-  - GitOps를 통한 배포
-  - Helm Chart 작성
-  - ArgoCD를 통한 배포 자동화</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes 기반 서비스 개발</li>
+<li>Kubernetes Operator 패턴</li>
+<li>Custom Resource Definition (CRD)</li>
+<li>Controller 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 컨테이너화된 서비스 운영</li>
+<li>마이크로서비스 아키텍처</li>
+<li>서비스 간 통신</li>
+<li>서비스 디스커버리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 선언적 관리</li>
+<li>GitOps를 통한 배포</li>
+<li>Helm Chart 작성</li>
+<li>ArgoCD를 통한 배포 자동화</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - Kubernetes Operator를 활용한 컴퓨팅 서비스 개발
 - 컨테이너화된 OpenStack 서비스 배포</p>
@@ -1464,24 +1472,26 @@
 <h3 id="5">5. 클라우드 인프라 설계<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <p><strong>학습 목표:</strong>
 - 서비스 확장성을 고려한 Region/Availability Zone/Cell/Rack 단위 인프라 설계</p>
-<p><strong>학습 내용:</strong>
-- [ ] 멀티 레벨 아키텍처
-  - Region 설계
-  - Availability Zone (AZ) 설계
-  - Cell 아키텍처
-  - Rack 단위 관리
-- [ ] 고가용성 설계
-  - 장애 격리 (Failure Isolation)
-  - 자동 장애 복구
-  - 데이터 복제 전략
-- [ ] 확장성 설계
-  - 수평 확장 (Horizontal Scaling)
-  - 수직 확장 (Vertical Scaling)
-  - 자동 스케일링
-- [ ] 리소스 관리
-  - 쿼터 관리
-  - 리소스 풀 관리
-  - 우선순위 기반 할당</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 멀티 레벨 아키텍처</li>
+<li>Region 설계</li>
+<li>Availability Zone (AZ) 설계</li>
+<li>Cell 아키텍처</li>
+<li>Rack 단위 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 고가용성 설계</li>
+<li>장애 격리 (Failure Isolation)</li>
+<li>자동 장애 복구</li>
+<li>데이터 복제 전략</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 확장성 설계</li>
+<li>수평 확장 (Horizontal Scaling)</li>
+<li>수직 확장 (Vertical Scaling)</li>
+<li>자동 스케일링</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 리소스 관리</li>
+<li>쿼터 관리</li>
+<li>리소스 풀 관리</li>
+<li>우선순위 기반 할당</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - 멀티 레벨 클라우드 인프라 설계
 - 고가용성 구성 구현</p>
@@ -1492,24 +1502,26 @@
 <h3 id="6-kubernetes-operator">6. Kubernetes Operator 개발<a class="headerlink" href="#6-kubernetes-operator" title="Permanent link">&para;</a></h3>
 <p><strong>학습 목표:</strong>
 - Kubernetes Operator(Controller) 관련 개발/운영</p>
-<p><strong>학습 내용:</strong>
-- [ ] Kubernetes Controller 패턴
-  - Controller 아키텍처
-  - Informer 및 Workqueue
-  - Reconcile Loop
-- [ ] Operator SDK
-  - Operator SDK를 사용한 Operator 개발
-  - Helm Operator
-  - Ansible Operator
-  - Go Operator
-- [ ] Custom Resource Definition (CRD)
-  - CRD 정의
-  - Validation 및 Defaulting
-  - Finalizer 패턴
-- [ ] Operator 배포 및 운영
-  - Operator Lifecycle Manager (OLM)
-  - Operator 모니터링
-  - Operator 업그레이드</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes Controller 패턴</li>
+<li>Controller 아키텍처</li>
+<li>Informer 및 Workqueue</li>
+<li>Reconcile Loop</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Operator SDK</li>
+<li>Operator SDK를 사용한 Operator 개발</li>
+<li>Helm Operator</li>
+<li>Ansible Operator</li>
+<li>Go Operator</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Custom Resource Definition (CRD)</li>
+<li>CRD 정의</li>
+<li>Validation 및 Defaulting</li>
+<li>Finalizer 패턴</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Operator 배포 및 운영</li>
+<li>Operator Lifecycle Manager (OLM)</li>
+<li>Operator 모니터링</li>
+<li>Operator 업그레이드</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - 컴퓨팅 리소스 관리 Operator 개발
 - OpenStack 서비스 Operator 개발</p>
@@ -1520,21 +1532,23 @@
 <h3 id="7-cloud-network-cni">7. Cloud Network 및 CNI<a class="headerlink" href="#7-cloud-network-cni" title="Permanent link">&para;</a></h3>
 <p><strong>학습 목표:</strong>
 - Cloud network 혹은 Kubernetes CNI 기술에 대한 깊은 이해</p>
-<p><strong>학습 내용:</strong>
-- [ ] Kubernetes 네트워킹
-  - Pod 네트워킹
-  - Service 네트워킹
-  - Network Policy
-- [ ] CNI (Container Network Interface)
-  - CNI 플러그인 아키텍처
-  - 주요 CNI 플러그인 (Calico, Flannel, Cilium 등)
-  - 커스텀 CNI 플러그인 개발
-- [ ] 네트워크 가상화
-  - VXLAN, GRE 등 오버레이 네트워크
-  - 언더레이 네트워크 통합
-- [ ] 서비스 메시
-  - Istio, Linkerd 등
-  - 마이크로서비스 네트워킹</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes 네트워킹</li>
+<li>Pod 네트워킹</li>
+<li>Service 네트워킹</li>
+<li>Network Policy</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CNI (Container Network Interface)</li>
+<li>CNI 플러그인 아키텍처</li>
+<li>주요 CNI 플러그인 (Calico, Flannel, Cilium 등)</li>
+<li>커스텀 CNI 플러그인 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 네트워크 가상화</li>
+<li>VXLAN, GRE 등 오버레이 네트워크</li>
+<li>언더레이 네트워크 통합</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 서비스 메시</li>
+<li>Istio, Linkerd 등</li>
+<li>마이크로서비스 네트워킹</li>
+</ul>
 <p><strong>실습 프로젝트:</strong>
 - 커스텀 CNI 플러그인 개발
 - Service Mesh 구성</p>
@@ -1547,30 +1561,34 @@
 <h3 id="csp">글로벌 CSP 활용 경험<a class="headerlink" href="#csp" title="Permanent link">&para;</a></h3>
 <p><strong>학습 목표:</strong>
 - AWS, GCP, MS Azure 등 글로벌 CSP 활용 경험</p>
-<p><strong>학습 내용:</strong>
-- [ ] AWS
-  - EC2, EBS, AMI
-  - Auto Scaling
-  - Lambda
-- [ ] GCP
-  - Compute Engine
-  - Cloud Storage
-  - Cloud Functions
-- [ ] Azure
-  - Virtual Machines
-  - Managed Disks
-  - Functions</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> AWS</li>
+<li>EC2, EBS, AMI</li>
+<li>Auto Scaling</li>
+<li>Lambda</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> GCP</li>
+<li>Compute Engine</li>
+<li>Cloud Storage</li>
+<li>Cloud Functions</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Azure</li>
+<li>Virtual Machines</li>
+<li>Managed Disks</li>
+<li>Functions</li>
+</ul>
 <p><strong>실습:</strong>
 - 각 CSP에서 컴퓨팅 서비스 사용 경험</p>
 <h3 id="cncf">CNCF 오픈소스 기여<a class="headerlink" href="#cncf" title="Permanent link">&para;</a></h3>
 <p><strong>학습 목표:</strong>
 - CNCF 오픈소스 코드 기여 경험</p>
-<p><strong>학습 내용:</strong>
-- [ ] 오픈소스 기여 프로세스
-- [ ] 주요 CNCF 프로젝트 탐색
-  - Kubernetes
-  - OpenStack (일부 CNCF 프로젝트와 연관)
-  - CRI-O, containerd</p>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 오픈소스 기여 프로세스</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 주요 CNCF 프로젝트 탐색</li>
+<li>Kubernetes</li>
+<li>OpenStack (일부 CNCF 프로젝트와 연관)</li>
+<li>CRI-O, containerd</li>
+</ul>
 <p><strong>실습:</strong>
 - 작은 버그 수정부터 시작
 - 기능 추가 기여</p>
