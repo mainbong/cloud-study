@@ -2486,9 +2486,10 @@ Linux 커널 기능으로 프로세스 그룹의 리소스 사용을 제한, 격
 <div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>vCPU 오버커밋 = (할당된 vCPU 총합) / (물리 CPU 코어 수)
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>안전한 범위:
-</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>- 프로덕션: 1:1 ~ 2:1
-</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>- 일반: 3:1 ~ 4:1
-</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>- VDI: 5:1 ~ 8:1 (사용자가 동시에 사용하지 않음)
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>- 프로덕션: 1:1 ~ 2:1
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>- 일반: 3:1 ~ 4:1
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>- VDI: 5:1 ~ 8:1 (사용자가 동시에 사용하지 않음)
 </span></code></pre></div></p>
 <p><strong>2025 Best Practice (RedHat):</strong></p>
 <blockquote>
@@ -2520,9 +2521,10 @@ Linux 커널 기능으로 프로세스 그룹의 리소스 사용을 제한, 격
 <div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Memory Overcommit % = (Total VM Memory - Reserved Memory) / Total VM Memory × 100
 </span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
 </span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>예시:
-</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>- VM Memory: 9 GB
-</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>- Reserved (Request): 6 GB
-</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>- Overcommit: (9 - 6) / 9 × 100 = 33%
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>- VM Memory: 9 GB
+</span><span id="__span-22-6"><a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>- Reserved (Request): 6 GB
+</span><span id="__span-22-7"><a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a>- Overcommit: (9 - 6) / 9 × 100 = 33%
 </span></code></pre></div></p>
 <p><strong>Nova 설정:</strong>
 <div class="language-ini highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># /etc/nova/nova.conf</span>
