@@ -1,0 +1,193 @@
+# 사이트 정보
+site_name: 클라우드 엔지니어 학습 가이드
+site_description: Cloud Infrastructure 학습을 위한 종합 가이드 - OpenStack, Kubernetes, 가상화, 네트워킹
+site_author: Cloud Study Team
+site_url: https://mainbong.github.io/cloud-study
+
+# 저장소 정보
+repo_name: cloud-study
+repo_url: https://github.com/mainbong/cloud-study
+edit_uri: edit/main/docs/
+
+# 테마 설정
+theme:
+  name: material
+  language: ko
+  features:
+    # 네비게이션
+    - navigation.tabs            # 상단 탭 네비게이션
+    - navigation.tabs.sticky     # 스크롤 시 탭 고정
+    - navigation.sections        # 섹션 구분
+    - navigation.expand          # 기본 확장
+    - navigation.top             # 맨 위로 버튼
+    - navigation.footer          # 푸터 네비게이션
+    - navigation.indexes         # 섹션 인덱스 페이지
+
+    # 검색
+    - search.suggest             # 검색 제안
+    - search.highlight           # 검색 결과 하이라이트
+    - search.share               # 검색 공유
+
+    # 콘텐츠
+    - content.code.copy          # 코드 복사 버튼
+    - content.code.annotate      # 코드 주석
+    - content.tabs.link          # 탭 링크
+    - content.tooltips           # 툴팁
+
+    # 기타
+    - toc.follow                 # TOC 자동 스크롤
+    - toc.integrate              # TOC 통합
+
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 다크 모드로 전환
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 라이트 모드로 전환
+
+  font:
+    text: Noto Sans KR
+    code: Fira Code
+
+  icon:
+    repo: fontawesome/brands/github
+    admonition:
+      note: fontawesome/solid/note-sticky
+      abstract: fontawesome/solid/book
+      info: fontawesome/solid/circle-info
+      tip: fontawesome/solid/bullhorn
+      success: fontawesome/solid/check
+      question: fontawesome/solid/circle-question
+      warning: fontawesome/solid/triangle-exclamation
+      failure: fontawesome/solid/bomb
+      danger: fontawesome/solid/skull
+      bug: fontawesome/solid/robot
+      example: fontawesome/solid/flask
+      quote: fontawesome/solid/quote-left
+
+# 플러그인
+plugins:
+  - search:
+      lang: ko
+      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - tags
+
+# 마크다운 확장
+markdown_extensions:
+  # 코드 하이라이팅
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+  # 콘텐츠 탭
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+  # 체크리스트
+  - pymdownx.tasklist:
+      custom_checkbox: true
+      clickable_checkbox: false
+
+  # 기타 확장
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.tilde
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+# 네비게이션 구조
+nav:
+  - 홈:
+    - README.md
+    - 학습 계획: docs/IMPLEMENTATION_PLAN.md
+
+  - 공통 역량:
+    - docs/common-skills/README.md
+    - Ch1. Linux 운영: docs/common-skills/Ch1.Linux_운영.md
+    - Ch2. Python & GO: docs/common-skills/Ch2.Python_GO.md
+    - Ch3. Cloud Native: docs/common-skills/Ch3.Cloud_Native.md
+    - Ch4. DevOps: docs/common-skills/Ch4.DevOps.md
+    - Ch5. 시스템 설계: docs/common-skills/Ch5.시스템_설계.md
+
+  - Infrastructure Platform:
+    - docs/infrastructure-platform/README.md
+    - Ch1. Kubernetes 심화: docs/infrastructure-platform/Ch1.Kubernetes_심화.md
+    - Ch2. ClusterAPI & Ironic: docs/infrastructure-platform/Ch2.ClusterAPI_Ironic.md
+    - Ch3. IaC: docs/infrastructure-platform/Ch3.IaC.md
+    - Ch4. Cloud Native 플랫폼 도구: docs/infrastructure-platform/Ch4.Cloud_Native_플랫폼_도구.md
+    - Ch5. 모니터링: docs/infrastructure-platform/Ch5.모니터링.md
+    - Ch6. Linux OS 이미지: docs/infrastructure-platform/Ch6.Linux_OS_이미지.md
+
+  - Computing Service:
+    - docs/computing-service/README.md
+    - Ch1. OpenStack: docs/computing-service/Ch1.OpenStack.md
+    - Ch2. 가상화 기술: docs/computing-service/Ch2.가상화_기술.md
+    - Ch3. 스케줄링: docs/computing-service/Ch3.스케줄링.md
+    - Ch4. Cloud Native 컴퓨팅: docs/computing-service/Ch4.Cloud_Native_컴퓨팅.md
+    - Ch5. 클라우드 인프라 설계: docs/computing-service/Ch5.클라우드_인프라_설계.md
+    - Ch6. Kubernetes Operator: docs/computing-service/Ch6.Kubernetes_Operator.md
+    - Ch7. Cloud Network CNI: docs/computing-service/Ch7.Cloud_Network_CNI.md
+
+# 추가 설정
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mainbong/cloud-study
+      name: GitHub Repository
+
+  generator: false  # "Made with Material for MkDocs" 제거
+
+  version:
+    provider: mike
+
+# Copyright
+copyright: Copyright &copy; 2025 Cloud Study Team
+
+# CSS 커스터마이징 (선택사항)
+extra_css:
+  - stylesheets/extra.css
+
+# JavaScript 추가 (선택사항)
+extra_javascript:
+  - javascripts/extra.js

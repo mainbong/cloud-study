@@ -1,0 +1,126 @@
+/* 커스텀 스타일시트 */
+
+/* 한글 폰트 최적화 */
+:root {
+  --md-text-font: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --md-code-font: "Fira Code", "JetBrains Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* 코드 블록 스타일 개선 */
+.highlight pre {
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* 체크리스트 스타일 개선 */
+.task-list-item {
+  list-style-type: none;
+}
+
+.task-list-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+/* 테이블 반응형 개선 */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* 이모지 크기 조정 */
+.emoji {
+  height: 1.2em;
+  width: 1.2em;
+  vertical-align: text-bottom;
+}
+
+/* 링크 색상 개선 */
+.md-typeset a {
+  color: var(--md-primary-fg-color);
+  text-decoration: none;
+}
+
+.md-typeset a:hover {
+  text-decoration: underline;
+}
+
+/* 인용구 스타일 */
+.md-typeset blockquote {
+  border-left: 0.25rem solid var(--md-primary-fg-color);
+  padding-left: 1rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* 헤더 앵커 링크 */
+.md-typeset .headerlink {
+  color: var(--md-default-fg-color--lighter);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.md-typeset :hover > .headerlink {
+  opacity: 1;
+}
+
+/* 코드 복사 버튼 스타일 */
+.md-clipboard {
+  color: var(--md-default-fg-color--light);
+}
+
+.md-clipboard:hover {
+  color: var(--md-accent-fg-color);
+}
+
+/* 검색 결과 하이라이트 */
+.md-search-result__article--document {
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* 네비게이션 활성 항목 */
+.md-nav__item--active > .md-nav__link {
+  color: var(--md-primary-fg-color);
+  font-weight: 600;
+}
+
+/* TOC 스크롤 개선 */
+.md-sidebar--secondary {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-default-fg-color--lighter) transparent;
+}
+
+.md-sidebar--secondary::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+.md-sidebar--secondary::-webkit-scrollbar-thumb {
+  background-color: var(--md-default-fg-color--lighter);
+  border-radius: 0.2rem;
+}
+
+/* 모바일 최적화 */
+@media screen and (max-width: 76.25em) {
+  .md-typeset table {
+    font-size: 0.85rem;
+  }
+}
+
+/* 다크모드 개선 */
+[data-md-color-scheme="slate"] {
+  --md-code-bg-color: #1e1e1e;
+  --md-code-fg-color: #d4d4d4;
+}
+
+/* 프린트 최적화 */
+@media print {
+  .md-header,
+  .md-tabs,
+  .md-sidebar,
+  .md-footer {
+    display: none;
+  }
+
+  .md-content {
+    max-width: 100%;
+  }
+}
