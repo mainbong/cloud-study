@@ -1540,12 +1540,14 @@ provisioner "ansible" {
 ## ✅ 학습 체크리스트
 
 ### 기본 개념
+
 - [ ] Linux 부팅 프로세스 (BIOS/UEFI → kernel → init) 이해
 - [ ] ISO 이미지와 Cloud 이미지의 차이점 이해
 - [ ] GPT/MBR 파티션 스킴 차이 이해
 - [ ] cloud-init의 역할 및 4단계 실행 흐름 이해
 
 ### Packer
+
 - [ ] HCL2 문법으로 Packer 템플릿 작성
 - [ ] Source, Build, Provisioner, Post-Processor 구조 이해
 - [ ] QEMU builder로 로컬 이미지 빌드
@@ -1553,6 +1555,7 @@ provisioner "ansible" {
 - [ ] Ansible Provisioner 통합
 
 ### cloud-init
+
 - [ ] user-data (cloud-config) 작성
 - [ ] meta-data 및 network-config 설정
 - [ ] 멀티파트 user-data 작성
@@ -1560,6 +1563,7 @@ provisioner "ansible" {
 - [ ] cloud-init clean 명령 이해
 
 ### Golden Image Pipeline
+
 - [ ] GitHub Actions로 이미지 빌드 자동화
 - [ ] OIDC 기반 인증 설정
 - [ ] HCP Packer 연동
@@ -1567,6 +1571,7 @@ provisioner "ansible" {
 - [ ] 보안 스캔 (Trivy) 통합
 
 ### 디버깅 및 최적화
+
 - [ ] chroot 환경으로 이미지 수정
 - [ ] QCOW2 이미지 압축 및 최적화
 - [ ] 부팅 시간 분석 (systemd-analyze)

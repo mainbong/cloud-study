@@ -7,6 +7,7 @@ Cloud-native는 클라우드 환경에서 애플리케이션을 구축하고 실
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Docker를 사용한 컨테이너 이미지 빌드 및 관리
 - Kubernetes를 사용한 컨테이너 오케스트레이션
 - 12-Factor App 방법론을 적용한 클라우드 네이티브 애플리케이션 설계
@@ -922,21 +923,25 @@ minikube service hello-app --url
 ## 📚 참고 자료
 
 ### Docker
+
 - [Docker 공식 문서](https://docs.docker.com/)
 - [Docker Best Practices 2025](https://docs.docker.com/build/building/best-practices/)
 - [Multi-Stage Builds](https://docs.docker.com/build/building/multi-stage/)
 
 ### Kubernetes
+
 - [Kubernetes 공식 문서](https://kubernetes.io/docs/)
 - [Kubernetes Tutorial for Beginners 2025](https://kodekloud.com/blog/kubernetes-tutorial-for-beginners-2025/)
 - [Kubernetes By Example](https://kubernetesbyexample.com/)
 
 ### 12-Factor App
+
 - [The Twelve-Factor App](https://12factor.net/)
 - [12 Factor App Guide 2025](https://techoral.com/design/12-factor-app-guide.html)
 - [Red Hat - 12 Factor App meets Kubernetes](https://www.redhat.com/en/blog/12-factor-app-containers)
 
 ### CNCF
+
 - [CNCF Cloud Native Landscape](https://landscape.cncf.io/)
 - [Cloud Native Glossary](https://glossary.cncf.io/)
 
@@ -959,5 +964,6 @@ minikube service hello-app --url
 ## 🎓 다음 단계
 
 Cloud-Native 기초를 마스터한 후:
+
 - [Ch4. DevOps 도구 및 실무](./Ch4.DevOps.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

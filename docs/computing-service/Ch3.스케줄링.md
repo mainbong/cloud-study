@@ -451,6 +451,7 @@ openstack server create --flavor m1.small --image ubuntu --availability-zone az-
 vCPU 오버커밋 = (할당된 vCPU 총합) / (물리 CPU 코어 수)
 
 안전한 범위:
+
 - 프로덕션: 1:1 ~ 2:1
 - 일반: 3:1 ~ 4:1
 - VDI: 5:1 ~ 8:1 (사용자가 동시에 사용하지 않음)
@@ -489,6 +490,7 @@ cpu_allocation_ratio = 4.0
 Memory Overcommit % = (Total VM Memory - Reserved Memory) / Total VM Memory × 100
 
 예시:
+
 - VM Memory: 9 GB
 - Reserved (Request): 6 GB
 - Overcommit: (9 - 6) / 9 × 100 = 33%
@@ -1142,12 +1144,14 @@ Host(compute-03: vCPU=0/32, RAM=0/131072MB, Disk=0/1000GB, instances=0)
 ## ✅ 학습 체크리스트
 
 ### 기본 개념
+
 - [ ] CFS에서 EEVDF로의 전환 이해 (Linux 6.6+)
 - [ ] 스케줄링 클래스 (SCHED_DEADLINE, FIFO, RR, OTHER)
 - [ ] Nice 값과 커널 우선순위 매핑
 - [ ] Context switching 개념 및 비용
 
 ### cgroups
+
 - [ ] cgroups v1 vs v2 차이점
 - [ ] CPU 제어 (shares, quota, cpuset)
 - [ ] 메모리 제어 (limit, OOM control)
@@ -1155,6 +1159,7 @@ Host(compute-03: vCPU=0/32, RAM=0/131072MB, Disk=0/1000GB, instances=0)
 - [ ] systemd와 cgroups 통합
 
 ### OpenStack Nova Scheduler
+
 - [ ] Filter Scheduler 아키텍처
 - [ ] 주요 필터 (Availability Zone, NUMA, PCI 등)
 - [ ] Weigher 및 가중치 계산
@@ -1162,12 +1167,14 @@ Host(compute-03: vCPU=0/32, RAM=0/131072MB, Disk=0/1000GB, instances=0)
 - [ ] Placement API 역할
 
 ### 오버커밋
+
 - [ ] CPU 오버커밋 비율 결정 (1:1 ~ 5:1)
 - [ ] 메모리 오버커밋 위험성 이해
 - [ ] SWAP 및 WASP 설정
 - [ ] 오버커밋 모니터링 및 조정
 
 ### QoS
+
 - [ ] CPU QoS (shares, quota)
 - [ ] Memory QoS (limits, OOM score)
 - [ ] I/O QoS (ionice, blkio)

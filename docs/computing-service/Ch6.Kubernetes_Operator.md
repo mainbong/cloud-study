@@ -1474,6 +1474,7 @@ undeploy:
 ## ✅ 학습 체크리스트
 
 ### 기본 (Essential)
+
 - [ ] Validating Webhook과 Mutating Webhook의 차이 이해
 - [ ] CEL Validation과 Webhook의 적절한 사용 시나리오 판단
 - [ ] EnvTest로 Controller 통합 테스트 작성
@@ -1481,6 +1482,7 @@ undeploy:
 - [ ] 기본적인 Prometheus metrics 노출
 
 ### 중급 (Intermediate)
+
 - [ ] Webhook에서 다른 리소스 조회하여 검증
 - [ ] admission.Warnings 활용하여 사용자에게 경고 전달
 - [ ] Ginkgo/Gomega로 BDD 스타일 테스트 작성
@@ -1488,6 +1490,7 @@ undeploy:
 - [ ] Multi-cluster 배포 패턴 중 하나 구현
 
 ### 고급 (Advanced)
+
 - [ ] Conversion Webhook 구현 (CRD 버전 변환)
 - [ ] E2E 테스트 프레임워크 구축
 - [ ] OLMv1 ClusterExtension으로 배포
@@ -1496,6 +1499,7 @@ undeploy:
 - [ ] Operator 성능 프로파일링 및 최적화
 
 ### 프로덕션 (Production-Ready)
+
 - [ ] RBAC 최소 권한 원칙 적용 및 검증
 - [ ] Webhook 부작용(side effects) 처리 패턴 구현
 - [ ] 인증서 만료 모니터링 및 알림
@@ -1519,6 +1523,7 @@ Kubernetes의 네트워크 플러그인 아키텍처인 CNI(Container Network In
 - NetworkPolicy 고급 활용
 
 ### 추가 학습 리소스
+
 - [OperatorHub.io](https://operatorhub.io/) - 커뮤니티 Operator 탐색
 - [Kubernetes SIG-API-Machinery](https://github.com/kubernetes/community/tree/master/sig-api-machinery) - API 확장 메커니즘 학습
 - [CNCF Landscape](https://landscape.cncf.io/) - Operator 생태계 이해

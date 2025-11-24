@@ -227,6 +227,7 @@ avg(node_load5) / count(node_cpu_seconds_total{mode="idle"})
 ### 3.1 Grafana 대시보드 설계 - 3-3-3 Rule (2025)
 
 2025년 best practice로 자리잡은 **3-3-3 Rule**:
+
 - **3 rows** of panels
 - **3 panels** per row
 - **3 key metrics** per panel
@@ -1490,12 +1491,14 @@ data:
 ## ✅ 학습 체크리스트
 
 ### 기본 개념
+
 - [ ] Prometheus의 pull 기반 아키텍처 이해
 - [ ] TSDB와 시계열 데이터 모델 이해
 - [ ] 레이블과 카디널리티의 관계 이해
 - [ ] Four Golden Signals 개념 숙지
 
 ### Prometheus & PromQL
+
 - [ ] kube-prometheus-stack 배포 및 설정
 - [ ] ServiceMonitor/PodMonitor로 커스텀 메트릭 수집
 - [ ] PromQL 기본 쿼리 작성 (rate, sum, avg, quantile)
@@ -1503,6 +1506,7 @@ data:
 - [ ] Prometheus federation 또는 Thanos 구성
 
 ### Grafana
+
 - [ ] 데이터소스 연결 (Prometheus, Loki)
 - [ ] 3-3-3 Rule을 적용한 대시보드 설계
 - [ ] 변수(Variables)를 활용한 동적 대시보드 작성
@@ -1510,12 +1514,14 @@ data:
 - [ ] Dashboard as Code (Terraform/jsonnet)
 
 ### Logging (Loki)
+
 - [ ] Loki + Promtail 설치 및 설정
 - [ ] LogQL 쿼리 작성 (필터, 파싱, 메트릭 추출)
 - [ ] Loki와 Prometheus 메트릭 상관관계 분석
 - [ ] 로그 retention 정책 설정
 
 ### Distributed Tracing (OpenTelemetry)
+
 - [ ] OpenTelemetry Collector 배포
 - [ ] Python/Go 애플리케이션 계측 (auto & manual)
 - [ ] Trace context propagation 이해
@@ -1523,6 +1529,7 @@ data:
 - [ ] Span metrics 활용
 
 ### 통합 및 운영
+
 - [ ] Layered monitoring architecture 설계
 - [ ] Storage 및 retention 전략 수립
 - [ ] TLS 및 인증 설정

@@ -7,6 +7,7 @@
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - 확장성, 가용성, 일관성을 고려한 시스템 설계
 - CAP 정리와 분산 시스템의 트레이드오프 이해
 - 마이크로서비스 아키텍처 설계 및 패턴 적용
@@ -288,6 +289,7 @@ CAP 정리의 확장으로, 파티션이 없는 경우의 트레이드오프를 
 
 ```
 Examples:
+
 - MongoDB: PC/EC (Consistency 우선)
 - Cassandra: PA/EL (Availability & Low Latency 우선)
 - DynamoDB: PA/EL
@@ -768,16 +770,19 @@ class URLShortener:
 ## 📚 참고 자료
 
 ### 시스템 설계
+
 - [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
 - [System Design Interview](https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF)
 - [AWS Well-Architected Framework](https://aws.amazon.com/architecture/well-architected/)
 
 ### 분산 시스템
+
 - [CAP Theorem - Wikipedia](https://en.wikipedia.org/wiki/CAP_theorem)
 - [PACELC Theorem](https://www.cs.umd.edu/~abadi/papers/abadi-pacelc.pdf)
 - [Designing Distributed Systems](https://www.oreilly.com/library/view/designing-distributed-systems/9781491983638/)
 
 ### 마이크로서비스
+
 - [Microservices Patterns](https://microservices.io/patterns/)
 - [Building Microservices](https://www.oreilly.com/library/view/building-microservices-2nd/9781492034018/)
 - [Service Mesh Patterns](https://www.manning.com/books/service-mesh-patterns)
@@ -803,6 +808,7 @@ class URLShortener:
 ## 🎓 다음 단계
 
 Common Skills 학습을 완료했습니다! 이제 포지션별 심화 학습으로 넘어가세요:
+
 - [Infrastructure Platform 개발자](../infrastructure-platform/README.md)
 - [컴퓨팅 서비스 개발자](../computing-service/README.md)
 - 또는 [전체 가이드](../README.md)로 돌아가기

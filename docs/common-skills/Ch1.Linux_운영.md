@@ -7,6 +7,7 @@ Linux는 클라우드 인프라의 기반이 되는 운영체제입니다. 대�
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - 대규모 Linux 환경에서 서비스를 안정적으로 운영
 - Linux 시스템 관리 및 트러블슈팅 수행
 - Shell 스크립트를 활용한 반복 작업 자동화
@@ -935,32 +936,38 @@ done
 ## 📚 참고 자료
 
 ### 공식 문서
+
 - [Linux Documentation Project](https://tldp.org/)
 - [Red Hat Enterprise Linux Documentation](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/)
 - [Ubuntu Server Guide](https://ubuntu.com/server/docs)
 - [Arch Linux Wiki](https://wiki.archlinux.org/) (매우 상세한 레퍼런스)
 
 ### 학습 자료
+
 - [Linux System Administration Guide](https://www.tldp.org/LDP/sag/html/)
 - [Advanced Bash-Scripting Guide](https://tldp.org/LDP/abs/html/)
 - [Linux Performance](https://www.brendangregg.com/linuxperf.html) - Brendan Gregg의 성능 튜닝 가이드
 - [Linux Journal](https://www.linuxjournal.com/)
 
 ### 도구 문서
+
 - [Systemd Documentation](https://www.freedesktop.org/wiki/Software/systemd/)
 - [Netdata Documentation](https://learn.netdata.cloud/)
 - [Prometheus Node Exporter](https://github.com/prometheus/node_exporter)
 
 ### 온라인 강좌
+
 - [Linux Foundation - Linux System Administration Essentials (LFS207)](https://training.linuxfoundation.org/training/linux-system-administration-essentials-lfs207/)
 - [Udemy - Linux Administration Bootcamp](https://www.udemy.com/course/master-linux-administration/)
 
 ### 커뮤니티
+
 - [r/linuxadmin](https://www.reddit.com/r/linuxadmin/)
 - [Server Fault](https://serverfault.com/)
 - [Linux Questions](https://www.linuxquestions.org/)
 
 ### 모범 사례 (2025)
+
 - [CyberPanel - 10 Linux System Administration Practices for 2025](https://cyberpanel.net/blog/linux-system-administration)
 - [Linux System Administration Best Practices (UPenn)](https://cets.seas.upenn.edu/answers/linux-best-practices.html)
 
@@ -986,5 +993,6 @@ done
 ## 🎓 다음 단계
 
 Linux 운영 기초를 마스터한 후:
+
 - [Ch2. Python/GO 프로그래밍](./Ch2.Python_GO.md)으로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

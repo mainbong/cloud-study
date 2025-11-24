@@ -7,6 +7,7 @@ Cloud-Native 플랫폼을 구축하려면 다양한 도구가 필요합니다. H
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Helm으로 Kubernetes 애플리케이션 패키징 및 배포
 - ArgoCD로 GitOps 파이프라인 구축
 - Harbor로 컨테이너 레지스트리 운영
@@ -644,23 +645,28 @@ helm install gitlab-runner gitlab/gitlab-runner \
 ## 📚 참고 자료
 
 ### Helm
+
 - [Helm Documentation](https://helm.sh/docs/)
 - [Helm Best Practices](https://helm.sh/docs/chart_best_practices/)
 - [Artifact Hub](https://artifacthub.io/)
 
 ### ArgoCD
+
 - [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
 - [ArgoCD Best Practices](https://argo-cd.readthedocs.io/en/stable/user-guide/best_practices/)
 
 ### Harbor
+
 - [Harbor Documentation](https://goharbor.io/docs/)
 - [Harbor Helm Chart](https://github.com/goharbor/harbor-helm)
 
 ### Keycloak
+
 - [Keycloak Documentation](https://www.keycloak.org/documentation)
 - [Keycloak on Kubernetes](https://www.keycloak.org/operator/installation)
 
 ### GitLab
+
 - [GitLab CI/CD Documentation](https://docs.gitlab.com/ee/ci/)
 - [GitLab Runner Helm Chart](https://docs.gitlab.com/runner/install/kubernetes.html)
 
@@ -685,5 +691,6 @@ helm install gitlab-runner gitlab/gitlab-runner \
 ## 🎓 다음 단계
 
 Cloud-Native 플랫폼 도구를 마스터한 후:
+
 - [Ch5. 모니터링 및 가시성](./Ch5.모니터링.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

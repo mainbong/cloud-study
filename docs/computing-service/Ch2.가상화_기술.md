@@ -221,6 +221,7 @@ ps -eLf | grep qemu-system-x86_64
 vCPU 오버커밋 비율 = (총 vCPU 수) / (물리 CPU 코어 수)
 
 예시:
+
 - 물리 CPU: 32 cores
 - VM 1: 8 vCPUs
 - VM 2: 8 vCPUs
@@ -229,6 +230,7 @@ vCPU 오버커밋 비율 = (총 vCPU 수) / (물리 CPU 코어 수)
 - 오버커밋 비율 = 32 / 32 = 1:1 (이상적)
 
 오버커밋 (aggressive):
+
 - 물리 CPU: 32 cores
 - VM 10개 x 8 vCPUs = 80 vCPUs
 - 오버커밋 비율 = 80 / 32 = 2.5:1
@@ -676,6 +678,7 @@ lspci | grep -i virtual
 └─────────────────────────────────────────────────────────┘
 
 성능 차이:
+
 - 로컬 메모리 접근: 100 ns
 - 원격 메모리 접근: 200-300 ns (2-3배 느림)
 ```
@@ -1304,36 +1307,42 @@ python3 vm-monitor.py test-vm
 ## ✅ 학습 체크리스트
 
 ### 기본 개념
+
 - [ ] KVM과 QEMU의 역할 차이 이해
 - [ ] Intel VT-x / AMD-V 하드웨어 가상화 확장 이해
 - [ ] EPT/NPT 2단계 페이지 테이블 동작 원리
 - [ ] Libvirt 아키텍처 및 XML 구조
 
 ### CPU 가상화
+
 - [ ] vCPU 오버커밋 비율 설정
 - [ ] CPU 피닝 구성 (vcpupin, emulatorpin)
 - [ ] CPU 모델 선택 (host-passthrough vs host-model)
 - [ ] CPU 토폴로지 설정 (sockets, cores, threads)
 
 ### 메모리 가상화
+
 - [ ] Huge Pages 설정 (2MB, 1GB)
 - [ ] Memory Ballooning 동작 이해
 - [ ] KSM (Kernel Same-page Merging) 장단점
 - [ ] 메모리 잠금 (locked) 설정
 
 ### I/O 가상화
+
 - [ ] virtio-blk vs virtio-scsi 선택 기준
 - [ ] 디스크 캐시 모드 (none, writethrough, writeback)
 - [ ] virtio-net multi-queue 설정
 - [ ] VFIO/SR-IOV PCI 패스스루
 
 ### NUMA 최적화
+
 - [ ] NUMA 토폴로지 확인 (numactl, lstopo)
 - [ ] vCPU와 메모리의 NUMA 정렬
 - [ ] NUMA 통계 모니터링 (numastat)
 - [ ] NIC와 vCPU의 NUMA 일치
 
 ### 성능 튜닝
+
 - [ ] 종합 튜닝 체크리스트 적용
 - [ ] 호스트 커널 파라미터 최적화
 - [ ] 벤치마킹 (sysbench, fio, iperf3)

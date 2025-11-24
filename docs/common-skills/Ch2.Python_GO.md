@@ -7,6 +7,7 @@
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Python 또는 GO를 활용한 RESTful API 백엔드 설계 및 개발
 - 비동기 프로그래밍을 통한 고성능 API 서버 구현
 - gRPC를 사용한 마이크로서비스 간 통신 구현
@@ -168,6 +169,7 @@ asyncio.run(main())
 #### FastAPI 소개
 
 FastAPI는 2025년 현재 Python 백엔드 개발의 Top 3 프레임워크 중 하나로, 다음과 같은 특징을 가집니다:
+
 - **빠른 성능**: Node.js 및 Go와 비슷한 수준
 - **자동 문서화**: OpenAPI (Swagger) 및 ReDoc 자동 생성
 - **타입 안정성**: Python type hints 기반 검증
@@ -795,6 +797,7 @@ func main() {
 #### gRPC 동시성 (2025 Best Practice)
 
 gRPC-Go는 스레드 안전하게 설계되었습니다:
+
 - **ClientConn**은 동시에 안전하게 접근 가능
 - 각 RPC 핸들러는 자체 goroutine에서 실행됨
 - 서버는 많은 수의 동시 요청을 효율적으로 처리
@@ -873,6 +876,7 @@ func BenchmarkCreateUser(b *testing.B) {
 ## 📚 참고 자료
 
 ### Python 자료
+
 - [Python 공식 문서](https://docs.python.org/3/)
 - [FastAPI 공식 문서](https://fastapi.tiangolo.com/)
 - [Asyncio 공식 가이드](https://docs.python.org/3/library/asyncio.html)
@@ -880,6 +884,7 @@ func BenchmarkCreateUser(b *testing.B) {
 - [Real Python - Async IO](https://realpython.com/async-io-python/)
 
 ### GO 자료
+
 - [Go 공식 문서](https://go.dev/doc/)
 - [Effective Go](https://go.dev/doc/effective_go)
 - [Go by Example](https://gobyexample.com/)
@@ -887,6 +892,7 @@ func BenchmarkCreateUser(b *testing.B) {
 - [Gin 프레임워크](https://gin-gonic.com/docs/)
 
 ### 2025년 최신 자료
+
 - [Python Backend 2025: Asyncio & FastAPI](https://www.nucamp.co/blog/coding-bootcamp-backend-with-python-2025)
 - [Coursera - Go Essentials: Concurrency, gRPC & More](https://www.coursera.org/learn/packt-go-essentials)
 
@@ -895,6 +901,7 @@ func BenchmarkCreateUser(b *testing.B) {
 ## ✅ 학습 체크리스트
 
 ### Python
+
 - [ ] Python 기초 문법 및 객체지향 프로그래밍
 - [ ] Asyncio 개념 및 기본 사용법
 - [ ] FastAPI로 RESTful API 구현
@@ -903,6 +910,7 @@ func BenchmarkCreateUser(b *testing.B) {
 - [ ] Pytest를 사용한 테스트 작성
 
 ### GO
+
 - [ ] Go 기초 문법
 - [ ] Goroutine 및 Channel 사용
 - [ ] 동시성 패턴 (Worker Pool, Pipeline)
@@ -916,5 +924,6 @@ func BenchmarkCreateUser(b *testing.B) {
 ## 🎓 다음 단계
 
 프로그래밍 언어 기초를 마스터한 후:
+
 - [Ch3. Cloud-Native 환경](./Ch3.Cloud_Native.md)으로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

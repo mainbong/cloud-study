@@ -7,6 +7,7 @@ Kubernetes는 컨테이너 오케스트레이션의 사실상 표준이 되었�
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Kubernetes Control Plane의 내부 동작 원리 이해
 - Custom Resource Definition (CRD) 생성 및 관리
 - Kubernetes Controller 개발 (Informer, Workqueue)
@@ -785,17 +786,20 @@ make deploy IMG=myregistry/myapp-operator:v1.0.0
 ## 📚 참고 자료
 
 ### 공식 문서
+
 - [Kubernetes Documentation](https://kubernetes.io/docs/)
 - [Kubernetes Controller Development Guide](https://kubernetes.io/docs/concepts/architecture/controller/)
 - [CRD Documentation](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)
 - [Operator Pattern](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/)
 
 ### Controller 개발
+
 - [client-go Examples](https://github.com/kubernetes/client-go/tree/master/examples)
 - [sample-controller](https://github.com/kubernetes/sample-controller)
 - [Informers Deep Dive (2025)](https://medium.com/@dhruvbhl/informers-listers-workqueues-the-brain-behind-your-controller-f5b0967026de)
 
 ### Operator SDK
+
 - [Operator SDK Documentation](https://sdk.operatorframework.io/)
 - [Operator Framework](https://operatorframework.io/)
 - [Kubebuilder Book](https://book.kubebuilder.io/)
@@ -819,5 +823,6 @@ make deploy IMG=myregistry/myapp-operator:v1.0.0
 ## 🎓 다음 단계
 
 Kubernetes 심화를 마스터한 후:
+
 - [Ch2. ClusterAPI & Ironic](./Ch2.ClusterAPI_Ironic.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

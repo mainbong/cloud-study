@@ -67,6 +67,7 @@
 Availability % = (Total Time - Downtime) / Total Time × 100
 
 예시:
+
 - 99.9% (Three Nines):  43.2분 다운타임/월
 - 99.99% (Four Nines):  4.32분 다운타임/월
 - 99.999% (Five Nines): 25.9초 다운타임/월

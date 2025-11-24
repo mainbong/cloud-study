@@ -986,6 +986,7 @@ networking:
   disableDefaultCNI: true
   podSubnet: "10.244.0.0/16"
 nodes:
+
 - role: control-plane
 - role: worker
 - role: worker
@@ -1381,6 +1382,7 @@ chmod +x netpol-validator.py
 ## ✅ 학습 체크리스트
 
 ### 기본 (Essential)
+
 - [ ] CNI 스펙과 플러그인 구조 이해
 - [ ] Cilium, Calico, Flannel 차이점 설명 가능
 - [ ] Kubernetes NetworkPolicy 작성 및 적용
@@ -1388,6 +1390,7 @@ chmod +x netpol-validator.py
 - [ ] Service 타입 (ClusterIP, NodePort, LoadBalancer) 이해
 
 ### 중급 (Intermediate)
+
 - [ ] eBPF 기반 네트워킹의 장점 이해
 - [ ] Cilium으로 kube-proxy 대체
 - [ ] Calico BGP 설정 및 외부 라우터 연동
@@ -1395,6 +1398,7 @@ chmod +x netpol-validator.py
 - [ ] Hubble로 네트워크 트래픽 관찰
 
 ### 고급 (Advanced)
+
 - [ ] 멀티 클러스터 네트워킹 (ClusterMesh) 구성
 - [ ] L7 NetworkPolicy (HTTP/gRPC) 작성
 - [ ] Service Mesh (Istio/Linkerd) 설치 및 설정
@@ -1402,6 +1406,7 @@ chmod +x netpol-validator.py
 - [ ] Ambient Mesh (Sidecar-less) 아키텍처 이해
 
 ### 프로덕션 (Production-Ready)
+
 - [ ] Zero Trust 네트워킹 아키텍처 설계
 - [ ] 지리적 차단 및 Egress 트래픽 제어
 - [ ] CNI 플러그인 성능 튜닝 및 벤치마크
@@ -1428,6 +1433,7 @@ chmod +x netpol-validator.py
 사용자 요청에 따라 Networking Service 섹션은 현재 보류 상태입니다. Computing Service 학습을 먼저 완료하고, 추후 필요시 Networking Service 학습을 진행할 수 있습니다.
 
 ### 추가 학습 리소스
+
 - [CNCF Landscape - Networking](https://landscape.cncf.io/guide#runtime--cloud-native-network)
 - [Kubernetes Networking Special Interest Group](https://github.com/kubernetes/community/tree/master/sig-network)
 - [eBPF Documentation](https://ebpf.io/)

@@ -7,6 +7,7 @@ DevOps는 개발(Development)과 운영(Operations)을 통합하여 소프트웨
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Git을 사용한 효과적인 버전 관리 및 협업
 - CI/CD 파이프라인 구축 및 운영
 - GitOps를 통한 선언적 배포 자동화
@@ -873,22 +874,26 @@ def read_root():
 ## 📚 참고 자료
 
 ### Git
+
 - [Pro Git Book](https://git-scm.com/book/ko/v2)
 - [GitHub Flow Guide](https://guides.github.com/introduction/flow/)
 - [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/)
 
 ### CI/CD
+
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 - [Jenkins Documentation](https://www.jenkins.io/doc/)
 - [CI/CD Best Practices 2025](https://www.kunal-chowdhury.com/2025/07/devops-ci-cd-pipelines.html)
 
 ### GitOps
+
 - [ArgoCD Documentation](https://argo-cd.readthedocs.io/)
 - [Flux CD Documentation](https://fluxcd.io/docs/)
 - [GitOps Principles](https://www.gitops.tech/)
 
 ### 모니터링
+
 - [Prometheus Documentation](https://prometheus.io/docs/)
 - [Grafana Documentation](https://grafana.com/docs/)
 - [Kubernetes Monitoring Guide 2025](https://linuxcloudservers.com/kubernetes-monitoring/)
@@ -912,5 +917,6 @@ def read_root():
 ## 🎓 다음 단계
 
 DevOps 도구를 마스터한 후:
+
 - [Ch5. 시스템 설계 및 아키텍처](./Ch5.시스템_설계.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

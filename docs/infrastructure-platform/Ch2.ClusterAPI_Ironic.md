@@ -7,6 +7,7 @@ ClusterAPI는 Kubernetes 클러스터의 프로비저닝, 업그레이드, 운�
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - ClusterAPI를 사용한 Kubernetes 클러스터 자동 생성
 - ClusterAPI Provider 이해 및 활용
 - OpenStack Ironic을 사용한 베어메탈 프로비저닝
@@ -617,18 +618,21 @@ echo "  clusterctl get kubeconfig ${CLUSTER_NAME} > ${CLUSTER_NAME}.kubeconfig"
 ## 📚 참고 자료
 
 ### Cluster API
+
 - [Cluster API Official Documentation](https://cluster-api.sigs.k8s.io/)
 - [Cluster API Book](https://cluster-api.sigs.k8s.io/user/quick-start)
 - [ClusterAPI GitHub](https://github.com/kubernetes-sigs/cluster-api)
 - [ClusterAPI Providers](https://cluster-api.sigs.k8s.io/reference/providers)
 
 ### OpenStack Ironic
+
 - [Ironic Documentation](https://docs.openstack.org/ironic/latest/)
 - [Ironic User Guide](https://docs.openstack.org/ironic/latest/user/)
 - [Bifrost Documentation](https://docs.openstack.org/bifrost/latest/)
 - [Ironic Python Agent](https://docs.openstack.org/ironic-python-agent/latest/)
 
 ### 통합
+
 - [CAPO - Cluster API Provider OpenStack](https://github.com/kubernetes-sigs/cluster-api-provider-openstack)
 - [Metal3 - Bare Metal Provisioning](https://metal3.io/)
 
@@ -650,5 +654,6 @@ echo "  clusterctl get kubeconfig ${CLUSTER_NAME} > ${CLUSTER_NAME}.kubeconfig"
 ## 🎓 다음 단계
 
 ClusterAPI & Ironic을 마스터한 후:
+
 - [Ch3. Infrastructure as Code (IaC)](./Ch3.IaC.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

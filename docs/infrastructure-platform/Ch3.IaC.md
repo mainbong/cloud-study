@@ -7,6 +7,7 @@ Infrastructure as Code (IaC)는 인프라를 코드로 정의하고 버전 관�
 ### 학습 목표
 
 이 장을 학습한 후, 다음을 할 수 있습니다:
+
 - Terraform으로 인프라 리소스 정의 및 관리
 - Ansible로 서버 설정 자동화
 - Packer로 머신 이미지 빌드 자동화
@@ -823,18 +824,21 @@ build {
 ## 📚 참고 자료
 
 ### Terraform
+
 - [Terraform Documentation](https://developer.hashicorp.com/terraform)
 - [Terraform Best Practices 2025](https://www.elysiate.com/blog/terraform-best-practices-infrastructure-as-code-2025)
 - [Terraform Module Registry](https://registry.terraform.io/)
 - [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 
 ### Ansible
+
 - [Ansible Documentation](https://docs.ansible.com/)
 - [Ansible Galaxy](https://galaxy.ansible.com/)
 - [Ansible Best Practices 2025](https://www.gocodeo.com/post/ansible-in-2025-best-practices-for-configuration-and-provisioning)
 - [Good Practices for Ansible](https://redhat-cop.github.io/automation-good-practices/)
 
 ### Packer
+
 - [Packer Documentation](https://developer.hashicorp.com/packer)
 - [Packer Plugin Registry](https://developer.hashicorp.com/packer/plugins)
 - [HCL2 Configuration](https://developer.hashicorp.com/packer/guides/hcl)
@@ -844,6 +848,7 @@ build {
 ## ✅ 학습 체크리스트
 
 ### Terraform
+
 - [ ] 리소스 정의 및 프로비저닝
 - [ ] 모듈 작성 및 재사용
 - [ ] Remote Backend 설정 (S3 + DynamoDB)
@@ -852,6 +857,7 @@ build {
 - [ ] 변수 및 출력값 사용
 
 ### Ansible
+
 - [ ] Inventory 파일 작성 (정적/동적)
 - [ ] Playbook 작성
 - [ ] Role 구조 이해 및 작성
@@ -860,6 +866,7 @@ build {
 - [ ] Handler 및 알림 사용
 
 ### Packer
+
 - [ ] Packer 템플릿 작성 (HCL2)
 - [ ] 프로비저너 사용 (Shell, Ansible)
 - [ ] 이미지 빌드 및 검증
@@ -870,5 +877,6 @@ build {
 ## 🎓 다음 단계
 
 IaC를 마스터한 후:
+
 - [Ch4. Cloud-Native 플랫폼 구성 도구](./Ch4.Cloud_Native_플랫폼_도구.md)로 진행
 - 또는 [README](./README.md)로 돌아가서 학습 로드맵 확인

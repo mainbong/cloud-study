@@ -1297,36 +1297,42 @@ output "web_server_ips" {
 ## ✅ 학습 체크리스트
 
 ### 기본 개념
+
 - [ ] OpenStack 서비스 아키텍처 및 상호작용 이해
 - [ ] Keystone 인증 플로우 이해
 - [ ] RabbitMQ를 통한 RPC 통신 이해
 - [ ] Placement API의 역할 이해
 
 ### Nova
+
 - [ ] Nova 컴포넌트 (API, Scheduler, Compute, Conductor) 역할 이해
 - [ ] 인스턴스 생성 플로우 (11단계) 이해
 - [ ] Nova Scheduler 필터링 및 가중치 계산
 - [ ] Placement API를 통한 리소스 추적
 
 ### Cinder
+
 - [ ] Cinder 아키텍처 및 볼륨 생성 플로우
 - [ ] LVM, Ceph, NFS 백엔드 설정
 - [ ] 볼륨 타입 및 멀티 백엔드 구성
 - [ ] 볼륨 스냅샷 및 백업
 
 ### Glance
+
 - [ ] Glance 스토어 백엔드 (File, Swift, Ceph, Cinder)
 - [ ] 멀티 스토어 설정 (2025.1)
 - [ ] Glance Image Cache for Cinder 활성화
 - [ ] 이미지 메타데이터 관리
 
 ### Ironic
+
 - [ ] Ironic 아키텍처 및 Nova 통합 방식
 - [ ] IPMI/Redfish 드라이버를 통한 하드웨어 관리
 - [ ] 베어메탈 프로비저닝 플로우
 - [ ] 프로비저닝 네트워크 설계
 
 ### Kolla-Ansible
+
 - [ ] Kolla-Ansible을 활용한 All-in-One 배포
 - [ ] 멀티노드 HA 구성
 - [ ] globals.yml 및 inventory 설정
