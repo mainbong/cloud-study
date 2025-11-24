@@ -140,34 +140,34 @@ markdown_extensions:
 nav:
   - 홈:
     - README.md
-    - 학습 계획: docs/IMPLEMENTATION_PLAN.md
+    - 학습 계획: IMPLEMENTATION_PLAN.md
 
   - 공통 역량:
-    - docs/common-skills/README.md
-    - Ch1. Linux 운영: docs/common-skills/Ch1.Linux_운영.md
-    - Ch2. Python & GO: docs/common-skills/Ch2.Python_GO.md
-    - Ch3. Cloud Native: docs/common-skills/Ch3.Cloud_Native.md
-    - Ch4. DevOps: docs/common-skills/Ch4.DevOps.md
-    - Ch5. 시스템 설계: docs/common-skills/Ch5.시스템_설계.md
+    - common-skills/README.md
+    - Ch1. Linux 운영: common-skills/Ch1.Linux_운영.md
+    - Ch2. Python & GO: common-skills/Ch2.Python_GO.md
+    - Ch3. Cloud Native: common-skills/Ch3.Cloud_Native.md
+    - Ch4. DevOps: common-skills/Ch4.DevOps.md
+    - Ch5. 시스템 설계: common-skills/Ch5.시스템_설계.md
 
   - Infrastructure Platform:
-    - docs/infrastructure-platform/README.md
-    - Ch1. Kubernetes 심화: docs/infrastructure-platform/Ch1.Kubernetes_심화.md
-    - Ch2. ClusterAPI & Ironic: docs/infrastructure-platform/Ch2.ClusterAPI_Ironic.md
-    - Ch3. IaC: docs/infrastructure-platform/Ch3.IaC.md
-    - Ch4. Cloud Native 플랫폼 도구: docs/infrastructure-platform/Ch4.Cloud_Native_플랫폼_도구.md
-    - Ch5. 모니터링: docs/infrastructure-platform/Ch5.모니터링.md
-    - Ch6. Linux OS 이미지: docs/infrastructure-platform/Ch6.Linux_OS_이미지.md
+    - infrastructure-platform/README.md
+    - Ch1. Kubernetes 심화: infrastructure-platform/Ch1.Kubernetes_심화.md
+    - Ch2. ClusterAPI & Ironic: infrastructure-platform/Ch2.ClusterAPI_Ironic.md
+    - Ch3. IaC: infrastructure-platform/Ch3.IaC.md
+    - Ch4. Cloud Native 플랫폼 도구: infrastructure-platform/Ch4.Cloud_Native_플랫폼_도구.md
+    - Ch5. 모니터링: infrastructure-platform/Ch5.모니터링.md
+    - Ch6. Linux OS 이미지: infrastructure-platform/Ch6.Linux_OS_이미지.md
 
   - Computing Service:
-    - docs/computing-service/README.md
-    - Ch1. OpenStack: docs/computing-service/Ch1.OpenStack.md
-    - Ch2. 가상화 기술: docs/computing-service/Ch2.가상화_기술.md
-    - Ch3. 스케줄링: docs/computing-service/Ch3.스케줄링.md
-    - Ch4. Cloud Native 컴퓨팅: docs/computing-service/Ch4.Cloud_Native_컴퓨팅.md
-    - Ch5. 클라우드 인프라 설계: docs/computing-service/Ch5.클라우드_인프라_설계.md
-    - Ch6. Kubernetes Operator: docs/computing-service/Ch6.Kubernetes_Operator.md
-    - Ch7. Cloud Network CNI: docs/computing-service/Ch7.Cloud_Network_CNI.md
+    - computing-service/README.md
+    - Ch1. OpenStack: computing-service/Ch1.OpenStack.md
+    - Ch2. 가상화 기술: computing-service/Ch2.가상화_기술.md
+    - Ch3. 스케줄링: computing-service/Ch3.스케줄링.md
+    - Ch4. Cloud Native 컴퓨팅: computing-service/Ch4.Cloud_Native_컴퓨팅.md
+    - Ch5. 클라우드 인프라 설계: computing-service/Ch5.클라우드_인프라_설계.md
+    - Ch6. Kubernetes Operator: computing-service/Ch6.Kubernetes_Operator.md
+    - Ch7. Cloud Network CNI: computing-service/Ch7.Cloud_Network_CNI.md
 
 # 추가 설정
 extra:
