@@ -2149,15 +2149,19 @@
 <h3 id="21-cgroups-v1-vs-v2">2.1 cgroups v1 vs v2<a class="headerlink" href="#21-cgroups-v1-vs-v2" title="Permanent link">&para;</a></h3>
 <p><strong>cgroups (Control Groups):</strong>
 Linux 커널 기능으로 프로세스 그룹의 리소스 사용을 제한, 격리, 측정합니다.</p>
-<p><strong>cgroups v1 (Legacy):</strong>
-- 각 리소스 컨트롤러가 독립적인 계층 구조
-- 복잡한 설정 및 관리
-- CPU, memory, blkio, net_cls 등 분리</p>
-<p><strong>cgroups v2 (Unified Hierarchy - 권장):</strong>
-- 단일 통합 계층 구조
-- 간소화된 인터페이스
-- 더 나은 리소스 격리
-- Linux 4.5+ 지원, 대부분의 배포판이 기본으로 채택 (2025)</p>
+<p><strong>cgroups v1 (Legacy):</strong></p>
+<ul>
+<li>각 리소스 컨트롤러가 독립적인 계층 구조</li>
+<li>복잡한 설정 및 관리</li>
+<li>CPU, memory, blkio, net_cls 등 분리</li>
+</ul>
+<p><strong>cgroups v2 (Unified Hierarchy - 권장):</strong></p>
+<ul>
+<li>단일 통합 계층 구조</li>
+<li>간소화된 인터페이스</li>
+<li>더 나은 리소스 격리</li>
+<li>Linux 4.5+ 지원, 대부분의 배포판이 기본으로 채택 (2025)</li>
+</ul>
 <p><strong>현재 cgroups 버전 확인:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># cgroups v2 마운트 확인</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>mount<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>cgroup2
@@ -2503,9 +2507,11 @@ Linux 커널 기능으로 프로세스 그룹의 리소스 사용을 제한, 격
 </span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a><span class="c1"># 최대 할당 가능 vCPU = 32 × 4.0 = 128 vCPUs</span>
 </span></code></pre></div></p>
 <h3 id="42">4.2 메모리 오버커밋<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
-<p><strong>메모리 오버커밋의 위험:</strong>
-- OOM (Out Of Memory) Killer 발동 → 프로세스 강제 종료
-- SWAP 사용 → 심각한 성능 저하 (디스크 I/O)</p>
+<p><strong>메모리 오버커밋의 위험:</strong></p>
+<ul>
+<li>OOM (Out Of Memory) Killer 발동 → 프로세스 강제 종료</li>
+<li>SWAP 사용 → 심각한 성능 저하 (디스크 I/O)</li>
+</ul>
 <p><strong>2025 OpenShift Virtualization 권장사항:</strong></p>
 <blockquote>
 <p>OpenShift Virtualization은 **최대 25% 메모리 오버커밋**을 다양한 워크로드에서 매우 잘 처리합니다.</p>

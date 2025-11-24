@@ -1633,11 +1633,13 @@
 <h3 id="1-python-asyncio">1. Python 비동기 프로그래밍 (Asyncio)<a class="headerlink" href="#1-python-asyncio" title="Permanent link">&para;</a></h3>
 <h4 id="asyncio">Asyncio 개념<a class="headerlink" href="#asyncio" title="Permanent link">&para;</a></h4>
 <p>**Asyncio**는 Python 3.4부터 추가된 비동기 I/O 라이브러리로, 단일 스레드에서 동시성 코드를 작성할 수 있게 해줍니다.</p>
-<p><strong>핵심 개념:</strong>
-- <strong>Coroutine (코루틴)</strong>: <code>async def</code>로 정의된 비동기 함수
-- <strong>Event Loop</strong>: 비동기 작업을 관리하고 실행하는 루프
-- <strong>Task</strong>: 이벤트 루프에서 실행되는 코루틴
-- <strong>Future</strong>: 아직 완료되지 않은 작업의 결과</p>
+<p><strong>핵심 개념:</strong></p>
+<ul>
+<li><strong>Coroutine (코루틴)</strong>: <code>async def</code>로 정의된 비동기 함수</li>
+<li><strong>Event Loop</strong>: 비동기 작업을 관리하고 실행하는 루프</li>
+<li><strong>Task</strong>: 이벤트 루프에서 실행되는 코루틴</li>
+<li><strong>Future</strong>: 아직 완료되지 않은 작업의 결과</li>
+</ul>
 <p><strong>언제 Asyncio를 사용해야 하나? (2025 Best Practice)</strong>
 - ✅ I/O 바운드 작업 (네트워크 요청, 데이터베이스 쿼리, 파일 I/O)
 - ✅ 많은 수의 동시 연결 처리

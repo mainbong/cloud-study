@@ -1664,10 +1664,12 @@
 <hr />
 <h2 id="part-1-cluster-api">🔧 Part 1: Cluster API<a class="headerlink" href="#part-1-cluster-api" title="Permanent link">&para;</a></h2>
 <h3 id="1-cluster-api">1. Cluster API 개념<a class="headerlink" href="#1-cluster-api" title="Permanent link">&para;</a></h3>
-<p><strong>Cluster API의 핵심 원칙:</strong>
-- <strong>Declarative API</strong>: YAML로 클러스터 정의
-- <strong>Kubernetes-style</strong>: Kubernetes 패턴 사용
-- <strong>Provider 기반</strong>: 다양한 인프라 지원 (AWS, Azure, GCP, OpenStack 등)</p>
+<p><strong>Cluster API의 핵심 원칙:</strong></p>
+<ul>
+<li><strong>Declarative API</strong>: YAML로 클러스터 정의</li>
+<li><strong>Kubernetes-style</strong>: Kubernetes 패턴 사용</li>
+<li><strong>Provider 기반</strong>: 다양한 인프라 지원 (AWS, Azure, GCP, OpenStack 등)</li>
+</ul>
 <p><strong>아키텍처:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────┐
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│ Management Cluster  │ ← ClusterAPI 컨트롤러 실행
@@ -1838,11 +1840,13 @@
 <hr />
 <h2 id="part-2-openstack-ironic">🖥️ Part 2: OpenStack Ironic<a class="headerlink" href="#part-2-openstack-ironic" title="Permanent link">&para;</a></h2>
 <h3 id="1-ironic">1. Ironic 아키텍처<a class="headerlink" href="#1-ironic" title="Permanent link">&para;</a></h3>
-<p><strong>주요 컴포넌트:</strong>
-- <strong>ironic-api</strong>: REST API 서버
-- <strong>ironic-conductor</strong>: 베어메탈 관리 엔진
-- <strong>ironic-python-agent (IPA)</strong>: 노드에서 실행되는 에이전트
-- <strong>Inspector</strong>: 하드웨어 검사 서비스</p>
+<p><strong>주요 컴포넌트:</strong></p>
+<ul>
+<li><strong>ironic-api</strong>: REST API 서버</li>
+<li><strong>ironic-conductor</strong>: 베어메탈 관리 엔진</li>
+<li><strong>ironic-python-agent (IPA)</strong>: 노드에서 실행되는 에이전트</li>
+<li><strong>Inspector</strong>: 하드웨어 검사 서비스</li>
+</ul>
 <p><strong>프로비저닝 흐름:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>1. Enrollment (등록)
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>   ↓

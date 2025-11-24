@@ -2033,16 +2033,20 @@
 <hr />
 <h2 id="part-1-kvmqemu">Part 1: KVM/QEMU 아키텍처<a class="headerlink" href="#part-1-kvmqemu" title="Permanent link">&para;</a></h2>
 <h3 id="11-kvm-qemu">1.1 KVM과 QEMU의 역할<a class="headerlink" href="#11-kvm-qemu" title="Permanent link">&para;</a></h3>
-<p><strong>KVM (Kernel-based Virtual Machine):</strong>
-- Linux 커널 모듈 (<code>kvm.ko</code>, <code>kvm-intel.ko</code>, <code>kvm-amd.ko</code>)
-- 하드웨어 가상화 확장 활용 (Intel VT-x, AMD-V)
-- CPU와 메모리 가상화 제공
-- Type-1 Hypervisor로 동작</p>
-<p><strong>QEMU (Quick Emulator):</strong>
-- 사용자 공간 프로세스
-- I/O 장치 에뮬레이션 (디스크, 네트워크, GPU 등)
-- 동적 바이너리 변환 (TCG - Tiny Code Generator)
-- KVM과 함께 사용 시 하드웨어 가속 활용</p>
+<p><strong>KVM (Kernel-based Virtual Machine):</strong></p>
+<ul>
+<li>Linux 커널 모듈 (<code>kvm.ko</code>, <code>kvm-intel.ko</code>, <code>kvm-amd.ko</code>)</li>
+<li>하드웨어 가상화 확장 활용 (Intel VT-x, AMD-V)</li>
+<li>CPU와 메모리 가상화 제공</li>
+<li>Type-1 Hypervisor로 동작</li>
+</ul>
+<p><strong>QEMU (Quick Emulator):</strong></p>
+<ul>
+<li>사용자 공간 프로세스</li>
+<li>I/O 장치 에뮬레이션 (디스크, 네트워크, GPU 등)</li>
+<li>동적 바이너리 변환 (TCG - Tiny Code Generator)</li>
+<li>KVM과 함께 사용 시 하드웨어 가속 활용</li>
+</ul>
 <p><strong>통합 아키텍처:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌─────────────────────────────────────────────────────────┐
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                    Guest VM (Virtual Machine)           │
@@ -2078,16 +2082,20 @@
 </span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>└──────────────────────────────────────────────────────────┘
 </span></code></pre></div></p>
 <h3 id="12">1.2 하드웨어 가상화 확장<a class="headerlink" href="#12" title="Permanent link">&para;</a></h3>
-<p><strong>Intel VT-x (Virtualization Technology):</strong>
-- <strong>VMX (Virtual Machine Extensions)</strong>: Root 모드와 Non-root 모드
-- <strong>EPT (Extended Page Tables)</strong>: 2단계 주소 변환
-- <strong>VPID (Virtual Processor ID)</strong>: TLB 태깅으로 컨텍스트 스위칭 최적화
-- <strong>VT-d (I/O Virtualization)</strong>: IOMMU를 통한 DMA 리매핑</p>
-<p><strong>AMD-V (AMD Virtualization):</strong>
-- <strong>SVM (Secure Virtual Machine)</strong>: Host 모드와 Guest 모드
-- <strong>NPT (Nested Page Tables)</strong>: EPT와 동일한 2단계 페이지 테이블
-- <strong>ASID (Address Space Identifier)</strong>: VPID와 동일
-- <strong>AMD-Vi (IOMMU)</strong>: VT-d와 동일</p>
+<p><strong>Intel VT-x (Virtualization Technology):</strong></p>
+<ul>
+<li><strong>VMX (Virtual Machine Extensions)</strong>: Root 모드와 Non-root 모드</li>
+<li><strong>EPT (Extended Page Tables)</strong>: 2단계 주소 변환</li>
+<li><strong>VPID (Virtual Processor ID)</strong>: TLB 태깅으로 컨텍스트 스위칭 최적화</li>
+<li><strong>VT-d (I/O Virtualization)</strong>: IOMMU를 통한 DMA 리매핑</li>
+</ul>
+<p><strong>AMD-V (AMD Virtualization):</strong></p>
+<ul>
+<li><strong>SVM (Secure Virtual Machine)</strong>: Host 모드와 Guest 모드</li>
+<li><strong>NPT (Nested Page Tables)</strong>: EPT와 동일한 2단계 페이지 테이블</li>
+<li><strong>ASID (Address Space Identifier)</strong>: VPID와 동일</li>
+<li><strong>AMD-Vi (IOMMU)</strong>: VT-d와 동일</li>
+</ul>
 <p><strong>하드웨어 지원 확인:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># Intel VT-x 지원 확인</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;vmx&#39;</span><span class="w"> </span>/proc/cpuinfo
@@ -2196,15 +2204,19 @@ KVM에서 각 vCPU는 Linux 커널의 일반 프로세스 스레드로 구현됩
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>- VM 10개 x 8 vCPUs = 80 vCPUs
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>- 오버커밋 비율 = 80 / 32 = 2.5:1
 </span></code></pre></div></p>
-<p><strong>권장사항:</strong>
-- <strong>프로덕션</strong>: 1:1 ~ 2:1
-- <strong>개발/테스트</strong>: 4:1 ~ 8:1
-- <strong>VDI (Virtual Desktop)</strong>: 8:1 ~ 16:1 (CPU idle이 높음)</p>
+<p><strong>권장사항:</strong></p>
+<ul>
+<li><strong>프로덕션</strong>: 1:1 ~ 2:1</li>
+<li><strong>개발/테스트</strong>: 4:1 ~ 8:1</li>
+<li><strong>VDI (Virtual Desktop)</strong>: 8:1 ~ 16:1 (CPU idle이 높음)</li>
+</ul>
 <h3 id="23-cpu-pinning">2.3 CPU 피닝 (Pinning)<a class="headerlink" href="#23-cpu-pinning" title="Permanent link">&para;</a></h3>
-<p><strong>CPU 피닝의 장점:</strong>
-- L1/L2/L3 캐시 지역성 향상
-- NUMA 노드 경계 교차 방지
-- 예측 가능한 성능</p>
+<p><strong>CPU 피닝의 장점:</strong></p>
+<ul>
+<li>L1/L2/L3 캐시 지역성 향상</li>
+<li>NUMA 노드 경계 교차 방지</li>
+<li>예측 가능한 성능</li>
+</ul>
 <p><strong>Libvirt를 통한 CPU 피닝:</strong>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;domain</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;kvm&#39;</span><span class="nt">&gt;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">&lt;vcpu</span><span class="w"> </span><span class="na">placement=</span><span class="s">&#39;static&#39;</span><span class="nt">&gt;</span>4<span class="nt">&lt;/vcpu&gt;</span>
@@ -2234,10 +2246,12 @@ KVM에서 각 vCPU는 Linux 커널의 일반 프로세스 스레드로 구현됩
 </span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>virsh<span class="w"> </span>vcpuinfo<span class="w"> </span>test-vm
 </span></code></pre></div></p>
 <h3 id="24-cpu">2.4 CPU 모델 및 기능 플래그<a class="headerlink" href="#24-cpu" title="Permanent link">&para;</a></h3>
-<p><strong>CPU 모드:</strong>
-- <strong>host-passthrough</strong>: 호스트 CPU 그대로 노출 (마이그레이션 제약)
-- <strong>host-model</strong>: 호스트 CPU와 유사한 모델 (마이그레이션 가능)
-- <strong>custom</strong>: 특정 CPU 모델 지정</p>
+<p><strong>CPU 모드:</strong></p>
+<ul>
+<li><strong>host-passthrough</strong>: 호스트 CPU 그대로 노출 (마이그레이션 제약)</li>
+<li><strong>host-model</strong>: 호스트 CPU와 유사한 모델 (마이그레이션 가능)</li>
+<li><strong>custom</strong>: 특정 CPU 모델 지정</li>
+</ul>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="cm">&lt;!-- host-passthrough: 최고 성능 --&gt;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="nt">&lt;cpu</span><span class="w"> </span><span class="na">mode=</span><span class="s">&#39;host-passthrough&#39;</span><span class="w"> </span><span class="na">check=</span><span class="s">&#39;none&#39;</span><span class="nt">/&gt;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
@@ -2287,13 +2301,17 @@ KVM에서 각 vCPU는 Linux 커널의 일반 프로세스 스레드로 구현됩
 </span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>장점: VM Exit 감소, 하드웨어 가속 변환
 </span></code></pre></div></p>
 <h3 id="32-huge-pages">3.2 Huge Pages<a class="headerlink" href="#32-huge-pages" title="Permanent link">&para;</a></h3>
-<p><strong>Huge Pages의 이점:</strong>
-- <strong>TLB Miss 감소</strong>: 더 많은 메모리를 더 적은 TLB 엔트리로 커버
-- <strong>페이지 테이블 오버헤드 감소</strong>: 페이지 테이블 크기 축소
-- <strong>성능 향상</strong>: 대용량 메모리 워크로드에서 5-20% 성능 향상</p>
-<p><strong>Huge Pages 타입:</strong>
-- <strong>2MB Huge Pages</strong>: 일반적으로 사용
-- <strong>1GB Huge Pages</strong>: 대용량 메모리 (128GB+) VM에 권장</p>
+<p><strong>Huge Pages의 이점:</strong></p>
+<ul>
+<li><strong>TLB Miss 감소</strong>: 더 많은 메모리를 더 적은 TLB 엔트리로 커버</li>
+<li><strong>페이지 테이블 오버헤드 감소</strong>: 페이지 테이블 크기 축소</li>
+<li><strong>성능 향상</strong>: 대용량 메모리 워크로드에서 5-20% 성능 향상</li>
+</ul>
+<p><strong>Huge Pages 타입:</strong></p>
+<ul>
+<li><strong>2MB Huge Pages</strong>: 일반적으로 사용</li>
+<li><strong>1GB Huge Pages</strong>: 대용량 메모리 (128GB+) VM에 권장</li>
+</ul>
 <p><strong>호스트 설정:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># 1. Huge Pages 할당 (2MB)</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="c1"># 총 메모리의 80-90% 할당 권장</span>
@@ -2381,10 +2399,12 @@ KVM에서 각 vCPU는 Linux 커널의 일반 프로세스 스레드로 구현됩
 </span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>cat<span class="w"> </span>/sys/kernel/mm/ksm/pages_sharing
 </span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>cat<span class="w"> </span>/sys/kernel/mm/ksm/pages_shared
 </span></code></pre></div></p>
-<p><strong>주의사항:</strong>
-- CPU 오버헤드 발생 (스캔 비용)
-- 보안 고려사항 (side-channel 공격 가능성)
-- 프로덕션 환경에서는 신중하게 사용</p>
+<p><strong>주의사항:</strong></p>
+<ul>
+<li>CPU 오버헤드 발생 (스캔 비용)</li>
+<li>보안 고려사항 (side-channel 공격 가능성)</li>
+<li>프로덕션 환경에서는 신중하게 사용</li>
+</ul>
 <hr />
 <h2 id="part-4-io">Part 4: I/O 가상화<a class="headerlink" href="#part-4-io" title="Permanent link">&para;</a></h2>
 <h3 id="41-virtio">4.1 VirtIO 아키텍처<a class="headerlink" href="#41-virtio" title="Permanent link">&para;</a></h3>
@@ -2470,11 +2490,13 @@ KVM 환경에서 최적화된 반가상화(Paravirtualization) I/O 드라이버�
 </span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">  </span><span class="nt">&lt;target</span><span class="w"> </span><span class="na">dev=</span><span class="s">&#39;sda&#39;</span><span class="w"> </span><span class="na">bus=</span><span class="s">&#39;scsi&#39;</span><span class="nt">/&gt;</span>
 </span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="nt">&lt;/disk&gt;</span>
 </span></code></pre></div></p>
-<p><strong>캐시 모드:</strong>
-- <strong>none</strong>: Write-through, O_DIRECT (안전, 성능 양호) ← 권장
-- <strong>writethrough</strong>: Write-through, 캐시 사용 (안전, 느림)
-- <strong>writeback</strong>: Write-back (빠름, 데이터 손실 위험)
-- <strong>directsync</strong>: O_DIRECT + O_SYNC (가장 안전, 느림)</p>
+<p><strong>캐시 모드:</strong></p>
+<ul>
+<li><strong>none</strong>: Write-through, O_DIRECT (안전, 성능 양호) ← 권장</li>
+<li><strong>writethrough</strong>: Write-through, 캐시 사용 (안전, 느림)</li>
+<li><strong>writeback</strong>: Write-back (빠름, 데이터 손실 위험)</li>
+<li><strong>directsync</strong>: O_DIRECT + O_SYNC (가장 안전, 느림)</li>
+</ul>
 <h3 id="43-network-io-virtio-net">4.3 Network I/O - virtio-net<a class="headerlink" href="#43-network-io-virtio-net" title="Permanent link">&para;</a></h3>
 <p><strong>virtio-net 성능 최적화:</strong>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nt">&lt;interface</span><span class="w"> </span><span class="na">type=</span><span class="s">&#39;network&#39;</span><span class="nt">&gt;</span>
@@ -2513,10 +2535,12 @@ KVM 환경에서 최적화된 반가상화(Paravirtualization) I/O 드라이버�
 <h3 id="44-vfio-pci">4.4 VFIO 및 PCI 패스스루<a class="headerlink" href="#44-vfio-pci" title="Permanent link">&para;</a></h3>
 <p><strong>VFIO (Virtual Function I/O):</strong>
 하드웨어 장치를 직접 Guest에 할당하여 네이티브에 가까운 성능을 얻습니다.</p>
-<p><strong>사용 사례:</strong>
-- GPU 패스스루 (NVIDIA, AMD)
-- 고성능 NIC (10GbE, 100GbE)
-- NVME SSD</p>
+<p><strong>사용 사례:</strong></p>
+<ul>
+<li>GPU 패스스루 (NVIDIA, AMD)</li>
+<li>고성능 NIC (10GbE, 100GbE)</li>
+<li>NVME SSD</li>
+</ul>
 <p><strong>VFIO 설정:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># 1. IOMMU 활성화 (/etc/default/grub)</span>
 </span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="c1"># Intel</span>
@@ -2667,34 +2691,44 @@ KVM 환경에서 최적화된 반가상화(Paravirtualization) I/O 드라이버�
 <hr />
 <h2 id="part-6">Part 6: 프로덕션 성능 튜닝<a class="headerlink" href="#part-6" title="Permanent link">&para;</a></h2>
 <h3 id="61">6.1 종합 튜닝 체크리스트<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
-<p><strong>✅ CPU:</strong>
-- [ ] CPU 피닝 설정 (vCPU → Physical CPU)
-- [ ] Emulator 및 I/O 스레드 전용 CPU 할당
-- [ ] NUMA 경계 교차 방지
-- [ ] CPU 모델: host-passthrough (성능) 또는 host-model (마이그레이션)
-- [ ] 오버커밋 비율: 프로덕션 1:1 ~ 2:1</p>
-<p><strong>✅ Memory:</strong>
-- [ ] Huge Pages 활성화 (2MB 또는 1GB)
-- [ ] 메모리 잠금 (locked) - swap 방지
-- [ ] NUMA 메모리 정렬 (strict mode)
-- [ ] Memory Ballooning 비활성화 (성능 중시)
-- [ ] KSM 비활성화 (CPU 오버헤드 회피)</p>
-<p><strong>✅ Disk I/O:</strong>
-- [ ] virtio-scsi 사용 (DB, I/O 집약적)
-- [ ] Cache mode: none + io=native
-- [ ] discard=unmap (SSD TRIM 지원)
-- [ ] I/O 스레드 활성화 및 피닝
-- [ ] 디스크 I/O 스케줄러: none (NVMe) 또는 mq-deadline (SSD/HDD)</p>
-<p><strong>✅ Network:</strong>
-- [ ] virtio-net + vhost-net
-- [ ] Multi-queue 활성화 (vCPU 수만큼)
-- [ ] Jumbo Frames (MTU 9000)
-- [ ] TSO/GSO/GRO 활성화
-- [ ] NIC와 vCPU를 동일 NUMA 노드에 배치</p>
-<p><strong>✅ 기타:</strong>
-- [ ] CPU 절전 기능 비활성화 (C-states, P-states)
-- [ ] Transparent Huge Pages (THP) 비활성화
-- [ ] SELinux/AppArmor 성능 영향 확인</p>
+<p><strong>✅ CPU:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CPU 피닝 설정 (vCPU → Physical CPU)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Emulator 및 I/O 스레드 전용 CPU 할당</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> NUMA 경계 교차 방지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CPU 모델: host-passthrough (성능) 또는 host-model (마이그레이션)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 오버커밋 비율: 프로덕션 1:1 ~ 2:1</li>
+</ul>
+<p><strong>✅ Memory:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Huge Pages 활성화 (2MB 또는 1GB)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 메모리 잠금 (locked) - swap 방지</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> NUMA 메모리 정렬 (strict mode)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Memory Ballooning 비활성화 (성능 중시)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> KSM 비활성화 (CPU 오버헤드 회피)</li>
+</ul>
+<p><strong>✅ Disk I/O:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> virtio-scsi 사용 (DB, I/O 집약적)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cache mode: none + io=native</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> discard=unmap (SSD TRIM 지원)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> I/O 스레드 활성화 및 피닝</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 디스크 I/O 스케줄러: none (NVMe) 또는 mq-deadline (SSD/HDD)</li>
+</ul>
+<p><strong>✅ Network:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> virtio-net + vhost-net</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Multi-queue 활성화 (vCPU 수만큼)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Jumbo Frames (MTU 9000)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> TSO/GSO/GRO 활성화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> NIC와 vCPU를 동일 NUMA 노드에 배치</li>
+</ul>
+<p><strong>✅ 기타:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> CPU 절전 기능 비활성화 (C-states, P-states)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Transparent Huge Pages (THP) 비활성화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SELinux/AppArmor 성능 영향 확인</li>
+</ul>
 <h3 id="62">6.2 호스트 커널 튜닝<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
 <p><strong>CPU 절전 비활성화:</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="c1"># /etc/default/grub</span>

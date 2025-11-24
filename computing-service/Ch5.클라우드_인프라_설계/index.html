@@ -2339,11 +2339,13 @@
 </span><span id="__span-18-9"><a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">  </span>container_memory_working_set_bytes<span class="o">{</span><span class="nv">pod</span><span class="o">=</span><span class="s2">&quot;my-app&quot;</span><span class="o">}[</span>7d<span class="o">]</span>
 </span><span id="__span-18-10"><a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="o">)</span><span class="w"> </span>/<span class="w"> </span>on<span class="o">(</span>pod<span class="o">)</span><span class="w"> </span>container_spec_memory_limit_bytes
 </span></code></pre></div></p>
-<p><strong>권장사항:</strong>
-- CPU 사용률 &lt; 20%: 인스턴스 다운사이징
-- CPU 사용률 &gt; 80%: 인스턴스 업사이징 또는 스케일 아웃
-- 메모리 사용률 &lt; 50%: 메모리 줄이기
-- 메모리 사용률 &gt; 90%: OOM 위험, 증설 필요</p>
+<p><strong>권장사항:</strong></p>
+<ul>
+<li>CPU 사용률 &lt; 20%: 인스턴스 다운사이징</li>
+<li>CPU 사용률 &gt; 80%: 인스턴스 업사이징 또는 스케일 아웃</li>
+<li>메모리 사용률 &lt; 50%: 메모리 줄이기</li>
+<li>메모리 사용률 &gt; 90%: OOM 위험, 증설 필요</li>
+</ul>
 <h3 id="52-spot-instances">5.2 Spot Instances 활용<a class="headerlink" href="#52-spot-instances" title="Permanent link">&para;</a></h3>
 <p><strong>Kubernetes에서 Spot Instance 사용:</strong>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>

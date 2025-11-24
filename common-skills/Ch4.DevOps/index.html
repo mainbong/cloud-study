@@ -1924,16 +1924,20 @@ jobs:
 </span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>argocd<span class="w"> </span>app<span class="w"> </span>sync<span class="w"> </span>my-app
 </span></code></pre></div>
 <h4 id="argocd-vs-flux-cd-2025">ArgoCD vs Flux CD (2025 비교)<a class="headerlink" href="#argocd-vs-flux-cd-2025" title="Permanent link">&para;</a></h4>
-<p><strong>ArgoCD:</strong>
-- ✅ 풍부한 웹 UI
-- ✅ Multi-tenancy 지원
-- ✅ Multi-cluster 관리
-- ✅ 직관적인 사용자 경험</p>
-<p><strong>Flux CD:</strong>
-- ✅ 경량, CLI 중심
-- ✅ Kubernetes-native (CRD 기반)
-- ✅ 리소스 효율적
-- ✅ GitOps Toolkit으로 확장 가능</p>
+<p><strong>ArgoCD:</strong></p>
+<ul>
+<li>✅ 풍부한 웹 UI</li>
+<li>✅ Multi-tenancy 지원</li>
+<li>✅ Multi-cluster 관리</li>
+<li>✅ 직관적인 사용자 경험</li>
+</ul>
+<p><strong>Flux CD:</strong></p>
+<ul>
+<li>✅ 경량, CLI 중심</li>
+<li>✅ Kubernetes-native (CRD 기반)</li>
+<li>✅ 리소스 효율적</li>
+<li>✅ GitOps Toolkit으로 확장 가능</li>
+</ul>
 <p><strong>2025년 기준:</strong> 65% 이상의 기업이 GitOps를 도입하고 있으며, ArgoCD와 Flux 모두 널리 사용됩니다.</p>
 <h3 id="3-flux-cd">3. Flux CD<a class="headerlink" href="#3-flux-cd" title="Permanent link">&para;</a></h3>
 <h4 id="_6">설치<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
@@ -1988,11 +1992,13 @@ jobs:
 <h2 id="part-4-prometheus-grafana">📊 Part 4: 모니터링 (Prometheus &amp; Grafana)<a class="headerlink" href="#part-4-prometheus-grafana" title="Permanent link">&para;</a></h2>
 <h3 id="1-prometheus">1. Prometheus<a class="headerlink" href="#1-prometheus" title="Permanent link">&para;</a></h3>
 <h4 id="prometheus">Prometheus 아키텍처<a class="headerlink" href="#prometheus" title="Permanent link">&para;</a></h4>
-<p><strong>핵심 컴포넌트:</strong>
-- <strong>Prometheus Server</strong>: 메트릭 수집 및 저장
-- <strong>Exporters</strong>: 메트릭 노출 (Node Exporter, MySQL Exporter 등)
-- <strong>Alertmanager</strong>: 알림 관리
-- <strong>Pushgateway</strong>: 단기 작업 메트릭 수집</p>
+<p><strong>핵심 컴포넌트:</strong></p>
+<ul>
+<li><strong>Prometheus Server</strong>: 메트릭 수집 및 저장</li>
+<li><strong>Exporters</strong>: 메트릭 노출 (Node Exporter, MySQL Exporter 등)</li>
+<li><strong>Alertmanager</strong>: 알림 관리</li>
+<li><strong>Pushgateway</strong>: 단기 작업 메트릭 수집</li>
+</ul>
 <h4 id="helm">설치 (Helm)<a class="headerlink" href="#helm" title="Permanent link">&para;</a></h4>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1"># Prometheus Stack 설치 (Prometheus + Grafana + Alertmanager)</span>
 </span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>helm<span class="w"> </span>repo<span class="w"> </span>add<span class="w"> </span>prometheus-community<span class="w"> </span>https://prometheus-community.github.io/helm-charts

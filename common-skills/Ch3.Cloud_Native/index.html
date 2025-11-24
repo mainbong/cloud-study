@@ -1683,11 +1683,13 @@
 <h3 id="1-docker">1. Docker 기초<a class="headerlink" href="#1-docker" title="Permanent link">&para;</a></h3>
 <h4 id="docker">Docker란?<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h4>
 <p>Docker는 애플리케이션을 컨테이너로 패키징하고 실행하는 플랫폼입니다.</p>
-<p><strong>핵심 개념:</strong>
-- <strong>이미지 (Image)</strong>: 애플리케이션 실행에 필요한 모든 것을 포함하는 불변의 템플릿
-- <strong>컨테이너 (Container)</strong>: 이미지의 실행 인스턴스
-- <strong>Dockerfile</strong>: 이미지를 빌드하기 위한 명령어 스크립트
-- <strong>레지스트리 (Registry)</strong>: 이미지를 저장하고 공유하는 저장소 (예: Docker Hub)</p>
+<p><strong>핵심 개념:</strong></p>
+<ul>
+<li><strong>이미지 (Image)</strong>: 애플리케이션 실행에 필요한 모든 것을 포함하는 불변의 템플릿</li>
+<li><strong>컨테이너 (Container)</strong>: 이미지의 실행 인스턴스</li>
+<li><strong>Dockerfile</strong>: 이미지를 빌드하기 위한 명령어 스크립트</li>
+<li><strong>레지스트리 (Registry)</strong>: 이미지를 저장하고 공유하는 저장소 (예: Docker Hub)</li>
+</ul>
 <h4 id="docker_1">기본 Docker 명령어<a class="headerlink" href="#docker_1" title="Permanent link">&para;</a></h4>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># 이미지 관리</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>pull<span class="w"> </span>nginx:latest<span class="w">              </span><span class="c1"># 이미지 다운로드</span>
@@ -1939,15 +1941,19 @@
 <h2 id="part-2-kubernetes">☸️ Part 2: Kubernetes 기초<a class="headerlink" href="#part-2-kubernetes" title="Permanent link">&para;</a></h2>
 <h3 id="1-kubernetes">1. Kubernetes 아키텍처<a class="headerlink" href="#1-kubernetes" title="Permanent link">&para;</a></h3>
 <h4 id="_3">핵심 컴포넌트<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
-<p><strong>Control Plane (마스터 노드):</strong>
-- <strong>API Server</strong>: Kubernetes API의 진입점
-- <strong>etcd</strong>: 클러스터 상태를 저장하는 키-값 저장소
-- <strong>Scheduler</strong>: Pod를 노드에 할당
-- <strong>Controller Manager</strong>: 컨트롤러 실행 (Deployment, ReplicaSet 등)</p>
-<p><strong>Worker Node:</strong>
-- <strong>Kubelet</strong>: 각 노드에서 실행되는 에이전트
-- <strong>Container Runtime</strong>: 컨테이너 실행 (Docker, containerd 등)
-- <strong>Kube-proxy</strong>: 네트워크 프록시</p>
+<p><strong>Control Plane (마스터 노드):</strong></p>
+<ul>
+<li><strong>API Server</strong>: Kubernetes API의 진입점</li>
+<li><strong>etcd</strong>: 클러스터 상태를 저장하는 키-값 저장소</li>
+<li><strong>Scheduler</strong>: Pod를 노드에 할당</li>
+<li><strong>Controller Manager</strong>: 컨트롤러 실행 (Deployment, ReplicaSet 등)</li>
+</ul>
+<p><strong>Worker Node:</strong></p>
+<ul>
+<li><strong>Kubelet</strong>: 각 노드에서 실행되는 에이전트</li>
+<li><strong>Container Runtime</strong>: 컨테이너 실행 (Docker, containerd 등)</li>
+<li><strong>Kube-proxy</strong>: 네트워크 프록시</li>
+</ul>
 <hr />
 <h3 id="2-kubernetes">2. Kubernetes 기본 리소스<a class="headerlink" href="#2-kubernetes" title="Permanent link">&para;</a></h3>
 <h4 id="pod-">Pod - 가장 작은 배포 단위<a class="headerlink" href="#pod-" title="Permanent link">&para;</a></h4>
@@ -2060,10 +2066,12 @@
 </span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w">          </span><span class="c1"># Service 포트</span>
 </span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span><span class="w">    </span><span class="c1"># 컨테이너 포트</span>
 </span></code></pre></div>
-<p><strong>Service 타입:</strong>
-- <strong>ClusterIP</strong> (기본): 클러스터 내부에서만 접근
-- <strong>NodePort</strong>: 각 노드의 특정 포트로 노출
-- <strong>LoadBalancer</strong>: 클라우드 로드 밸런서 생성</p>
+<p><strong>Service 타입:</strong></p>
+<ul>
+<li><strong>ClusterIP</strong> (기본): 클러스터 내부에서만 접근</li>
+<li><strong>NodePort</strong>: 각 노드의 특정 포트로 노출</li>
+<li><strong>LoadBalancer</strong>: 클라우드 로드 밸런서 생성</li>
+</ul>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1"># Service 생성</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>service.yaml
 </span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>

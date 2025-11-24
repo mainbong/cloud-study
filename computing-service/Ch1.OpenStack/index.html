@@ -2071,16 +2071,20 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 </span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                                                   │   (KVM/QEMU)   │
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                                                   └────────────────┘
 </span></code></pre></div></p>
-<p><strong>주요 통신 메커니즘:</strong>
-- <strong>REST API</strong>: 외부 클라이언트와 OpenStack 서비스 간
-- <strong>RPC (oslo.messaging)</strong>: 서비스 내부 컴포넌트 간 (RabbitMQ/AMQP)
-- <strong>Database</strong>: 상태 저장 (MariaDB/MySQL)</p>
+<p><strong>주요 통신 메커니즘:</strong></p>
+<ul>
+<li><strong>REST API</strong>: 외부 클라이언트와 OpenStack 서비스 간</li>
+<li><strong>RPC (oslo.messaging)</strong>: 서비스 내부 컴포넌트 간 (RabbitMQ/AMQP)</li>
+<li><strong>Database</strong>: 상태 저장 (MariaDB/MySQL)</li>
+</ul>
 <h3 id="13-keystone-identity-service">1.3 Keystone - Identity Service<a class="headerlink" href="#13-keystone-identity-service" title="Permanent link">&para;</a></h3>
-<p><strong>Keystone의 역할:</strong>
-- 사용자 인증 (Authentication)
-- 서비스 카탈로그 관리
-- 토큰 발급 및 검증
-- 권한 관리 (RBAC)</p>
+<p><strong>Keystone의 역할:</strong></p>
+<ul>
+<li>사용자 인증 (Authentication)</li>
+<li>서비스 카탈로그 관리</li>
+<li>토큰 발급 및 검증</li>
+<li>권한 관리 (RBAC)</li>
+</ul>
 <p><strong>인증 플로우:</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># Python으로 Keystone 인증</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">keystoneauth1</span><span class="w"> </span><span class="kn">import</span> <span class="n">session</span>
@@ -2234,12 +2238,14 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 </span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>                  <span class="n">ServerGroupAntiAffinityFilter</span><span class="p">,</span>
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>                  <span class="n">ServerGroupAffinityFilter</span>
 </span></code></pre></div></p>
-<p><strong>주요 필터:</strong>
-- <strong>AvailabilityZoneFilter</strong>: 가용 영역 기반 필터링
-- <strong>ComputeFilter</strong>: 활성 상태의 컴퓨트 노드만 선택
-- <strong>ComputeCapabilitiesFilter</strong>: CPU, RAM, Disk 요구사항 충족 확인
-- <strong>ImagePropertiesFilter</strong>: 이미지 속성과 호스트 capabilities 매칭
-- <strong>ServerGroupAntiAffinityFilter</strong>: 인스턴스를 서로 다른 호스트에 배치</p>
+<p><strong>주요 필터:</strong></p>
+<ul>
+<li><strong>AvailabilityZoneFilter</strong>: 가용 영역 기반 필터링</li>
+<li><strong>ComputeFilter</strong>: 활성 상태의 컴퓨트 노드만 선택</li>
+<li><strong>ComputeCapabilitiesFilter</strong>: CPU, RAM, Disk 요구사항 충족 확인</li>
+<li><strong>ImagePropertiesFilter</strong>: 이미지 속성과 호스트 capabilities 매칭</li>
+<li><strong>ServerGroupAntiAffinityFilter</strong>: 인스턴스를 서로 다른 호스트에 배치</li>
+</ul>
 <p><strong>Weighting (가중치 계산):</strong>
 <div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">[</span><span class="n">filter_scheduler</span><span class="p">]</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">weight_classes</span> <span class="o">=</span> <span class="n">nova</span><span class="o">.</span><span class="n">scheduler</span><span class="o">.</span><span class="n">weights</span><span class="o">.</span><span class="n">all_weighers</span>
@@ -2417,10 +2423,12 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 <hr />
 <h2 id="part-4-glance-">Part 4: Glance - 이미지 서비스<a class="headerlink" href="#part-4-glance-" title="Permanent link">&para;</a></h2>
 <h3 id="41-glance">4.1 Glance 아키텍처<a class="headerlink" href="#41-glance" title="Permanent link">&para;</a></h3>
-<p><strong>Glance 컴포넌트:</strong>
-- <strong>glance-api</strong>: REST API 제공, 이미지 메타데이터 관리
-- <strong>glance-registry</strong> (deprecated): 메타데이터 저장 (2025.1에서 제거됨)
-- <strong>Backend Store</strong>: 실제 이미지 데이터 저장 (Swift, Ceph, Filesystem, Cinder)</p>
+<p><strong>Glance 컴포넌트:</strong></p>
+<ul>
+<li><strong>glance-api</strong>: REST API 제공, 이미지 메타데이터 관리</li>
+<li><strong>glance-registry</strong> (deprecated): 메타데이터 저장 (2025.1에서 제거됨)</li>
+<li><strong>Backend Store</strong>: 실제 이미지 데이터 저장 (Swift, Ceph, Filesystem, Cinder)</li>
+</ul>
 <p><strong>이미지 저장소 옵션:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>┌─────────────────────────────────────────┐
 </span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>│          glance-api                      │
@@ -2497,9 +2505,11 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 </span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="na">cinder_store_password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">secret</span>
 </span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="na">cinder_store_project_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">service</span>
 </span></code></pre></div></p>
-<p><strong>성능 향상:</strong>
-- 이미지 캐싱 활성화 시 볼륨 생성 시간 <strong>50-70% 단축</strong>
-- Glance Image Cache for Cinder는 Pure Storage, NetApp 등 엔터프라이즈 스토리지에서 권장</p>
+<p><strong>성능 향상:</strong></p>
+<ul>
+<li>이미지 캐싱 활성화 시 볼륨 생성 시간 <strong>50-70% 단축</strong></li>
+<li>Glance Image Cache for Cinder는 Pure Storage, NetApp 등 엔터프라이즈 스토리지에서 권장</li>
+</ul>
 <hr />
 <h2 id="part-5-ironic-">Part 5: Ironic - 베어메탈 프로비저닝<a class="headerlink" href="#part-5-ironic-" title="Permanent link">&para;</a></h2>
 <h3 id="51-ironic">5.1 Ironic 아키텍처<a class="headerlink" href="#51-ironic" title="Permanent link">&para;</a></h3>
@@ -2634,29 +2644,35 @@ Ironic은 가상 머신 대신 **물리 서버(베어메탈)**를 프로비저�
 <blockquote>
 <p>Kolla's mission is to provide production-ready containers and deployment tools for operating OpenStack clouds.</p>
 </blockquote>
-<p><strong>핵심 특징:</strong>
-- <strong>컨테이너 기반</strong>: 모든 OpenStack 서비스를 Docker/Podman 컨테이너로 실행
-- <strong>Ansible 자동화</strong>: Playbook을 통한 선언적 배포
-- <strong>HA 지원</strong>: HAProxy, Keepalived를 통한 고가용성
-- <strong>롤링 업그레이드</strong>: 무중단 업그레이드 지원</p>
+<p><strong>핵심 특징:</strong></p>
+<ul>
+<li><strong>컨테이너 기반</strong>: 모든 OpenStack 서비스를 Docker/Podman 컨테이너로 실행</li>
+<li><strong>Ansible 자동화</strong>: Playbook을 통한 선언적 배포</li>
+<li><strong>HA 지원</strong>: HAProxy, Keepalived를 통한 고가용성</li>
+<li><strong>롤링 업그레이드</strong>: 무중단 업그레이드 지원</li>
+</ul>
 <h3 id="62">6.2 하드웨어 요구사항<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
-<p><strong>최소 요구사항 (개발/테스트):</strong>
-- <strong>네트워크 인터페이스</strong>: 2개 (Management, External)
-- <strong>메모리</strong>: 8GB
-- <strong>디스크</strong>: 40GB</p>
-<p><strong>프로덕션 권장사항:</strong>
-- <strong>Controller Node</strong>: 3대 (HA)
-  - CPU: 8 cores
-  - RAM: 64GB
-  - Disk: 500GB SSD (OS + 컨테이너)
-- <strong>Compute Node</strong>: N대
-  - CPU: 32+ cores
-  - RAM: 128GB+
-  - Disk: 1TB+ (인스턴스 ephemeral storage)
-- <strong>Storage Node</strong>: 3+ 대 (Ceph)
-  - CPU: 8 cores
-  - RAM: 64GB
-  - Disk: 10TB+ HDD (데이터), 100GB SSD (journal)</p>
+<p><strong>최소 요구사항 (개발/테스트):</strong></p>
+<ul>
+<li><strong>네트워크 인터페이스</strong>: 2개 (Management, External)</li>
+<li><strong>메모리</strong>: 8GB</li>
+<li><strong>디스크</strong>: 40GB</li>
+</ul>
+<p><strong>프로덕션 권장사항:</strong></p>
+<ul>
+<li><strong>Controller Node</strong>: 3대 (HA)</li>
+<li>CPU: 8 cores</li>
+<li>RAM: 64GB</li>
+<li>Disk: 500GB SSD (OS + 컨테이너)</li>
+<li><strong>Compute Node</strong>: N대</li>
+<li>CPU: 32+ cores</li>
+<li>RAM: 128GB+</li>
+<li>Disk: 1TB+ (인스턴스 ephemeral storage)</li>
+<li><strong>Storage Node</strong>: 3+ 대 (Ceph)</li>
+<li>CPU: 8 cores</li>
+<li>RAM: 64GB</li>
+<li>Disk: 10TB+ HDD (데이터), 100GB SSD (journal)</li>
+</ul>
 <h3 id="63-kolla-ansible">6.3 Kolla-Ansible 설치 및 설정<a class="headerlink" href="#63-kolla-ansible" title="Permanent link">&para;</a></h3>
 <p><strong>Step 1: 환경 준비</strong>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="c1"># 1. 의존성 설치 (배포 서버)</span>

@@ -1673,11 +1673,13 @@
 <h3 id="1-control-plane">1. Control Plane 컴포넌트<a class="headerlink" href="#1-control-plane" title="Permanent link">&para;</a></h3>
 <h4 id="api-server">API Server<a class="headerlink" href="#api-server" title="Permanent link">&para;</a></h4>
 <p>모든 Kubernetes 작업의 진입점입니다.</p>
-<p><strong>주요 기능:</strong>
-- RESTful API 제공
-- 인증/인가 (Authentication/Authorization)
-- Admission Control
-- etcd와 통신</p>
+<p><strong>주요 기능:</strong></p>
+<ul>
+<li>RESTful API 제공</li>
+<li>인증/인가 (Authentication/Authorization)</li>
+<li>Admission Control</li>
+<li>etcd와 통신</li>
+</ul>
 <p><strong>API Request 흐름:</strong>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Client (kubectl)
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  ↓
@@ -1753,32 +1755,40 @@
 </span></code></pre></div></p>
 <h4 id="controller-manager">Controller Manager<a class="headerlink" href="#controller-manager" title="Permanent link">&para;</a></h4>
 <p>다양한 Controller를 실행하는 데몬입니다.</p>
-<p><strong>주요 Controller:</strong>
-- <strong>Deployment Controller</strong>: Deployment 관리
-- <strong>ReplicaSet Controller</strong>: Pod 복제본 관리
-- <strong>Node Controller</strong>: Node 상태 모니터링
-- <strong>Service Controller</strong>: LoadBalancer Service 관리</p>
+<p><strong>주요 Controller:</strong></p>
+<ul>
+<li><strong>Deployment Controller</strong>: Deployment 관리</li>
+<li><strong>ReplicaSet Controller</strong>: Pod 복제본 관리</li>
+<li><strong>Node Controller</strong>: Node 상태 모니터링</li>
+<li><strong>Service Controller</strong>: LoadBalancer Service 관리</li>
+</ul>
 <hr />
 <h3 id="2-node">2. Node 컴포넌트<a class="headerlink" href="#2-node" title="Permanent link">&para;</a></h3>
 <h4 id="kubelet">Kubelet<a class="headerlink" href="#kubelet" title="Permanent link">&para;</a></h4>
 <p>각 Node에서 실행되며, Pod의 생명주기를 관리합니다.</p>
-<p><strong>주요 기능:</strong>
-- Pod Spec 수신 및 실행
-- Container 상태 모니터링
-- Volume 마운트
-- Health Check 수행</p>
+<p><strong>주요 기능:</strong></p>
+<ul>
+<li>Pod Spec 수신 및 실행</li>
+<li>Container 상태 모니터링</li>
+<li>Volume 마운트</li>
+<li>Health Check 수행</li>
+</ul>
 <h4 id="container-runtime">Container Runtime<a class="headerlink" href="#container-runtime" title="Permanent link">&para;</a></h4>
 <p>실제 컨테이너를 실행하는 엔진입니다.</p>
-<p><strong>지원되는 Runtime:</strong>
-- containerd (권장)
-- CRI-O
-- Docker (deprecated, dockershim 제거됨)</p>
+<p><strong>지원되는 Runtime:</strong></p>
+<ul>
+<li>containerd (권장)</li>
+<li>CRI-O</li>
+<li>Docker (deprecated, dockershim 제거됨)</li>
+</ul>
 <h4 id="kube-proxy">Kube-proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">&para;</a></h4>
 <p>각 Node에서 네트워크 규칙을 관리합니다.</p>
-<p><strong>모드:</strong>
-- <strong>iptables</strong>: 기본값, iptables 규칙 사용
-- <strong>IPVS</strong>: 고성능, 대규모 클러스터에 적합
-- <strong>userspace</strong>: 레거시</p>
+<p><strong>모드:</strong></p>
+<ul>
+<li><strong>iptables</strong>: 기본값, iptables 규칙 사용</li>
+<li><strong>IPVS</strong>: 고성능, 대규모 클러스터에 적합</li>
+<li><strong>userspace</strong>: 레거시</li>
+</ul>
 <hr />
 <h2 id="part-2-custom-resource-definition-crd">🔧 Part 2: Custom Resource Definition (CRD)<a class="headerlink" href="#part-2-custom-resource-definition-crd" title="Permanent link">&para;</a></h2>
 <h3 id="1-crd">1. CRD란?<a class="headerlink" href="#1-crd" title="Permanent link">&para;</a></h3>
@@ -1933,11 +1943,13 @@
 </span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>   └──────────────────┘
 </span></code></pre></div></p>
 <h3 id="2-controller">2. Controller 구조<a class="headerlink" href="#2-controller" title="Permanent link">&para;</a></h3>
-<p><strong>핵심 컴포넌트:</strong>
-- <strong>Informer</strong>: Kubernetes API를 Watch하고 캐시 유지
-- <strong>Lister</strong>: 캐시에서 리소스 조회
-- <strong>Workqueue</strong>: 처리할 작업 큐
-- <strong>EventHandler</strong>: 리소스 변경 시 호출되는 함수</p>
+<p><strong>핵심 컴포넌트:</strong></p>
+<ul>
+<li><strong>Informer</strong>: Kubernetes API를 Watch하고 캐시 유지</li>
+<li><strong>Lister</strong>: 캐시에서 리소스 조회</li>
+<li><strong>Workqueue</strong>: 처리할 작업 큐</li>
+<li><strong>EventHandler</strong>: 리소스 변경 시 호출되는 함수</li>
+</ul>
 <div class="language-go highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1">// controller.go</span>
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
@@ -2117,20 +2129,24 @@
 </span><span id="__span-13-15"><a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>│   Workqueue     │
 </span><span id="__span-13-16"><a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>└─────────────────┘
 </span></code></pre></div></p>
-<p><strong>Workqueue의 특징 (2025 Best Practice):</strong>
-- <strong>Deduplication</strong>: 같은 키를 중복 처리하지 않음
-- <strong>Rate Limiting</strong>: 실패 시 백오프 지연
-- <strong>Retry</strong>: 실패한 항목 재시도
-- <strong>Concurrency</strong>: 여러 Worker가 병렬 처리</p>
+<p><strong>Workqueue의 특징 (2025 Best Practice):</strong></p>
+<ul>
+<li><strong>Deduplication</strong>: 같은 키를 중복 처리하지 않음</li>
+<li><strong>Rate Limiting</strong>: 실패 시 백오프 지연</li>
+<li><strong>Retry</strong>: 실패한 항목 재시도</li>
+<li><strong>Concurrency</strong>: 여러 Worker가 병렬 처리</li>
+</ul>
 <hr />
 <h2 id="part-4-kubernetes-operator">🤖 Part 4: Kubernetes Operator<a class="headerlink" href="#part-4-kubernetes-operator" title="Permanent link">&para;</a></h2>
 <h3 id="1-operator">1. Operator 패턴<a class="headerlink" href="#1-operator" title="Permanent link">&para;</a></h3>
 <p>Operator = CRD + Custom Controller</p>
-<p><strong>Operator의 역할:</strong>
-- 애플리케이션 배포
-- 업그레이드 자동화
-- 백업 및 복구
-- 스케일링</p>
+<p><strong>Operator의 역할:</strong></p>
+<ul>
+<li>애플리케이션 배포</li>
+<li>업그레이드 자동화</li>
+<li>백업 및 복구</li>
+<li>스케일링</li>
+</ul>
 <h3 id="2-operator-sdk-operator">2. Operator SDK로 Operator 개발<a class="headerlink" href="#2-operator-sdk-operator" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Operator SDK 설치</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>brew<span class="w"> </span>install<span class="w"> </span>operator-sdk
