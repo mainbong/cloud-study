@@ -1,0 +1,22 @@
+[project]
+name = "cloud-study-docs"
+version = "1.0.0"
+description = "Cloud Infrastructure 학습 가이드 문서"
+authors = [
+    {name = "Cloud Study Team"}
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mkdocs-material>=9.7.0",
+    "mkdocs-git-revision-date-localized-plugin>=1.2.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = []
+
+[tool.hatch.build.targets.wheel]
+packages = ["docs"]

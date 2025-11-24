@@ -26,13 +26,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.x
-          cache: 'pip'
+          python-version-file: '.python-version'
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          enable-cache: true
 
       - name: Install dependencies
-        run: |
-          pip install mkdocs-material
-          pip install mkdocs-git-revision-date-localized-plugin
+        run: uv sync
 
       - name: Build and Deploy to GitHub Pages
-        run: mkdocs gh-deploy --force
+        run: uv run mkdocs gh-deploy --force
