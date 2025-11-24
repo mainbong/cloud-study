@@ -19,6 +19,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - Kubernetes Controller와 Operator에 대한 실무적 이해
 
 **학습 내용:**
+
 - [ ] Kubernetes 아키텍처 심화
   - Control Plane 컴포넌트 이해
   - etcd 운영 및 백업
@@ -55,6 +56,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - OpenStack Ironic(Baremetal) 환경에서의 운영 및 개발
 
 **학습 내용:**
+
 - [ ] ClusterAPI 기초
   - ClusterAPI 아키텍처 이해
   - Cluster, Machine, MachineDeployment 리소스
@@ -88,6 +90,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - 선언적 인프라 관리
 
 **학습 내용:**
+
 - [ ] Terraform
   - Terraform 기초 문법
   - Provider 이해 및 사용
@@ -123,6 +126,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - 컨테이너 기반 마이크로서비스 CI/CD 파이프라인 구축
 
 **학습 내용:**
+
 - [ ] Helm
   - Helm Chart 작성
   - Chart 템플릿 문법
@@ -165,6 +169,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - 서비스 장애 감지 및 성능 최적화를 위한 모니터링 환경 구축
 
 **학습 내용:**
+
 - [ ] 메트릭 수집
   - Prometheus 설정 및 운영
   - Exporter 개발
@@ -196,6 +201,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - Linux OS 이미지 디버깅 및 패키징 능력
 
 **학습 내용:**
+
 - [ ] OS 이미지 구조 이해
   - 부팅 프로세스
   - Init 시스템 (systemd)
@@ -223,6 +229,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 - CNCF 오픈소스 프로젝트에 코드 기여 경험
 
 **학습 내용:**
+
 - [ ] 오픈소스 기여 프로세스 이해
   - Issue 생성 및 해결
   - Pull Request 작성

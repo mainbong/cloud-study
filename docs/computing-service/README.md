@@ -19,6 +19,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - 퍼블릭/프라이빗 클라우드 서비스 개발/운영
 
 **학습 내용:**
+
 - [ ] OpenStack 기초
   - OpenStack 아키텍처 이해
   - 주요 서비스 컴포넌트
@@ -61,6 +62,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - 가상화 관련 이슈 발굴 및 해결
 
 **학습 내용:**
+
 - [ ] 가상화 기초
   - 가상화 유형 (Full Virtualization, Para-virtualization)
   - 하이퍼바이저 유형 (Type 1, Type 2)
@@ -98,6 +100,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - 가상화 관련 이슈 발굴 및 연구/개발
 
 **학습 내용:**
+
 - [ ] 스케줄링 알고리즘
   - CPU 스케줄링 (CFS, Real-time)
   - I/O 스케줄링
@@ -132,6 +135,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - 모든 마이크로서비스를 컨테이너화하여 운영
 
 **학습 내용:**
+
 - [ ] Kubernetes 기반 서비스 개발
   - Kubernetes Operator 패턴
   - Custom Resource Definition (CRD)
@@ -161,6 +165,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - 서비스 확장성을 고려한 Region/Availability Zone/Cell/Rack 단위 인프라 설계
 
 **학습 내용:**
+
 - [ ] 멀티 레벨 아키텍처
   - Region 설계
   - Availability Zone (AZ) 설계
@@ -195,6 +200,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - Kubernetes Operator(Controller) 관련 개발/운영
 
 **학습 내용:**
+
 - [ ] Kubernetes Controller 패턴
   - Controller 아키텍처
   - Informer 및 Workqueue
@@ -229,6 +235,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - Cloud network 혹은 Kubernetes CNI 기술에 대한 깊은 이해
 
 **학습 내용:**
+
 - [ ] Kubernetes 네트워킹
   - Pod 네트워킹
   - Service 네트워킹
@@ -263,6 +270,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - AWS, GCP, MS Azure 등 글로벌 CSP 활용 경험
 
 **학습 내용:**
+
 - [ ] AWS
   - EC2, EBS, AMI
   - Auto Scaling
@@ -285,6 +293,7 @@ KakaoCloud의 핵심인 IaaS 컴퓨팅 서비스(Beyond Computing Service)를 �
 - CNCF 오픈소스 코드 기여 경험
 
 **학습 내용:**
+
 - [ ] 오픈소스 기여 프로세스
 - [ ] 주요 CNCF 프로젝트 탐색
   - Kubernetes

@@ -18,6 +18,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - 안정적이고 확장 가능한 시스템 설계 능력
 
 **학습 내용:**
+
 - [ ] 네트워크 프로토콜 심화
   - TCP/IP 스택 심화 이해
   - BGP, OSPF 등 라우팅 프로토콜
@@ -50,6 +51,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - RESTful 또는 gRPC 아키텍처 이해
 
 **학습 내용:**
+
 - [ ] RESTful API 설계
   - REST 원칙 이해
   - 리소스 모델링
@@ -85,6 +87,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - 퍼블릭 클라우드 환경에서의 네트워크 설계 및 운영
 
 **학습 내용:**
+
 - [ ] OpenStack 기초
   - OpenStack 아키텍처 이해
   - 주요 컴포넌트 (Nova, Neutron, Cinder 등)
@@ -120,6 +123,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - 복잡한 네트워크 환경에서의 문제 해결 능력
 
 **학습 내용:**
+
 - [ ] NFV (Network Functions Virtualization)
   - NFV 아키텍처
   - VNF (Virtual Network Function) 개발
@@ -150,6 +154,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - 고가용성과 확장성을 고려한 안정적인 통합 서비스 구축
 
 **학습 내용:**
+
 - [ ] 방화벽 (Firewall) 연동
   - 방화벽 API 이해
   - 정책 관리 자동화
@@ -184,6 +189,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - Event-driven 아키텍처 기반 마이크로서비스 설계 및 개발
 
 **학습 내용:**
+
 - [ ] 이벤트 기반 아키텍처 패턴
   - Event Sourcing
   - CQRS (Command Query Responsibility Segregation)
@@ -214,6 +220,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - Kubernetes, GitOps 등 생산성 도구 활용
 
 **학습 내용:**
+
 - [ ] Kubernetes 네트워킹
   - CNI (Container Network Interface) 이해
   - Service, Ingress 리소스
@@ -244,6 +251,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 - 퍼블릭 클라우드 환경에서의 네트워크 설계 및 운영 실무 경험
 
 **학습 내용:**
+
 - [ ] AWS 네트워킹
   - VPC, Subnet, Route Table
   - Security Group, NACL
