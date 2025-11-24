@@ -19,6 +19,7 @@ Infrastructure as Code (IaC)는 인프라를 코드로 정의하고 버전 관�
 ### 1. Terraform 기초
 
 **Terraform의 핵심 개념:**
+
 - **선언적(Declarative)**: 원하는 최종 상태를 정의
 - **멱등성(Idempotent)**: 여러 번 실행해도 같은 결과
 - **Provider 기반**: AWS, Azure, GCP, Kubernetes 등 다양한 플랫폼 지원

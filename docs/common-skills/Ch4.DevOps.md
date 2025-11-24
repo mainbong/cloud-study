@@ -519,12 +519,14 @@ argocd app sync my-app
 #### ArgoCD vs Flux CD (2025 비교)
 
 **ArgoCD:**
+
 - ✅ 풍부한 웹 UI
 - ✅ Multi-tenancy 지원
 - ✅ Multi-cluster 관리
 - ✅ 직관적인 사용자 경험
 
 **Flux CD:**
+
 - ✅ 경량, CLI 중심
 - ✅ Kubernetes-native (CRD 기반)
 - ✅ 리소스 효율적
@@ -597,6 +599,7 @@ spec:
 #### Prometheus 아키텍처
 
 **핵심 컴포넌트:**
+
 - **Prometheus Server**: 메트릭 수집 및 저장
 - **Exporters**: 메트릭 노출 (Node Exporter, MySQL Exporter 등)
 - **Alertmanager**: 알림 관리

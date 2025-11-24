@@ -11,6 +11,7 @@
 ### 1. Linux 기반 환경 운영
 
 **학습 목표:**
+
 - 대규모 Linux 환경에서의 서비스 운영 능력
 - Linux 시스템 관리 및 트러블슈팅
 
@@ -29,9 +30,11 @@
   - 로그 분석 및 디버깅
 
 **실습 자료:**
+
 - `phase-1/linux-vm/` 디렉토리 참고
 
 **추가 학습 자료:**
+
 - [Linux System Administration Guide](https://www.tldp.org/LDP/sag/html/)
 - [Advanced Bash Scripting Guide](https://tldp.org/LDP/abs/html/)
 
@@ -40,6 +43,7 @@
 ### 2. 프로그래밍 언어 (Python/GO)
 
 **학습 목표:**
+
 - Python 또는 GO 언어를 활용한 API 백엔드 설계 및 개발 역량
 
 #### Python
@@ -57,10 +61,12 @@
   - 단위 테스트, 통합 테스트
 
 **실습 프로젝트:**
+
 - 간단한 REST API 서버 구현
 - Kubernetes API 클라이언트 개발
 
 **추가 학습 자료:**
+
 - [Python 공식 문서](https://docs.python.org/3/)
 - [FastAPI 공식 문서](https://fastapi.tiangolo.com/)
 
@@ -77,10 +83,12 @@
   - Go testing 패키지
 
 **실습 프로젝트:**
+
 - gRPC 서비스 구현
 - Kubernetes Controller 개발
 
 **추가 학습 자료:**
+
 - [Go 공식 문서](https://go.dev/doc/)
 - [Effective Go](https://go.dev/doc/effective_go)
 
@@ -89,6 +97,7 @@
 ### 3. Cloud-native 환경
 
 **학습 목표:**
+
 - Cloud-native 환경에서의 개발 및 운영 능력
 - 컨테이너 기반 마이크로서비스 아키텍처 이해
 
@@ -108,9 +117,11 @@
   - Health Check 및 Liveness/Readiness Probe
 
 **실습 자료:**
+
 - `phase-2/containers/` 디렉토리 참고
 
 **추가 학습 자료:**
+
 - [Kubernetes 공식 문서](https://kubernetes.io/docs/)
 - [CNCF Cloud Native Landscape](https://landscape.cncf.io/)
 
@@ -119,6 +130,7 @@
 ### 4. DevOps 도구 및 실무
 
 **학습 목표:**
+
 - DevOps 파이프라인 구축 및 운영 능력
 - CI/CD 도구 활용
 
@@ -138,10 +150,12 @@
   - ELK Stack 또는 Loki
 
 **실습 프로젝트:**
+
 - 간단한 CI/CD 파이프라인 구축
 - GitOps를 통한 애플리케이션 배포
 
 **추가 학습 자료:**
+
 - [GitOps 공식 문서](https://www.gitops.tech/)
 - [ArgoCD 공식 문서](https://argo-cd.readthedocs.io/)
 
@@ -150,6 +164,7 @@
 ### 5. 시스템 설계 및 아키텍처
 
 **학습 목표:**
+
 - 확장 가능하고 안정적인 시스템 설계 능력
 - 분산 시스템 이해
 
@@ -169,6 +184,7 @@
   - 서비스 메시 (Service Mesh)
 
 **추가 학습 자료:**
+
 - [Designing Data-Intensive Applications](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)
 - [Microservices Patterns](https://microservices.io/patterns/)
 

@@ -19,6 +19,7 @@ ClusterAPI는 Kubernetes 클러스터의 프로비저닝, 업그레이드, 운�
 ### 1. Cluster API 개념
 
 **Cluster API의 핵심 원칙:**
+
 - **Declarative API**: YAML로 클러스터 정의
 - **Kubernetes-style**: Kubernetes 패턴 사용
 - **Provider 기반**: 다양한 인프라 지원 (AWS, Azure, GCP, OpenStack 등)
@@ -234,6 +235,7 @@ kind delete cluster --name capi-management
 ### 1. Ironic 아키텍처
 
 **주요 컴포넌트:**
+
 - **ironic-api**: REST API 서버
 - **ironic-conductor**: 베어메탈 관리 엔진
 - **ironic-python-agent (IPA)**: 노드에서 실행되는 에이전트

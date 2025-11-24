@@ -151,11 +151,13 @@ Kernel Priority:    0 ~ 139
 Linux 커널 기능으로 프로세스 그룹의 리소스 사용을 제한, 격리, 측정합니다.
 
 **cgroups v1 (Legacy):**
+
 - 각 리소스 컨트롤러가 독립적인 계층 구조
 - 복잡한 설정 및 관리
 - CPU, memory, blkio, net_cls 등 분리
 
 **cgroups v2 (Unified Hierarchy - 권장):**
+
 - 단일 통합 계층 구조
 - 간소화된 인터페이스
 - 더 나은 리소스 격리
@@ -475,6 +477,7 @@ cpu_allocation_ratio = 4.0
 ### 4.2 메모리 오버커밋
 
 **메모리 오버커밋의 위험:**
+
 - OOM (Out Of Memory) Killer 발동 → 프로세스 강제 종료
 - SWAP 사용 → 심각한 성능 저하 (디스크 I/O)
 

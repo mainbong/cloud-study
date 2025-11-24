@@ -52,6 +52,7 @@ Operator = Custom Resource Definition (CRD) + Controller
 ```
 
 **Operator의 역할:**
+
 - **운영 지식의 자동화**: 사람이 수행하던 운영 작업을 코드로 구현
 - **선언적 관리**: 원하는 상태를 정의하면 Operator가 자동으로 조정
 - **지속적 조정**: 장애 복구, 업그레이드, 스케일링 자동화

@@ -1,0 +1,75 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+# 글로벌 통합 규칙
+
+## API 통합 규칙
+- 모든 API 호출은 에러 핸들링을 포함해야 함
+- API 키는 환경변수로 관리하고 절대 하드코딩하지 말 것
+- API 응답은 타입 안전성을 위해 인터페이스나 타입을 정의할 것
+- 모든 외부 명령어 실행은 타임아웃을 설정할 것 (기본 30초)
+- 무한 대기 상황 발생 시 즉시 중단하고 대안 방법을 제시할 것
+
+## 데이터베이스 통합
+- 데이터베이스 연결은 connection pooling을 사용할 것
+- 모든 쿼리는 prepared statement를 사용할 것
+- 트랜잭션은 적절한 롤백 처리를 포함할 것
+
+## 로깅 및 모니터링
+- 모든 외부 API 호출은 로깅해야 함
+- 에러 발생 시 적절한 로그 레벨로 기록할 것
+- 성능 메트릭을 수집할 수 있도록 타이밍 정보를 포함할 것
+
+## 타임아웃 및 에러 처리
+- Git clone, Docker pull 등 장시간 소요 작업은 타임아웃 설정 필수
+- 명령어 실행 시 `timeout` 명령어 사용 권장 (예: `timeout 30s git clone ...`)
+- 무한 대기 상황 감지 시 즉시 중단하고 사용자에게 상황 설명
+- 대안 방법 제시: API 직접 호출, 다른 인증 방식, 수동 다운로드 등
+- 네트워크 문제 의심 시 연결 상태 확인 후 재시도
+
+## 보안 규칙
+- 민감한 데이터는 암호화하여 저장할 것
+- API 인증은 OAuth 2.0 또는 JWT를 사용할 것
+- 입력 데이터는 반드시 검증하고 sanitize할 것
+
+## 코드 스타일
+- 함수명은 동사로 시작하고 명확한 의미를 가져야 함
+- 상수는 UPPER_CASE로 정의할 것
+- 주석은 한국어로 작성하되, 코드는 영어로 작성할 것
+
+# 내부 플랫폼 연동
+
+## LDAP
+- 사용자: sher.lock
+- 이메일: sher.lock@kakaoenterprise.com
+
+## Jira
+- 내 프로젝트: KDEVCELL
+- 검색: 사용자가 특정 프로젝트나 모든 프로젝트에서 조회를 원할 경우 내 프로젝트가 아닌 사용자 요청을 따를것
+- 이슈 링크: 지라 이슈는 항상 링크 형태로 출력할것
+
+## Confluence
+- 스페이스:
+  - 내 스페이스: educntdev (사용자가 속한 조직의 위키 스페이스)
+- 페이지:
+  - 설명: mcp tool로 조회되는 url 형식은 잘못되어있음. 아래 형식으로 변환할것
+  - URL 형식: https://wiki.daumkakao.com/pages/viewpage.action?pageId={pageId}
+- 검색:
+  - 문서 유형: page로 할것. 단, 사용자가 유형을 명시적으로 요청한 경우 요청을 따를것
+  - 링크: 페이지는 항상 링크와 함께 출력할것
+- 조직 정보
+  - 조직명 : AI지식서비스파트
+  - 조직페이지 : https://wiki.daumkakao.com/spaces/educntdev/pages/56910817/Home
+
+## Github (Enterprise)
+ - domain : https://github.kakaocorp.com
+ - organization : kdev
+ - ssh key 획득 명령어 : ssh-add --apple-use-keychain ~/.ssh/id_rsa_github
+
+## Github
+ - domain : https://github.com
+ - account : mainbong
+ - ssh key 획득 명령어 : ssh-add --apple-use-keychain ~/.ssh/github_ed25519

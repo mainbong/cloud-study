@@ -42,6 +42,7 @@
 Prometheus는 CNCF 졸업 프로젝트로, 시계열 데이터베이스 기반의 모니터링 시스템입니다.
 
 **핵심 컴포넌트:**
+
 - **Prometheus Server**: 메트릭 수집 및 저장 (TSDB)
 - **Exporters**: 다양한 시스템의 메트릭을 Prometheus 형식으로 변환
 - **Pushgateway**: 단기 작업의 메트릭 수집
@@ -75,6 +76,7 @@ helm install kube-prometheus prometheus-community/kube-prometheus-stack \
 ```
 
 **포함 컴포넌트:**
+
 - Prometheus Operator
 - Prometheus Server
 - Grafana
@@ -103,6 +105,7 @@ http_requests_total{
 ```
 
 **스토리지 효율화:**
+
 - 레이블은 간결하게 (3-5자)
 - 카디널리티가 높은 값은 레이블로 사용 금지
 - 환경별 retention 정책 분리
@@ -519,11 +522,13 @@ sum(rate(http_requests_total{status="500"}[5m]))
 OpenTelemetry는 2025년 현재 Observability의 표준으로 자리잡았습니다. CNCF의 두 번째로 활발한 프로젝트입니다.
 
 **핵심 컴포넌트:**
+
 - **SDK**: 애플리케이션 계측 (12+ 언어 지원)
 - **Collector**: 텔레메트리 데이터 수집/처리/전송
 - **Exporter**: 다양한 백엔드로 데이터 전송
 
 **데이터 타입:**
+
 - **Traces**: 분산 트랜잭션 추적
 - **Metrics**: 시계열 데이터 (Prometheus 호환)
 - **Logs**: 구조화된 로그

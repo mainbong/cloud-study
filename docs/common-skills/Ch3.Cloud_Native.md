@@ -23,6 +23,7 @@ Cloud-native는 클라우드 환경에서 애플리케이션을 구축하고 실
 Docker는 애플리케이션을 컨테이너로 패키징하고 실행하는 플랫폼입니다.
 
 **핵심 개념:**
+
 - **이미지 (Image)**: 애플리케이션 실행에 필요한 모든 것을 포함하는 불변의 템플릿
 - **컨테이너 (Container)**: 이미지의 실행 인스턴스
 - **Dockerfile**: 이미지를 빌드하기 위한 명령어 스크립트
@@ -316,12 +317,14 @@ docker-compose restart web
 #### 핵심 컴포넌트
 
 **Control Plane (마스터 노드):**
+
 - **API Server**: Kubernetes API의 진입점
 - **etcd**: 클러스터 상태를 저장하는 키-값 저장소
 - **Scheduler**: Pod를 노드에 할당
 - **Controller Manager**: 컨트롤러 실행 (Deployment, ReplicaSet 등)
 
 **Worker Node:**
+
 - **Kubelet**: 각 노드에서 실행되는 에이전트
 - **Container Runtime**: 컨테이너 실행 (Docker, containerd 등)
 - **Kube-proxy**: 네트워크 프록시
@@ -455,6 +458,7 @@ spec:
 ```
 
 **Service 타입:**
+
 - **ClusterIP** (기본): 클러스터 내부에서만 접근
 - **NodePort**: 각 노드의 특정 포트로 노출
 - **LoadBalancer**: 클라우드 로드 밸런서 생성

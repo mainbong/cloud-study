@@ -69,12 +69,14 @@
 **ISO 이미지 vs Cloud 이미지:**
 
 **ISO 이미지:**
+
 - 설치 미디어 (installation media)
 - Anaconda/Ubiquity 등 인스톨러 포함
 - 사용자 상호작용 필요
 - 설치 시간 10-30분
 
 **Cloud 이미지:**
+
 - 사전 설치된 OS (pre-installed)
 - cloud-init으로 설정 자동화
 - 완전 자동화 가능
@@ -124,6 +126,7 @@ source "qemu" "ubuntu" {
 ### 2.1 Packer 아키텍처
 
 **핵심 컴포넌트:**
+
 - **Source**: 이미지 빌드 환경 정의 (AWS, Azure, QEMU 등)
 - **Build**: Source를 실행하고 Provisioner 적용
 - **Provisioner**: 이미지 커스터마이징 (Shell, Ansible, file 등)
@@ -458,6 +461,7 @@ echo "=== Cleanup completed ==="
 ```
 
 **데이터소스 타입:**
+
 - **NoCloud**: ISO 또는 HTTP로 제공 (로컬 테스트용)
 - **EC2**: AWS 메타데이터 서비스 (169.254.169.254)
 - **OpenStack**: OpenStack 메타데이터 서비스

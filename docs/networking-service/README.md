@@ -5,6 +5,7 @@ KakaoCloud 네트워킹 서비스 개발자 포지션을 위한 스터디 가이
 ## 포지션 개요
 
 KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)를 개발합니다.
+
 - Public Cloud 환경에서 확장 가능하고 안정적인 네트워크 시스템 설계
 - API 기반 가상화된 언더레이 네트워크 설계
 - Network Function 개발 및 조합을 통한 새로운 네트워크 서비스 구현
@@ -14,6 +15,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 1. 네트워크 프로토콜 및 시스템 설계
 
 **학습 목표:**
+
 - 시스템 구조와 네트워크 프로토콜에 대한 깊은 이해
 - 안정적이고 확장 가능한 시스템 설계 능력
 
@@ -35,10 +37,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 이벤트 기반 아키텍처
 
 **실습 프로젝트:**
+
 - 네트워크 토폴로지 설계
 - 분산 네트워크 서비스 아키텍처 설계
 
 **추가 학습 자료:**
+
 - [Computer Networks: A Systems Approach](https://book.systemsapproach.org/)
 - [High Performance Browser Networking](https://hpbn.co/)
 
@@ -47,6 +51,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 2. API 설계 및 개발
 
 **학습 목표:**
+
 - Stateless한 API 서버 설계 및 구현
 - RESTful 또는 gRPC 아키텍처 이해
 
@@ -70,11 +75,13 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 비동기 처리
 
 **실습 프로젝트:**
+
 - RESTful API 서버 구현
 - gRPC 서비스 구현
 - API 게이트웨이 구성
 
 **추가 학습 자료:**
+
 - [RESTful API Design Guide](https://restfulapi.net/)
 - [gRPC 공식 문서](https://grpc.io/docs/)
 
@@ -83,6 +90,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 3. OpenStack 기반 서비스 개발
 
 **학습 목표:**
+
 - OpenStack 기반 서비스 개발 주도적 수행
 - 퍼블릭 클라우드 환경에서의 네트워크 설계 및 운영
 
@@ -107,10 +115,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 멀티 테넌트 네트워크
 
 **실습 프로젝트:**
+
 - OpenStack Neutron을 활용한 네트워크 서비스 개발
 - 커스텀 네트워크 플러그인 개발
 
 **추가 학습 자료:**
+
 - [OpenStack 공식 문서](https://docs.openstack.org/)
 - [Neutron 개발자 가이드](https://docs.openstack.org/neutron/latest/)
 
@@ -119,6 +129,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 4. 네트워크 가상화 (NFV, SDN)
 
 **학습 목표:**
+
 - 데이터센터 네트워크 및 네트워크 가상화에 대한 깊이 있는 이해
 - 복잡한 네트워크 환경에서의 문제 해결 능력
 
@@ -138,10 +149,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 언더레이 네트워크 최적화
 
 **실습 프로젝트:**
+
 - 간단한 VNF 개발
 - SDN 컨트롤러 연동
 
 **추가 학습 자료:**
+
 - [ETSI NFV 문서](https://www.etsi.org/technologies/nfv)
 - [OpenDaylight 공식 문서](https://www.opendaylight.org/)
 
@@ -150,6 +163,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 5. 네트워크 어플라이언스 연동
 
 **학습 목표:**
+
 - 다양한 네트워크 어플라이언스(FW, LB, Switch)를 내부 시스템과 연동
 - 고가용성과 확장성을 고려한 안정적인 통합 서비스 구축
 
@@ -174,10 +188,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 장애 복구 자동화
 
 **실습 프로젝트:**
+
 - 방화벽 정책 자동화 도구 개발
 - 로드 밸런서 자동 구성 시스템
 
 **추가 학습 자료:**
+
 - [F5 Networks API 문서](https://clouddocs.f5.com/)
 - [HAProxy 문서](http://www.haproxy.org/#docs)
 
@@ -186,6 +202,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 6. Event-driven 아키텍처
 
 **학습 목표:**
+
 - Event-driven 아키텍처 기반 마이크로서비스 설계 및 개발
 
 **학습 내용:**
@@ -204,10 +221,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 이벤트 재생 및 복구
 
 **실습 프로젝트:**
+
 - 이벤트 기반 네트워크 서비스 구현
 - 메시지 브로커를 활용한 서비스 통신
 
 **추가 학습 자료:**
+
 - [Event-Driven Architecture Patterns](https://www.oreilly.com/library/view/event-driven-architecture/9781492057888/)
 - [Apache Kafka 공식 문서](https://kafka.apache.org/documentation/)
 
@@ -216,6 +235,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 7. Cloud-native 환경 개발
 
 **학습 목표:**
+
 - Cloud-native 환경에서의 개발 및 운영
 - Kubernetes, GitOps 등 생산성 도구 활용
 
@@ -234,10 +254,12 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - 선언적 네트워크 구성
 
 **실습 프로젝트:**
+
 - Kubernetes 기반 네트워크 서비스 개발
 - Service Mesh 구성 및 활용
 
 **추가 학습 자료:**
+
 - [Kubernetes 네트워킹 공식 문서](https://kubernetes.io/docs/concepts/cluster-administration/networking/)
 - [Cilium 공식 문서](https://docs.cilium.io/)
 
@@ -248,6 +270,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
 ### 퍼블릭 클라우드 네트워크 경험
 
 **학습 목표:**
+
 - 퍼블릭 클라우드 환경에서의 네트워크 설계 및 운영 실무 경험
 
 **학습 내용:**
@@ -267,6 +290,7 @@ KakaoCloud의 핵심인 IaaS 네트워킹 서비스(Beyond Networking Service)�
   - ExpressRoute
 
 **실습:**
+
 - 각 클라우드 플랫폼에서 네트워크 구성 실습
 
 ---

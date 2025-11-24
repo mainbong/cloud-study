@@ -1511,6 +1511,7 @@ undeploy:
 Kubernetes의 네트워크 플러그인 아키텍처인 CNI(Container Network Interface)를 학습하고, Cilium, Calico, Flannel 등 주요 CNI 플러그인의 동작 원리와 Service Mesh 통합 방법을 다룹니다.
 
 **주요 주제:**
+
 - CNI 플러그인 아키텍처 및 Spec
 - Cilium: eBPF 기반 네트워킹 및 보안
 - Calico: BGP 기반 네트워크 정책

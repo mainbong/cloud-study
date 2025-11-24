@@ -45,12 +45,14 @@
 ### 1.1 KVM과 QEMU의 역할
 
 **KVM (Kernel-based Virtual Machine):**
+
 - Linux 커널 모듈 (`kvm.ko`, `kvm-intel.ko`, `kvm-amd.ko`)
 - 하드웨어 가상화 확장 활용 (Intel VT-x, AMD-V)
 - CPU와 메모리 가상화 제공
 - Type-1 Hypervisor로 동작
 
 **QEMU (Quick Emulator):**
+
 - 사용자 공간 프로세스
 - I/O 장치 에뮬레이션 (디스크, 네트워크, GPU 등)
 - 동적 바이너리 변환 (TCG - Tiny Code Generator)
@@ -95,12 +97,14 @@
 ### 1.2 하드웨어 가상화 확장
 
 **Intel VT-x (Virtualization Technology):**
+
 - **VMX (Virtual Machine Extensions)**: Root 모드와 Non-root 모드
 - **EPT (Extended Page Tables)**: 2단계 주소 변환
 - **VPID (Virtual Processor ID)**: TLB 태깅으로 컨텍스트 스위칭 최적화
 - **VT-d (I/O Virtualization)**: IOMMU를 통한 DMA 리매핑
 
 **AMD-V (AMD Virtualization):**
+
 - **SVM (Secure Virtual Machine)**: Host 모드와 Guest 모드
 - **NPT (Nested Page Tables)**: EPT와 동일한 2단계 페이지 테이블
 - **ASID (Address Space Identifier)**: VPID와 동일
@@ -231,6 +235,7 @@ vCPU 오버커밋 비율 = (총 vCPU 수) / (물리 CPU 코어 수)
 ```
 
 **권장사항:**
+
 - **프로덕션**: 1:1 ~ 2:1
 - **개발/테스트**: 4:1 ~ 8:1
 - **VDI (Virtual Desktop)**: 8:1 ~ 16:1 (CPU idle이 높음)
@@ -238,6 +243,7 @@ vCPU 오버커밋 비율 = (총 vCPU 수) / (물리 CPU 코어 수)
 ### 2.3 CPU 피닝 (Pinning)
 
 **CPU 피닝의 장점:**
+
 - L1/L2/L3 캐시 지역성 향상
 - NUMA 노드 경계 교차 방지
 - 예측 가능한 성능
@@ -277,6 +283,7 @@ virsh vcpuinfo test-vm
 ### 2.4 CPU 모델 및 기능 플래그
 
 **CPU 모드:**
+
 - **host-passthrough**: 호스트 CPU 그대로 노출 (마이그레이션 제약)
 - **host-model**: 호스트 CPU와 유사한 모델 (마이그레이션 가능)
 - **custom**: 특정 CPU 모델 지정
@@ -344,11 +351,13 @@ Host Physical Address (HPA)
 ### 3.2 Huge Pages
 
 **Huge Pages의 이점:**
+
 - **TLB Miss 감소**: 더 많은 메모리를 더 적은 TLB 엔트리로 커버
 - **페이지 테이블 오버헤드 감소**: 페이지 테이블 크기 축소
 - **성능 향상**: 대용량 메모리 워크로드에서 5-20% 성능 향상
 
 **Huge Pages 타입:**
+
 - **2MB Huge Pages**: 일반적으로 사용
 - **1GB Huge Pages**: 대용량 메모리 (128GB+) VM에 권장
 
@@ -454,6 +463,7 @@ cat /sys/kernel/mm/ksm/pages_shared
 ```
 
 **주의사항:**
+
 - CPU 오버헤드 발생 (스캔 비용)
 - 보안 고려사항 (side-channel 공격 가능성)
 - 프로덕션 환경에서는 신중하게 사용
@@ -528,6 +538,7 @@ KVM 환경에서 최적화된 반가상화(Paravirtualization) I/O 드라이버�
 ```
 
 **캐시 모드:**
+
 - **none**: Write-through, O_DIRECT (안전, 성능 양호) ← 권장
 - **writethrough**: Write-through, 캐시 사용 (안전, 느림)
 - **writeback**: Write-back (빠름, 데이터 손실 위험)
@@ -581,6 +592,7 @@ ip link set eth0 mtu 9000
 하드웨어 장치를 직접 Guest에 할당하여 네이티브에 가까운 성능을 얻습니다.
 
 **사용 사례:**
+
 - GPU 패스스루 (NVIDIA, AMD)
 - 고성능 NIC (10GbE, 100GbE)
 - NVME SSD
@@ -763,6 +775,7 @@ numastat -p $(pgrep -f test-vm)
 ### 6.1 종합 튜닝 체크리스트
 
 **✅ CPU:**
+
 - [ ] CPU 피닝 설정 (vCPU → Physical CPU)
 - [ ] Emulator 및 I/O 스레드 전용 CPU 할당
 - [ ] NUMA 경계 교차 방지
@@ -770,6 +783,7 @@ numastat -p $(pgrep -f test-vm)
 - [ ] 오버커밋 비율: 프로덕션 1:1 ~ 2:1
 
 **✅ Memory:**
+
 - [ ] Huge Pages 활성화 (2MB 또는 1GB)
 - [ ] 메모리 잠금 (locked) - swap 방지
 - [ ] NUMA 메모리 정렬 (strict mode)
@@ -777,6 +791,7 @@ numastat -p $(pgrep -f test-vm)
 - [ ] KSM 비활성화 (CPU 오버헤드 회피)
 
 **✅ Disk I/O:**
+
 - [ ] virtio-scsi 사용 (DB, I/O 집약적)
 - [ ] Cache mode: none + io=native
 - [ ] discard=unmap (SSD TRIM 지원)
@@ -784,6 +799,7 @@ numastat -p $(pgrep -f test-vm)
 - [ ] 디스크 I/O 스케줄러: none (NVMe) 또는 mq-deadline (SSD/HDD)
 
 **✅ Network:**
+
 - [ ] virtio-net + vhost-net
 - [ ] Multi-queue 활성화 (vCPU 수만큼)
 - [ ] Jumbo Frames (MTU 9000)
@@ -791,6 +807,7 @@ numastat -p $(pgrep -f test-vm)
 - [ ] NIC와 vCPU를 동일 NUMA 노드에 배치
 
 **✅ 기타:**
+
 - [ ] CPU 절전 기능 비활성화 (C-states, P-states)
 - [ ] Transparent Huge Pages (THP) 비활성화
 - [ ] SELinux/AppArmor 성능 영향 확인

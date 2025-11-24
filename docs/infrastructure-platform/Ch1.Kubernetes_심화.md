@@ -24,6 +24,7 @@ Kubernetes는 컨테이너 오케스트레이션의 사실상 표준이 되었�
 모든 Kubernetes 작업의 진입점입니다.
 
 **주요 기능:**
+
 - RESTful API 제공
 - 인증/인가 (Authentication/Authorization)
 - Admission Control
@@ -121,6 +122,7 @@ spec:
 다양한 Controller를 실행하는 데몬입니다.
 
 **주요 Controller:**
+
 - **Deployment Controller**: Deployment 관리
 - **ReplicaSet Controller**: Pod 복제본 관리
 - **Node Controller**: Node 상태 모니터링
@@ -135,6 +137,7 @@ spec:
 각 Node에서 실행되며, Pod의 생명주기를 관리합니다.
 
 **주요 기능:**
+
 - Pod Spec 수신 및 실행
 - Container 상태 모니터링
 - Volume 마운트
@@ -145,6 +148,7 @@ spec:
 실제 컨테이너를 실행하는 엔진입니다.
 
 **지원되는 Runtime:**
+
 - containerd (권장)
 - CRI-O
 - Docker (deprecated, dockershim 제거됨)
@@ -154,6 +158,7 @@ spec:
 각 Node에서 네트워크 규칙을 관리합니다.
 
 **모드:**
+
 - **iptables**: 기본값, iptables 규칙 사용
 - **IPVS**: 고성능, 대규모 클러스터에 적합
 - **userspace**: 레거시
@@ -337,6 +342,7 @@ spec:
 ### 2. Controller 구조
 
 **핵심 컴포넌트:**
+
 - **Informer**: Kubernetes API를 Watch하고 캐시 유지
 - **Lister**: 캐시에서 리소스 조회
 - **Workqueue**: 처리할 작업 큐
@@ -527,6 +533,7 @@ func (c *Controller) syncHandler(key string) error {
 ```
 
 **Workqueue의 특징 (2025 Best Practice):**
+
 - **Deduplication**: 같은 키를 중복 처리하지 않음
 - **Rate Limiting**: 실패 시 백오프 지연
 - **Retry**: 실패한 항목 재시도
@@ -541,6 +548,7 @@ func (c *Controller) syncHandler(key string) error {
 Operator = CRD + Custom Controller
 
 **Operator의 역할:**
+
 - 애플리케이션 배포
 - 업그레이드 자동화
 - 백업 및 복구

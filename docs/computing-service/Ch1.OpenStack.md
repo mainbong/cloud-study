@@ -89,6 +89,7 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 ```
 
 **주요 통신 메커니즘:**
+
 - **REST API**: 외부 클라이언트와 OpenStack 서비스 간
 - **RPC (oslo.messaging)**: 서비스 내부 컴포넌트 간 (RabbitMQ/AMQP)
 - **Database**: 상태 저장 (MariaDB/MySQL)
@@ -96,6 +97,7 @@ OpenStack은 가상 머신, 스토리지, 네트워크를 관리하는 오픈소
 ### 1.3 Keystone - Identity Service
 
 **Keystone의 역할:**
+
 - 사용자 인증 (Authentication)
 - 서비스 카탈로그 관리
 - 토큰 발급 및 검증
@@ -238,6 +240,7 @@ enabled_filters = AvailabilityZoneFilter,
 ```
 
 **주요 필터:**
+
 - **AvailabilityZoneFilter**: 가용 영역 기반 필터링
 - **ComputeFilter**: 활성 상태의 컴퓨트 노드만 선택
 - **ComputeCapabilitiesFilter**: CPU, RAM, Disk 요구사항 충족 확인
@@ -454,6 +457,7 @@ openstack volume create \
 ### 4.1 Glance 아키텍처
 
 **Glance 컴포넌트:**
+
 - **glance-api**: REST API 제공, 이미지 메타데이터 관리
 - **glance-registry** (deprecated): 메타데이터 저장 (2025.1에서 제거됨)
 - **Backend Store**: 실제 이미지 데이터 저장 (Swift, Ceph, Filesystem, Cinder)
@@ -547,6 +551,7 @@ cinder_store_project_name = service
 ```
 
 **성능 향상:**
+
 - 이미지 캐싱 활성화 시 볼륨 생성 시간 **50-70% 단축**
 - Glance Image Cache for Cinder는 Pure Storage, NetApp 등 엔터프라이즈 스토리지에서 권장
 
@@ -702,6 +707,7 @@ openstack server create \
 > Kolla's mission is to provide production-ready containers and deployment tools for operating OpenStack clouds.
 
 **핵심 특징:**
+
 - **컨테이너 기반**: 모든 OpenStack 서비스를 Docker/Podman 컨테이너로 실행
 - **Ansible 자동화**: Playbook을 통한 선언적 배포
 - **HA 지원**: HAProxy, Keepalived를 통한 고가용성
@@ -710,11 +716,13 @@ openstack server create \
 ### 6.2 하드웨어 요구사항
 
 **최소 요구사항 (개발/테스트):**
+
 - **네트워크 인터페이스**: 2개 (Management, External)
 - **메모리**: 8GB
 - **디스크**: 40GB
 
 **프로덕션 권장사항:**
+
 - **Controller Node**: 3대 (HA)
   - CPU: 8 cores
   - RAM: 64GB

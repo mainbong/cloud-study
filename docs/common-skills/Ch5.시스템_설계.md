@@ -23,11 +23,13 @@
 기존 서버의 성능을 높이는 방식입니다.
 
 **장점:**
+
 - 구현이 간단
 - 데이터 일관성 유지 용이
 - 네트워크 지연 없음
 
 **단점:**
+
 - 물리적 한계 존재
 - 단일 장애점 (Single Point of Failure)
 - 비용 비효율적 (하드웨어 성능이 2배 높아지면 비용은 3-4배)
@@ -44,11 +46,13 @@
 서버의 수를 늘리는 방식입니다.
 
 **장점:**
+
 - 이론적으로 무한 확장 가능
 - 고가용성 (한 서버 장애 시 다른 서버가 처리)
 - 비용 효율적
 
 **단점:**
+
 - 구현 복잡도 증가
 - 데이터 일관성 문제
 - 네트워크 지연
@@ -81,6 +85,7 @@ spec:
 ```
 
 **로드 밸런싱 알고리즘:**
+
 - **Round Robin**: 순환 방식
 - **Least Connections**: 연결 수가 적은 서버 우선
 - **IP Hash**: 클라이언트 IP 기반 해싱
@@ -175,16 +180,19 @@ def call_external_service():
 #### 일관성 모델
 
 **1. Strong Consistency (강한 일관성):**
+
 - 모든 읽기 작업이 가장 최근 쓰기 결과를 반환
 - RDBMS, Zookeeper
 - 지연 시간 증가, 가용성 감소
 
 **2. Eventual Consistency (최종 일관성):**
+
 - 일정 시간 후 모든 복제본이 일치
 - DynamoDB, Cassandra
 - 높은 가용성, 낮은 지연 시간
 
 **3. Causal Consistency (인과 일관성):**
+
 - 인과 관계가 있는 작업은 순서 보장
 - 중간 수준의 일관성
 
@@ -274,6 +282,7 @@ result = session.execute("SELECT * FROM users WHERE id = 1")
 CAP 정리의 확장으로, 파티션이 없는 경우의 트레이드오프를 설명합니다.
 
 **PACELC:**
+
 - **P**artition이 발생하면: **A**vailability vs **C**onsistency
 - **E**lse (정상 상태): **L**atency vs **C**onsistency
 
@@ -305,6 +314,7 @@ Coordinator              Participant 1         Participant 2
 ```
 
 **단점:**
+
 - 블로킹 프로토콜 (coordinator 실패 시 대기)
 - 높은 지연 시간
 - 확장성 제한
@@ -370,12 +380,14 @@ class InventoryService:
 ```
 
 **마이크로서비스 장점:**
+
 - 독립적인 배포 및 확장
 - 기술 스택 자유도
 - 팀 자율성
 - 장애 격리
 
 **마이크로서비스 단점:**
+
 - 높은 복잡도
 - 분산 시스템 문제 (네트워크 지연, 장애 등)
 - 데이터 일관성 문제
@@ -645,11 +657,13 @@ channel.start_consuming()
 #### 요구사항
 
 **Functional:**
+
 - 긴 URL을 짧은 URL로 변환
 - 짧은 URL로 원본 URL 리다이렉트
 - 통계 수집 (클릭 수, 위치 등)
 
 **Non-Functional:**
+
 - 높은 가용성 (99.99%)
 - 낮은 지연 시간 (<100ms)
 - 확장 가능 (1B URLs, 10K QPS)
@@ -743,6 +757,7 @@ class URLShortener:
 ```
 
 **확장 고려사항:**
+
 - Database Sharding (URL ID 범위 기반)
 - CDN for geo-distributed access
 - Analytics service (별도 마이크로서비스)

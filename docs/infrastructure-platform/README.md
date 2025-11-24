@@ -5,6 +5,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ## 포지션 개요
 
 데이터센터 인프라의 모든 요소를 Cloud-native하게 관리하고 자동화하는 것을 목표로 합니다.
+
 - ClusterAPI & Ironic 기반 대규모 Kubernetes Cluster 구축 자동화
 - Kubernetes Operator 패턴을 통한 반복 작업 자동화
 - IaC를 통한 인프라 코드화 및 선언적 관리
@@ -15,6 +16,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 1. Kubernetes 심화
 
 **학습 목표:**
+
 - 대규모 Kubernetes Cluster 환경에서의 서비스 운영 능력
 - Kubernetes Controller와 Operator에 대한 실무적 이해
 
@@ -38,11 +40,13 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - 리소스 할당 및 제한
 
 **실습 프로젝트:**
+
 - 간단한 Kubernetes Controller 개발
 - Custom Operator 구현
 - 클러스터 모니터링 및 관리 도구 개발
 
 **추가 학습 자료:**
+
 - [Kubernetes Controller 개발 가이드](https://kubernetes.io/docs/concepts/architecture/controller/)
 - [Operator SDK 공식 문서](https://sdk.operatorframework.io/)
 - [Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way)
@@ -52,6 +56,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 2. ClusterAPI & Ironic
 
 **학습 목표:**
+
 - ClusterAPI를 활용한 Kubernetes provisioning 자동화
 - OpenStack Ironic(Baremetal) 환경에서의 운영 및 개발
 
@@ -74,10 +79,12 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - 자동화 서비스 개발
 
 **실습 프로젝트:**
+
 - ClusterAPI를 사용한 클러스터 자동 생성 도구
 - Ironic을 활용한 Baremetal 서버 프로비저닝
 
 **추가 학습 자료:**
+
 - [ClusterAPI 공식 문서](https://cluster-api.sigs.k8s.io/)
 - [OpenStack Ironic 공식 문서](https://docs.openstack.org/ironic/latest/)
 
@@ -86,6 +93,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 3. Infrastructure as Code (IaC)
 
 **학습 목표:**
+
 - Terraform, Ansible, Packer를 활용한 인프라 자동화
 - 선언적 인프라 관리
 
@@ -108,11 +116,13 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - 이미지 최적화
 
 **실습 프로젝트:**
+
 - Terraform으로 인프라 구성 정의
 - Ansible으로 서버 설정 자동화
 - Packer로 커스텀 이미지 생성
 
 **추가 학습 자료:**
+
 - [Terraform 공식 문서](https://www.terraform.io/docs)
 - [Ansible 공식 문서](https://docs.ansible.com/)
 - [Packer 공식 문서](https://www.packer.io/docs)
@@ -122,6 +132,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 4. Cloud-native 플랫폼 구성 도구
 
 **학습 목표:**
+
 - Helm, ArgoCD, Prow, Keycloak, Harbor, Gitlab 등 도구 활용
 - 컨테이너 기반 마이크로서비스 CI/CD 파이프라인 구축
 
@@ -152,11 +163,13 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - Container Registry 활용
 
 **실습 프로젝트:**
+
 - Helm Chart로 애플리케이션 패키징
 - ArgoCD로 GitOps 파이프라인 구축
 - 전체 CI/CD 파이프라인 구성
 
 **추가 학습 자료:**
+
 - [Helm 공식 문서](https://helm.sh/docs/)
 - [ArgoCD 공식 문서](https://argo-cd.readthedocs.io/)
 - [Prow 공식 문서](https://docs.prow.k8s.io/)
@@ -166,6 +179,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 5. 모니터링 및 가시성
 
 **학습 목표:**
+
 - 서비스 장애 감지 및 성능 최적화를 위한 모니터링 환경 구축
 
 **학습 내용:**
@@ -186,10 +200,12 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - Jaeger 또는 Zipkin
 
 **실습 프로젝트:**
+
 - 모니터링 스택 구축
 - 커스텀 메트릭 수집 및 대시보드 구성
 
 **추가 학습 자료:**
+
 - [Prometheus 공식 문서](https://prometheus.io/docs/)
 - [Grafana 공식 문서](https://grafana.com/docs/)
 
@@ -198,6 +214,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### 6. Linux OS 이미지 관리
 
 **학습 목표:**
+
 - Linux OS 이미지 디버깅 및 패키징 능력
 
 **학습 내용:**
@@ -216,6 +233,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - 서비스 시작 문제 해결
 
 **실습 프로젝트:**
+
 - 커스텀 Linux 이미지 생성
 - 이미지 검증 및 테스트 자동화
 
@@ -226,6 +244,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
 ### CNCF 오픈소스 프로젝트 기여
 
 **학습 목표:**
+
 - CNCF 오픈소스 프로젝트에 코드 기여 경험
 
 **학습 내용:**
@@ -242,6 +261,7 @@ KakaoCloud Infrastructure Platform 개발자 포지션을 위한 스터디 가�
   - ClusterAPI
 
 **실습:**
+
 - 작은 버그 수정부터 시작
 - 문서 개선 기여
 - 기능 추가 기여
