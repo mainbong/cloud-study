@@ -14,11 +14,11 @@
 - [x] **1단계:** 실행 계획 문서 작성
 - [x] **2단계:** 폴더 구조 생성 (4개)
 - [x] **3단계:** 기존 스터디 플랜 이동
-- [ ] **4단계:** 상세 학습 자료 작성 (29개)
+- [x] **4단계:** 상세 학습 자료 작성 (29개)
   - [x] Common Skills (5개)
   - [x] Computing Service (7개)
   - [x] Infrastructure Platform (6개)
-  - [ ] Networking Service (7개)
+  - [x] Networking Service (7개)
 - [ ] **5단계:** 최상위 README.md 업데이트
 
 ---
@@ -152,31 +152,31 @@ docs/
 
 ### Networking Service (네트워킹 서비스) - 7개 파일
 
-- [ ] **Ch1.네트워크_프로토콜.md**
+- [x] **Ch1.네트워크_프로토콜.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: TCP/IP, Routing (BGP, OSPF), VLAN/VXLAN, SDN
 
-- [ ] **Ch2.API_설계.md**
+- [x] **Ch2.API_설계.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: RESTful API, gRPC, API 성능 최적화
 
-- [ ] **Ch3.OpenStack_네트워킹.md**
+- [x] **Ch3.OpenStack_네트워킹.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Neutron, ML2 플러그인, 커스텀 플러그인 개발
 
-- [ ] **Ch4.네트워크_가상화.md**
+- [x] **Ch4.네트워크_가상화.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: NFV, SDN Controllers, Network Overlays
 
-- [ ] **Ch5.네트워크_어플라이언스.md**
+- [x] **Ch5.네트워크_어플라이언스.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Firewall, Load Balancer, Switch 연동
 
-- [ ] **Ch6.Event_Driven.md**
+- [x] **Ch6.Event_Driven.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Event Sourcing, CQRS, Message Brokers
 
-- [ ] **Ch7.Cloud_Native_네트워킹.md**
+- [x] **Ch7.Cloud_Native_네트워킹.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Kubernetes 네트워킹, CNI, Network Policy, Service Mesh
 
