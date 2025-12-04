@@ -169,6 +169,16 @@ nav:
     - Ch6. Kubernetes Operator: computing-service/Ch6.Kubernetes_Operator.md
     - Ch7. Cloud Network CNI: computing-service/Ch7.Cloud_Network_CNI.md
 
+  - Networking Service:
+    - networking-service/README.md
+    - Ch1. 네트워크 프로토콜: networking-service/Ch1.네트워크_프로토콜.md
+    - Ch2. API 설계: networking-service/Ch2.API_설계.md
+    - Ch3. OpenStack 네트워킹: networking-service/Ch3.OpenStack_네트워킹.md
+    - Ch4. 네트워크 가상화: networking-service/Ch4.네트워크_가상화.md
+    - Ch5. 네트워크 어플라이언스: networking-service/Ch5.네트워크_어플라이언스.md
+    - Ch6. Event Driven: networking-service/Ch6.Event_Driven.md
+    - Ch7. Cloud Native 네트워킹: networking-service/Ch7.Cloud_Native_네트워킹.md
+
 # 추가 설정
 extra:
   social:
