@@ -189,15 +189,15 @@ docs/
 
 ### IAM/Storage Service (IAM/스토리지 서비스) - 12개 파일
 
-- [ ] **Ch1.OpenStack_Keystone.md**
+- [x] **Ch1.OpenStack_Keystone.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Keystone 아키텍처, Identity 백엔드, Token 관리, Federation
 
-- [ ] **Ch2.OAuth_OIDC_JWT.md**
+- [x] **Ch2.OAuth_OIDC_JWT.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: OAuth 2.0, OIDC, JWT, Go 구현
 
-- [ ] **Ch3.RBAC_ABAC.md**
+- [x] **Ch3.RBAC_ABAC.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: RBAC, ABAC, Casbin, 정책 엔진
 
