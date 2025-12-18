@@ -179,6 +179,21 @@ nav:
     - Ch6. Event Driven: networking-service/Ch6.Event_Driven.md
     - Ch7. Cloud Native 네트워킹: networking-service/Ch7.Cloud_Native_네트워킹.md
 
+  - IAM/Storage Service:
+    - iam-storage-service/README.md
+    - Ch1. OpenStack Keystone: iam-storage-service/Ch1.OpenStack_Keystone.md
+    - Ch2. OAuth/OIDC/JWT: iam-storage-service/Ch2.OAuth_OIDC_JWT.md
+    - Ch3. RBAC & ABAC: iam-storage-service/Ch3.RBAC_ABAC.md
+    - Ch4. Policy Engine OPA: iam-storage-service/Ch4.Policy_Engine_OPA.md
+    - Ch5. Secrets Management Vault: iam-storage-service/Ch5.Secrets_Management_Vault.md
+    - Ch6. Service Mesh Security: iam-storage-service/Ch6.Service_Mesh_Security.md
+    - Ch7. OpenStack Swift: iam-storage-service/Ch7.OpenStack_Swift.md
+    - Ch8. Object Storage S3: iam-storage-service/Ch8.Object_Storage_S3.md
+    - Ch9. Ceph 아키텍처: iam-storage-service/Ch9.Ceph_아키텍처.md
+    - Ch10. Ceph 운영/성능: iam-storage-service/Ch10.Ceph_운영_성능.md
+    - Ch11. Block Storage Cinder: iam-storage-service/Ch11.Block_Storage_Cinder.md
+    - Ch12. Storage Lifecycle: iam-storage-service/Ch12.Storage_Lifecycle.md
+
 # 추가 설정
 extra:
   social:

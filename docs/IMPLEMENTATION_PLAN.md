@@ -4,7 +4,7 @@
 
 기존 스터디 플랜 문서들을 포지션별 폴더로 재구성하고, 각 주제에 대한 상세한 학습 자료를 작성하는 프로젝트입니다.
 
-**목표:** 29개의 상세 학습 자료 작성
+**목표:** 41개의 상세 학습 자료 작성
 **방법:** 웹 검색을 통한 자료 조사, 정리, 작성
 
 ---
@@ -14,11 +14,12 @@
 - [x] **1단계:** 실행 계획 문서 작성
 - [x] **2단계:** 폴더 구조 생성 (4개)
 - [x] **3단계:** 기존 스터디 플랜 이동
-- [x] **4단계:** 상세 학습 자료 작성 (29개)
+- [ ] **4단계:** 상세 학습 자료 작성 (41개)
   - [x] Common Skills (5개)
   - [x] Computing Service (7개)
   - [x] Infrastructure Platform (6개)
   - [x] Networking Service (7개)
+  - [ ] IAM/Storage Service (12개)
 - [ ] **5단계:** 최상위 README.md 업데이트
 
 ---
@@ -38,9 +39,12 @@ docs/
 ├── infrastructure-platform/
 │   ├── README.md (infrastructure-platform-study.md 이동)
 │   └── [6개 Chapter 파일]
-└── networking-service/
-    ├── README.md (networking-service-study.md 이동)
-    └── [7개 Chapter 파일]
+├── networking-service/
+│   ├── README.md (networking-service-study.md 이동)
+│   └── [7개 Chapter 파일]
+└── iam-storage-service/
+    ├── README.md (새로 작성)
+    └── [12개 Chapter 파일]
 ```
 
 ---
@@ -54,6 +58,7 @@ docs/
 - [x] 폴더 생성: `computing-service/`
 - [x] 폴더 생성: `infrastructure-platform/`
 - [x] 폴더 생성: `networking-service/`
+- [x] 폴더 생성: `iam-storage-service/`
 
 ### 2단계: 스터디 플랜 이동
 
@@ -179,6 +184,58 @@ docs/
 - [x] **Ch7.Cloud_Native_네트워킹.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Kubernetes 네트워킹, CNI, Network Policy, Service Mesh
+
+---
+
+### IAM/Storage Service (IAM/스토리지 서비스) - 12개 파일
+
+- [ ] **Ch1.OpenStack_Keystone.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Keystone 아키텍처, Identity 백엔드, Token 관리, Federation
+
+- [ ] **Ch2.OAuth_OIDC_JWT.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: OAuth 2.0, OIDC, JWT, Go 구현
+
+- [ ] **Ch3.RBAC_ABAC.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: RBAC, ABAC, Casbin, 정책 엔진
+
+- [ ] **Ch4.Policy_Engine_OPA.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Open Policy Agent, Rego, Policy-as-Code
+
+- [ ] **Ch5.Secrets_Management_Vault.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: HashiCorp Vault, 동적 시크릿, 암호화 서비스
+
+- [ ] **Ch6.Service_Mesh_Security.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: mTLS, SPIFFE/SPIRE, Zero Trust, Envoy
+
+- [ ] **Ch7.OpenStack_Swift.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Swift 아키텍처, Ring, Replication, 성능 튜닝
+
+- [ ] **Ch8.Object_Storage_S3.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: S3 API, MinIO, Bucket 정책, Go SDK
+
+- [ ] **Ch9.Ceph_아키텍처.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Ceph 컴포넌트, RADOS, CRUSH, RBD/CephFS/RGW
+
+- [ ] **Ch10.Ceph_운영_성능.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: 클러스터 배포, 모니터링, 성능 최적화, 트러블슈팅
+
+- [ ] **Ch11.Block_Storage_Cinder.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Cinder 아키텍처, Volume Driver, QoS, Multi-backend
+
+- [ ] **Ch12.Storage_Lifecycle.md**
+  - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
+  - 주제: Storage Tiering, Lifecycle 정책, 압축, 비용 최적화
 
 ---
 

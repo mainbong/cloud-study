@@ -8,10 +8,11 @@
 
 모집공고에 명시된 각 포지션별 요구 역량을 기반으로 한 스터디 가이드입니다.
 
-- [공통 역량 스터디 가이드](./common-skills.md) - 모든 포지션에서 공통적으로 요구되는 역량
-- [Infrastructure Platform 개발자 스터디 가이드](./infrastructure-platform-study.md)
-- [네트워킹 서비스 개발자 스터디 가이드](./networking-service-study.md)
-- [컴퓨팅 서비스 개발자 스터디 가이드](./computing-service-study.md)
+- [공통 역량 스터디 가이드](./common-skills/README.md) - 모든 포지션에서 공통적으로 요구되는 역량
+- [Infrastructure Platform 개발자 스터디 가이드](./infrastructure-platform/README.md)
+- [네트워킹 서비스 개발자 스터디 가이드](./networking-service/README.md)
+- [컴퓨팅 서비스 개발자 스터디 가이드](./computing-service/README.md)
+- [IAM/Storage 서비스 개발자 스터디 가이드](./iam-storage-service/README.md)
 
 ## 사용 방법
 
