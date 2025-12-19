@@ -213,15 +213,15 @@ docs/
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: mTLS, SPIFFE/SPIRE, Zero Trust, Envoy
 
-- [ ] **Ch7.OpenStack_Swift.md**
+- [x] **Ch7.OpenStack_Swift.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Swift 아키텍처, Ring, Replication, 성능 튜닝
 
-- [ ] **Ch8.Object_Storage_S3.md**
+- [x] **Ch8.Object_Storage_S3.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: S3 API, MinIO, Bucket 정책, Go SDK
 
-- [ ] **Ch9.Ceph_아키텍처.md**
+- [x] **Ch9.Ceph_아키텍처.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Ceph 컴포넌트, RADOS, CRUSH, RBD/CephFS/RGW
 
