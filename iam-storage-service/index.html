@@ -12,29 +12,31 @@
         <meta name="author" content="Cloud Study Team">
       
       
-        <link rel="canonical" href="https://mainbong.github.io/cloud-study/">
+        <link rel="canonical" href="https://mainbong.github.io/cloud-study/iam-storage-service/">
       
       
+        <link rel="prev" href="../networking-service/Ch7.Cloud_Native_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/">
       
-        <link rel="next" href="IMPLEMENTATION_PLAN/">
+      
+        <link rel="next" href="Ch1.OpenStack_Keystone/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>추가 문서 - 클라우드 엔지니어 학습 가이드</title>
+        <title>IAM/Storage 서비스 개발자 스터디 가이드 - 클라우드 엔지니어 학습 가이드</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
   
@@ -118,9 +120,9 @@
       
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -145,7 +147,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#iamstorage" class="md-skip">
           콘텐츠로 이동
         </a>
       
@@ -165,7 +167,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="상단/헤더">
-    <a href="." title="클라우드 엔지니어 학습 가이드" class="md-header__button md-logo" aria-label="클라우드 엔지니어 학습 가이드" data-md-component="logo">
+    <a href=".." title="클라우드 엔지니어 학습 가이드" class="md-header__button md-logo" aria-label="클라우드 엔지니어 학습 가이드" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -185,7 +187,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              추가 문서
+              IAM/Storage 서비스 개발자 스터디 가이드
             
           </span>
         </div>
@@ -295,13 +297,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="." class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href=".." class="md-tabs__link">
           
   
   
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="common-skills/" class="md-tabs__link">
+        <a href="../common-skills/" class="md-tabs__link">
           
   
   
@@ -345,7 +345,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="infrastructure-platform/" class="md-tabs__link">
+        <a href="../infrastructure-platform/" class="md-tabs__link">
           
   
   
@@ -367,7 +367,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="computing-service/" class="md-tabs__link">
+        <a href="../computing-service/" class="md-tabs__link">
           
   
   
@@ -389,7 +389,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="networking-service/" class="md-tabs__link">
+        <a href="../networking-service/" class="md-tabs__link">
           
   
   
@@ -407,11 +407,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="iam-storage-service/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -455,7 +457,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="네비게이션" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="클라우드 엔지니어 학습 가이드" class="md-nav__button md-logo" aria-label="클라우드 엔지니어 학습 가이드" data-md-component="logo">
+    <a href=".." title="클라우드 엔지니어 학습 가이드" class="md-nav__button md-logo" aria-label="클라우드 엔지니어 학습 가이드" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -482,8 +484,6 @@
       
   
   
-    
-  
   
   
     
@@ -499,23 +499,22 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="." class="md-nav__link md-nav__link--active">
+            <a href=".." class="md-nav__link ">
               
   
   
@@ -533,13 +532,13 @@
             </a>
             
               
-              <label class="md-nav__link md-nav__link--active" for="__nav_1" id="__nav_1_label" tabindex="">
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -559,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="IMPLEMENTATION_PLAN/" class="md-nav__link">
+      <a href="../IMPLEMENTATION_PLAN/" class="md-nav__link">
         
   
   
@@ -629,7 +628,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="common-skills/" class="md-nav__link ">
+            <a href="../common-skills/" class="md-nav__link ">
               
   
   
@@ -673,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="common-skills/Ch1.Linux_%EC%9A%B4%EC%98%81/" class="md-nav__link">
+      <a href="../common-skills/Ch1.Linux_%EC%9A%B4%EC%98%81/" class="md-nav__link">
         
   
   
@@ -701,7 +700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="common-skills/Ch2.Python_GO/" class="md-nav__link">
+      <a href="../common-skills/Ch2.Python_GO/" class="md-nav__link">
         
   
   
@@ -729,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="common-skills/Ch3.Cloud_Native/" class="md-nav__link">
+      <a href="../common-skills/Ch3.Cloud_Native/" class="md-nav__link">
         
   
   
@@ -757,7 +756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="common-skills/Ch4.DevOps/" class="md-nav__link">
+      <a href="../common-skills/Ch4.DevOps/" class="md-nav__link">
         
   
   
@@ -785,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="common-skills/Ch5.%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%84%A4%EA%B3%84/" class="md-nav__link">
+      <a href="../common-skills/Ch5.%EC%8B%9C%EC%8A%A4%ED%85%9C_%EC%84%A4%EA%B3%84/" class="md-nav__link">
         
   
   
@@ -857,7 +856,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="infrastructure-platform/" class="md-nav__link ">
+            <a href="../infrastructure-platform/" class="md-nav__link ">
               
   
   
@@ -901,7 +900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch1.Kubernetes_%EC%8B%AC%ED%99%94/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch1.Kubernetes_%EC%8B%AC%ED%99%94/" class="md-nav__link">
         
   
   
@@ -929,7 +928,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch2.ClusterAPI_Ironic/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch2.ClusterAPI_Ironic/" class="md-nav__link">
         
   
   
@@ -957,7 +956,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch3.IaC/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch3.IaC/" class="md-nav__link">
         
   
   
@@ -985,7 +984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch4.Cloud_Native_%ED%94%8C%EB%9E%AB%ED%8F%BC_%EB%8F%84%EA%B5%AC/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch4.Cloud_Native_%ED%94%8C%EB%9E%AB%ED%8F%BC_%EB%8F%84%EA%B5%AC/" class="md-nav__link">
         
   
   
@@ -1013,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch5.%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch5.%EB%AA%A8%EB%8B%88%ED%84%B0%EB%A7%81/" class="md-nav__link">
         
   
   
@@ -1041,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="infrastructure-platform/Ch6.Linux_OS_%EC%9D%B4%EB%AF%B8%EC%A7%80/" class="md-nav__link">
+      <a href="../infrastructure-platform/Ch6.Linux_OS_%EC%9D%B4%EB%AF%B8%EC%A7%80/" class="md-nav__link">
         
   
   
@@ -1115,7 +1114,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="computing-service/" class="md-nav__link ">
+            <a href="../computing-service/" class="md-nav__link ">
               
   
   
@@ -1159,7 +1158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch1.OpenStack/" class="md-nav__link">
+      <a href="../computing-service/Ch1.OpenStack/" class="md-nav__link">
         
   
   
@@ -1187,7 +1186,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch2.%EA%B0%80%EC%83%81%ED%99%94_%EA%B8%B0%EC%88%A0/" class="md-nav__link">
+      <a href="../computing-service/Ch2.%EA%B0%80%EC%83%81%ED%99%94_%EA%B8%B0%EC%88%A0/" class="md-nav__link">
         
   
   
@@ -1215,7 +1214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch3.%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81/" class="md-nav__link">
+      <a href="../computing-service/Ch3.%EC%8A%A4%EC%BC%80%EC%A4%84%EB%A7%81/" class="md-nav__link">
         
   
   
@@ -1243,7 +1242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch4.Cloud_Native_%EC%BB%B4%ED%93%A8%ED%8C%85/" class="md-nav__link">
+      <a href="../computing-service/Ch4.Cloud_Native_%EC%BB%B4%ED%93%A8%ED%8C%85/" class="md-nav__link">
         
   
   
@@ -1271,7 +1270,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch5.%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C_%EC%9D%B8%ED%94%84%EB%9D%BC_%EC%84%A4%EA%B3%84/" class="md-nav__link">
+      <a href="../computing-service/Ch5.%ED%81%B4%EB%9D%BC%EC%9A%B0%EB%93%9C_%EC%9D%B8%ED%94%84%EB%9D%BC_%EC%84%A4%EA%B3%84/" class="md-nav__link">
         
   
   
@@ -1299,7 +1298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch6.Kubernetes_Operator/" class="md-nav__link">
+      <a href="../computing-service/Ch6.Kubernetes_Operator/" class="md-nav__link">
         
   
   
@@ -1327,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="computing-service/Ch7.Cloud_Network_CNI/" class="md-nav__link">
+      <a href="../computing-service/Ch7.Cloud_Network_CNI/" class="md-nav__link">
         
   
   
@@ -1401,7 +1400,7 @@
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="networking-service/" class="md-nav__link ">
+            <a href="../networking-service/" class="md-nav__link ">
               
   
   
@@ -1445,7 +1444,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch1.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C/" class="md-nav__link">
+      <a href="../networking-service/Ch1.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C/" class="md-nav__link">
         
   
   
@@ -1473,7 +1472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch2.API_%EC%84%A4%EA%B3%84/" class="md-nav__link">
+      <a href="../networking-service/Ch2.API_%EC%84%A4%EA%B3%84/" class="md-nav__link">
         
   
   
@@ -1501,7 +1500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch3.OpenStack_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/" class="md-nav__link">
+      <a href="../networking-service/Ch3.OpenStack_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/" class="md-nav__link">
         
   
   
@@ -1529,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch4.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EA%B0%80%EC%83%81%ED%99%94/" class="md-nav__link">
+      <a href="../networking-service/Ch4.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EA%B0%80%EC%83%81%ED%99%94/" class="md-nav__link">
         
   
   
@@ -1557,7 +1556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch5.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4/" class="md-nav__link">
+      <a href="../networking-service/Ch5.%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC_%EC%96%B4%ED%94%8C%EB%9D%BC%EC%9D%B4%EC%96%B8%EC%8A%A4/" class="md-nav__link">
         
   
   
@@ -1585,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch6.Event_Driven/" class="md-nav__link">
+      <a href="../networking-service/Ch6.Event_Driven/" class="md-nav__link">
         
   
   
@@ -1613,7 +1612,7 @@
   
   
     <li class="md-nav__item">
-      <a href="networking-service/Ch7.Cloud_Native_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/" class="md-nav__link">
+      <a href="../networking-service/Ch7.Cloud_Native_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/" class="md-nav__link">
         
   
   
@@ -1645,6 +1644,8 @@
       
   
   
+    
+  
   
   
     
@@ -1682,22 +1683,23 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <div class="md-nav__link md-nav__container">
-            <a href="iam-storage-service/" class="md-nav__link ">
+            <a href="./" class="md-nav__link md-nav__link--active">
               
   
   
@@ -1715,13 +1717,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1741,7 +1743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch1.OpenStack_Keystone/" class="md-nav__link">
+      <a href="Ch1.OpenStack_Keystone/" class="md-nav__link">
         
   
   
@@ -1769,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch2.OAuth_OIDC_JWT/" class="md-nav__link">
+      <a href="Ch2.OAuth_OIDC_JWT/" class="md-nav__link">
         
   
   
@@ -1797,7 +1799,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch3.RBAC_ABAC/" class="md-nav__link">
+      <a href="Ch3.RBAC_ABAC/" class="md-nav__link">
         
   
   
@@ -1825,7 +1827,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch4.Policy_Engine_OPA/" class="md-nav__link">
+      <a href="Ch4.Policy_Engine_OPA/" class="md-nav__link">
         
   
   
@@ -1853,7 +1855,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch5.Secrets_Management_Vault/" class="md-nav__link">
+      <a href="Ch5.Secrets_Management_Vault/" class="md-nav__link">
         
   
   
@@ -1881,7 +1883,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch6.Service_Mesh_Security/" class="md-nav__link">
+      <a href="Ch6.Service_Mesh_Security/" class="md-nav__link">
         
   
   
@@ -1909,7 +1911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch7.OpenStack_Swift/" class="md-nav__link">
+      <a href="Ch7.OpenStack_Swift/" class="md-nav__link">
         
   
   
@@ -1937,7 +1939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch8.Object_Storage_S3/" class="md-nav__link">
+      <a href="Ch8.Object_Storage_S3/" class="md-nav__link">
         
   
   
@@ -1965,7 +1967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch9.Ceph_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/" class="md-nav__link">
+      <a href="Ch9.Ceph_%EC%95%84%ED%82%A4%ED%85%8D%EC%B2%98/" class="md-nav__link">
         
   
   
@@ -1993,7 +1995,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch10.Ceph_운영_성능.md" class="md-nav__link">
+      <a href="Ch10.Ceph_운영_성능.md" class="md-nav__link">
         
   
   
@@ -2021,7 +2023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch11.Block_Storage_Cinder.md" class="md-nav__link">
+      <a href="Ch11.Block_Storage_Cinder.md" class="md-nav__link">
         
   
   
@@ -2049,7 +2051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="iam-storage-service/Ch12.Storage_Lifecycle.md" class="md-nav__link">
+      <a href="Ch12.Storage_Lifecycle.md" class="md-nav__link">
         
   
   
@@ -2097,24 +2099,557 @@
   
 
 
-<h1 id="_1">추가 문서<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>스터디 중 작성한 추가 문서들을 저장합니다.</p>
-<h2 id="_2">문서 목록<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">직군별 스터디 가이드<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>모집공고에 명시된 각 포지션별 요구 역량을 기반으로 한 스터디 가이드입니다.</p>
+<h1 id="iamstorage">IAM/Storage 서비스 개발자 스터디 가이드<a class="headerlink" href="#iamstorage" title="Permanent link">&para;</a></h1>
+<p>KakaoCloud IAM/Storage 서비스 개발자 포지션을 위한 스터디 가이드입니다.</p>
+<h2 id="_1">포지션 개요<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>KakaoCloud의 핵심인 IaaS IAM 및 Storage 서비스를 개발합니다.</p>
 <ul>
-<li><a href="common-skills/">공통 역량 스터디 가이드</a> - 모든 포지션에서 공통적으로 요구되는 역량</li>
-<li><a href="infrastructure-platform/">Infrastructure Platform 개발자 스터디 가이드</a></li>
-<li><a href="networking-service/">네트워킹 서비스 개발자 스터디 가이드</a></li>
-<li><a href="computing-service/">컴퓨팅 서비스 개발자 스터디 가이드</a></li>
-<li><a href="iam-storage-service/">IAM/Storage 서비스 개발자 스터디 가이드</a></li>
+<li>클라우드 인증/인가 시스템(IAM) 설계 및 개발</li>
+<li>OAuth2/OIDC 기반 현대적인 인증 시스템 구현</li>
+<li>분산 스토리지 시스템(Swift, Ceph) 운영 및 최적화</li>
+<li>대용량 오브젝트 스토리지 및 블록 스토리지 서비스 제공</li>
+<li>멀티 테넌트 환경에서 보안과 격리 보장</li>
+<li>Storage lifecycle 정책을 통한 비용 최적화</li>
 </ul>
-<h2 id="_4">사용 방법<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h2 id="_2">필수 역량<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">공통 스킬 (Prerequisites)<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>IAM/Storage 서비스 개발자는 다음 공통 역량을 갖추어야 합니다:</p>
+<ul>
+<li><a href="../common-skills/">공통 역량 스터디 가이드</a> 참고</li>
+<li>Linux 시스템 운영</li>
+<li><strong>Go 언어</strong> (Primary), Python (Secondary)</li>
+<li>Cloud Native 기초</li>
+<li>DevOps 파이프라인</li>
+<li>시스템 설계</li>
+</ul>
+<hr />
+<h2 id="iam-identity-access-management-6">IAM (Identity &amp; Access Management) - 6개 챕터<a class="headerlink" href="#iam-identity-access-management-6" title="Permanent link">&para;</a></h2>
+<h3 id="1-openstack-keystone">1. OpenStack Keystone<a class="headerlink" href="#1-openstack-keystone" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>OpenStack Keystone을 활용한 클라우드 IAM 시스템 개발</li>
+<li>멀티 테넌트 인증/인가 아키텍처 설계</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Keystone 아키텍처</li>
+<li>Identity, Resource, Assignment, Token, Catalog 서비스</li>
+<li>Fernet/JWS/JWT 토큰 포맷</li>
+<li>Domain, Project, User, Role 계층 구조</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Identity 백엔드</li>
+<li>SQL 백엔드</li>
+<li>LDAP/Active Directory 통합</li>
+<li>Federation (SAML, OIDC)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 정책 관리</li>
+<li>policy.json 설정</li>
+<li>RBAC 정책 엔진</li>
+<li>커스텀 정책 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Keystone API v3</li>
+<li>토큰 발급 및 검증</li>
+<li>서비스 카탈로그 관리</li>
+<li>프로젝트/도메인 관리</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Keystone 기반 멀티 테넌트 IAM 시스템 구축</li>
+<li>LDAP Federation 구성</li>
+<li>커스텀 인증 플러그인 개발</li>
+</ul>
+<hr />
+<h3 id="2-oauth-20-oidc-jwt">2. OAuth 2.0 / OIDC / JWT<a class="headerlink" href="#2-oauth-20-oidc-jwt" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>OAuth 2.0 / OIDC 프로토콜 구현</li>
+<li>JWT 기반 토큰 인증 시스템 개발</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OAuth 2.0 흐름</li>
+<li>Authorization Code Flow</li>
+<li>Client Credentials Flow</li>
+<li>Refresh Token Rotation</li>
+<li>PKCE (Proof Key for Code Exchange)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OpenID Connect (OIDC)</li>
+<li>ID Token 구조</li>
+<li>UserInfo Endpoint</li>
+<li>Discovery 메커니즘</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> JWT (JSON Web Token)</li>
+<li>JWT 구조 (Header, Payload, Signature)</li>
+<li>서명 알고리즘 (RS256, ES256)</li>
+<li>토큰 검증 및 만료 처리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go 구현</li>
+<li>go-oidc 라이브러리</li>
+<li>golang-jwt 활용</li>
+<li>토큰 미들웨어 개발</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>OAuth 2.0 Authorization Server 구현</li>
+<li>OIDC Provider 개발</li>
+<li>JWT 기반 API 인증 시스템</li>
+</ul>
+<hr />
+<h3 id="3-rbac-abac">3. RBAC &amp; ABAC<a class="headerlink" href="#3-rbac-abac" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>RBAC/ABAC 접근 제어 모델 설계</li>
+<li>Casbin을 활용한 정책 엔진 구현</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RBAC (Role-Based Access Control)</li>
+<li>Role, Permission 모델링</li>
+<li>계층적 역할 구조</li>
+<li>동적 역할 할당</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> ABAC (Attribute-Based Access Control)</li>
+<li>Subject, Resource, Action, Environment 속성</li>
+<li>정책 평가 엔진</li>
+<li>복합 조건 처리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RBAC vs ABAC 비교</li>
+<li>사용 사례별 적합성</li>
+<li>성능 및 확장성 고려사항</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Casbin 정책 프레임워크</li>
+<li>모델 정의 (PERM, ACL)</li>
+<li>정책 파일 관리</li>
+<li>Go 통합</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Casbin 기반 멀티 테넌트 권한 관리 시스템</li>
+<li>ABAC 정책 엔진 개발</li>
+<li>역할 계층 구조 설계</li>
+</ul>
+<hr />
+<h3 id="4-policy-engine-opa">4. Policy Engine (OPA)<a class="headerlink" href="#4-policy-engine-opa" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>Open Policy Agent(OPA)를 활용한 정책 기반 접근 제어</li>
+<li>Rego 언어로 정책 작성 및 테스트</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OPA 아키텍처</li>
+<li>Policy Decision Point (PDP)</li>
+<li>Policy Enforcement Point (PEP)</li>
+<li>Policy Information Point (PIP)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Rego 정책 언어</li>
+<li>규칙 작성</li>
+<li>데이터 쿼리</li>
+<li>함수 정의</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OPA 통합 패턴</li>
+<li>Kubernetes Admission Control</li>
+<li>API Gateway 통합</li>
+<li>마이크로서비스 인가</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 정책 테스트 및 디버깅</li>
+<li>OPA Test Framework</li>
+<li>Policy Bundle 관리</li>
+<li>성능 최적화</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>OPA 기반 Kubernetes Admission Controller</li>
+<li>API 인가 정책 개발</li>
+<li>멀티 테넌트 리소스 격리 정책</li>
+</ul>
+<hr />
+<h3 id="5-secrets-management-vault">5. Secrets Management (Vault)<a class="headerlink" href="#5-secrets-management-vault" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>HashiCorp Vault를 활용한 시크릿 관리</li>
+<li>동적 시크릿 생성 및 암호화 서비스 구현</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vault 아키텍처</li>
+<li>Storage Backend (Consul, etcd)</li>
+<li>Seal/Unseal 메커니즘</li>
+<li>HA 구성</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Secrets Engines</li>
+<li>KV (Key-Value) v2</li>
+<li>Database (동적 자격증명)</li>
+<li>PKI (인증서 발급)</li>
+<li>Transit (암호화 as a Service)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 인증 메서드</li>
+<li>Kubernetes Auth</li>
+<li>AppRole</li>
+<li>JWT/OIDC</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vault Agent</li>
+<li>자동 토큰 갱신</li>
+<li>템플릿 렌더링</li>
+<li>Sidecar 인젝션</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go SDK 통합</li>
+<li>vault/api 패키지</li>
+<li>동적 시크릿 관리</li>
+<li>암호화/복호화</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Vault 기반 시크릿 관리 시스템</li>
+<li>데이터베이스 동적 자격증명</li>
+<li>PKI 인증서 자동화</li>
+</ul>
+<hr />
+<h3 id="6-service-mesh-security">6. Service Mesh Security<a class="headerlink" href="#6-service-mesh-security" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>mTLS를 활용한 서비스 간 인증</li>
+<li>SPIFFE/SPIRE 기반 Identity 관리</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> mTLS (mutual TLS)</li>
+<li>인증서 기반 인증</li>
+<li>자동 인증서 로테이션</li>
+<li>Envoy proxy 통합</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SPIFFE (Secure Production Identity Framework for Everyone)</li>
+<li>SPIFFE ID 구조</li>
+<li>SVID (SPIFFE Verifiable Identity Document)</li>
+<li>Trust Bundle 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SPIRE (SPIFFE Runtime Environment)</li>
+<li>Workload API</li>
+<li>Attestation 메커니즘</li>
+<li>Federation</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Zero Trust 네트워킹</li>
+<li>서비스 간 인증</li>
+<li>최소 권한 원칙</li>
+<li>트래픽 암호화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go gRPC mTLS</li>
+<li>인증서 로딩</li>
+<li>TLS 설정</li>
+<li>클라이언트/서버 구현</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>SPIRE 기반 서비스 Identity 관리</li>
+<li>mTLS gRPC 서비스 개발</li>
+<li>Istio 보안 정책 구성</li>
+</ul>
+<hr />
+<h2 id="storage-6">Storage - 6개 챕터<a class="headerlink" href="#storage-6" title="Permanent link">&para;</a></h2>
+<h3 id="7-openstack-swift">7. OpenStack Swift<a class="headerlink" href="#7-openstack-swift" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>OpenStack Swift 오브젝트 스토리지 아키텍처 이해</li>
+<li>대규모 분산 스토리지 운영</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Swift 아키텍처</li>
+<li>Proxy Server</li>
+<li>Account/Container/Object Server</li>
+<li>Ring과 일관된 해싱</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 복제 및 내구성</li>
+<li>Replication</li>
+<li>Erasure Coding</li>
+<li>Consistency 모델</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Swift API</li>
+<li>오브젝트 업로드/다운로드</li>
+<li>Container ACL</li>
+<li>Large Object Support (SLO, DLO)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 미들웨어 커스터마이징</li>
+<li>Custom Middleware 개발</li>
+<li>인증/인가 통합</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 성능 튜닝</li>
+<li>네트워크 최적화</li>
+<li>디스크 I/O 튜닝</li>
+<li>캐싱 전략</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Swift 클러스터 구축</li>
+<li>커스텀 미들웨어 개발</li>
+<li>성능 벤치마킹</li>
+</ul>
+<hr />
+<h3 id="8-object-storage-s3-api">8. Object Storage &amp; S3 API<a class="headerlink" href="#8-object-storage-s3-api" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>S3 호환 API 구현</li>
+<li>MinIO를 활용한 오브젝트 스토리지 운영</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> S3 API 호환성</li>
+<li>Bucket/Object 작업</li>
+<li>Multipart Upload</li>
+<li>Presigned URL</li>
+<li>Versioning</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> MinIO 아키텍처</li>
+<li>분산 모드</li>
+<li>Erasure Coding</li>
+<li>BitRot Protection</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 버킷 정책 및 CORS</li>
+<li>IAM 정책</li>
+<li>Bucket Policy</li>
+<li>CORS 설정</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go SDK</li>
+<li>aws-sdk-go-v2</li>
+<li>minio-go</li>
+<li>클라이언트 구현</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>MinIO 분산 클러스터 구축</li>
+<li>S3 호환 스토리지 서비스 개발</li>
+<li>Lifecycle 정책 구현</li>
+</ul>
+<hr />
+<h3 id="9-ceph">9. Ceph 아키텍처<a class="headerlink" href="#9-ceph" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>Ceph 분산 스토리지 시스템 이해</li>
+<li>CRUSH 알고리즘 및 데이터 배치</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ceph 컴포넌트</li>
+<li>MON (Monitor)</li>
+<li>OSD (Object Storage Daemon)</li>
+<li>MDS (Metadata Server)</li>
+<li>MGR (Manager)</li>
+<li>RGW (RADOS Gateway)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RADOS (Reliable Autonomic Distributed Object Store)</li>
+<li>CRUSH 알고리즘</li>
+<li>Placement Group (PG)</li>
+<li>Pool 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ceph 스토리지 타입</li>
+<li>RBD (RADOS Block Device)</li>
+<li>CephFS (File System)</li>
+<li>RGW (Object Storage)</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 데이터 보호</li>
+<li>Replication</li>
+<li>Erasure Coding</li>
+<li>Scrubbing</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Ceph 클러스터 구축</li>
+<li>CRUSH Map 커스터마이징</li>
+<li>RBD/CephFS/RGW 설정</li>
+</ul>
+<hr />
+<h3 id="10-ceph">10. Ceph 운영 &amp; 성능<a class="headerlink" href="#10-ceph" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>Ceph 클러스터 운영 및 모니터링</li>
+<li>성능 최적화 및 트러블슈팅</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 클러스터 배포</li>
+<li>cephadm 활용</li>
+<li>Rook Operator (Kubernetes)</li>
+<li>노드 추가/제거</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 모니터링</li>
+<li>Prometheus/Grafana 통합</li>
+<li>Ceph Dashboard</li>
+<li>성능 메트릭</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 성능 최적화</li>
+<li>BlueStore 튜닝</li>
+<li>Network 최적화 (public/cluster 분리)</li>
+<li>OSD 최적화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 트러블슈팅</li>
+<li>OSD 복구</li>
+<li>PG 불균형 해결</li>
+<li>네트워크 문제 진단</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Erasure Coding vs Replication</li>
+<li>성능 비교</li>
+<li>비용 분석</li>
+<li>사용 사례</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Ceph 성능 벤치마킹</li>
+<li>Prometheus 모니터링 구축</li>
+<li>OSD 장애 복구 시나리오</li>
+</ul>
+<hr />
+<h3 id="11-block-storage-cinder">11. Block Storage (Cinder)<a class="headerlink" href="#11-block-storage-cinder" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>OpenStack Cinder 블록 스토리지 심화</li>
+<li>다양한 스토리지 백엔드 통합</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cinder 아키텍처</li>
+<li>cinder-api, cinder-scheduler</li>
+<li>cinder-volume</li>
+<li>Volume Driver 모델</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 볼륨 드라이버</li>
+<li>LVM Driver</li>
+<li>Ceph RBD Driver</li>
+<li>커스텀 드라이버 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 볼륨 타입 및 QoS</li>
+<li>Volume Type 설정</li>
+<li>QoS Spec</li>
+<li>성능 제한</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 스냅샷 및 백업</li>
+<li>스냅샷 전략</li>
+<li>백업 서비스</li>
+<li>볼륨 마이그레이션</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Multi-backend 구성</li>
+<li>여러 스토리지 백엔드 관리</li>
+<li>Volume Type 기반 스케줄링</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Cinder + Ceph 통합</li>
+<li>커스텀 볼륨 드라이버 개발</li>
+<li>QoS 정책 구현</li>
+</ul>
+<hr />
+<h3 id="12-storage-lifecycle-optimization">12. Storage Lifecycle &amp; Optimization<a class="headerlink" href="#12-storage-lifecycle-optimization" title="Permanent link">&para;</a></h3>
+<p><strong>학습 목표:</strong></p>
+<ul>
+<li>스토리지 계층화 및 라이프사이클 관리</li>
+<li>비용 최적화 및 용량 계획</li>
+</ul>
+<p><strong>학습 내용:</strong></p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Storage Tiering</li>
+<li>Hot/Warm/Cold/Archive 계층</li>
+<li>자동 티어링 정책</li>
+<li>데이터 이동 전략</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Lifecycle 정책</li>
+<li>자동 삭제 규칙</li>
+<li>Versioning 관리</li>
+<li>Transition 정책</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 압축 및 중복 제거</li>
+<li>Inline Compression</li>
+<li>Deduplication</li>
+<li>공간 절약 기법</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 씬 프로비저닝 (Thin Provisioning)</li>
+<li>Over-provisioning</li>
+<li>용량 모니터링</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 캐시 계층</li>
+<li>Write-back vs Write-through</li>
+<li>Cache Tiering</li>
+<li>SSD 캐싱</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 비용 최적화</li>
+<li>TCO 분석</li>
+<li>용량 계획</li>
+<li>데이터 마이그레이션</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 용량 계획 및 예측</li>
+<li>성장 추세 분석</li>
+<li>Capacity Forecasting</li>
+<li>확장 계획</li>
+</ul>
+<p><strong>실습 프로젝트:</strong></p>
+<ul>
+<li>Lifecycle 정책 자동화</li>
+<li>Storage Tiering 구현</li>
+<li>비용 최적화 시뮬레이션</li>
+</ul>
+<hr />
+<h2 id="_3">학습 로드맵<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="phase-1-iam-1-2">Phase 1: IAM 기초 (1-2개월)<a class="headerlink" href="#phase-1-iam-1-2" title="Permanent link">&para;</a></h3>
 <ol>
-<li>먼저 <a href="common-skills/">공통 역량 스터디 가이드</a>를 통해 공통 역량을 학습하세요.</li>
-<li>관심 있는 포지션의 스터디 가이드를 선택하여 학습을 진행하세요.</li>
-<li>각 가이드의 체크리스트를 활용하여 학습 진도를 관리하세요.</li>
+<li>OpenStack Keystone 이해</li>
+<li>OAuth 2.0 / OIDC 구현</li>
+<li>RBAC/ABAC 설계</li>
 </ol>
+<h3 id="phase-2-iam-1-2">Phase 2: IAM 고급 (1-2개월)<a class="headerlink" href="#phase-2-iam-1-2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>OPA 정책 엔진</li>
+<li>Vault Secrets Management</li>
+<li>Service Mesh Security</li>
+</ol>
+<h3 id="phase-3-storage-1-2">Phase 3: Storage 기초 (1-2개월)<a class="headerlink" href="#phase-3-storage-1-2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>OpenStack Swift</li>
+<li>S3 API &amp; MinIO</li>
+<li>Ceph 아키텍처</li>
+</ol>
+<h3 id="phase-4-storage-1-2">Phase 4: Storage 운영 (1-2개월)<a class="headerlink" href="#phase-4-storage-1-2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Ceph 운영 &amp; 성능</li>
+<li>Cinder 블록 스토리지</li>
+<li>Storage Lifecycle</li>
+</ol>
+<hr />
+<h2 id="_4">추가 학습 자료<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5">공식 문서<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.openstack.org/keystone/latest/">OpenStack Keystone Documentation</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc6749">OAuth 2.0 RFC 6749</a></li>
+<li><a href="https://www.openpolicyagent.org/docs/latest/">Open Policy Agent</a></li>
+<li><a href="https://www.vaultproject.io/docs">HashiCorp Vault</a></li>
+<li><a href="https://spiffe.io/docs/latest/">SPIFFE/SPIRE</a></li>
+<li><a href="https://docs.openstack.org/swift/latest/">OpenStack Swift</a></li>
+<li><a href="https://min.io/docs/">MinIO Documentation</a></li>
+<li><a href="https://docs.ceph.com/">Ceph Documentation</a></li>
+</ul>
+<h3 id="go">Go 라이브러리<a class="headerlink" href="#go" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/coreos/go-oidc">go-oidc</a></li>
+<li><a href="https://github.com/golang-jwt/jwt">golang-jwt</a></li>
+<li><a href="https://github.com/casbin/casbin">casbin</a></li>
+<li><a href="https://pkg.go.dev/github.com/hashicorp/vault/api">vault/api</a></li>
+<li><a href="https://github.com/aws/aws-sdk-go-v2">aws-sdk-go-v2</a></li>
+<li><a href="https://github.com/minio/minio-go">minio-go</a></li>
+</ul>
+<hr />
+<h2 id="_6">프로젝트 아이디어<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h3 id="iam">IAM 프로젝트<a class="headerlink" href="#iam" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>멀티 테넌트 IAM 플랫폼</strong></li>
+<li>Keystone 기반 인증/인가</li>
+<li>OAuth 2.0 / OIDC 통합</li>
+<li>
+<p>OPA 정책 엔진</p>
+</li>
+<li>
+<p><strong>Zero Trust 아키텍처</strong></p>
+</li>
+<li>SPIFFE/SPIRE Identity</li>
+<li>mTLS 서비스 인증</li>
+<li>동적 접근 제어</li>
+</ol>
+<h3 id="storage">Storage 프로젝트<a class="headerlink" href="#storage" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>하이브리드 오브젝트 스토리지</strong></li>
+<li>Swift + S3 API 호환</li>
+<li>Multi-backend 지원</li>
+<li>
+<p>Lifecycle 자동화</p>
+</li>
+<li>
+<p><strong>고가용성 블록 스토리지</strong></p>
+</li>
+<li>Ceph RBD 기반</li>
+<li>QoS 정책</li>
+<li>자동 복구</li>
+</ol>
+<hr />
+<h2 id="_7">체크리스트<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h3 id="iam_1">IAM 역량<a class="headerlink" href="#iam_1" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Keystone 기반 멀티 테넌트 IAM 구현</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OAuth 2.0 / OIDC Provider 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> RBAC/ABAC 정책 엔진 설계</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> OPA Rego 정책 작성</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Vault 기반 시크릿 관리</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> mTLS 서비스 인증 구현</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> SPIFFE/SPIRE Identity 관리</li>
+</ul>
+<h3 id="storage_1">Storage 역량<a class="headerlink" href="#storage_1" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Swift 클러스터 구축 및 운영</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> S3 호환 API 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> MinIO 분산 스토리지 운영</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ceph 클러스터 설계 및 배포</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Ceph 성능 최적화</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Cinder 멀티 백엔드 구성</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Storage Lifecycle 정책 자동화</li>
+</ul>
+<h3 id="go_1">Go 개발 역량<a class="headerlink" href="#go_1" title="Permanent link">&para;</a></h3>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go 기반 인증/인가 서비스 개발</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> gRPC + mTLS 구현</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Kubernetes Operator 패턴</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Go SDK 활용 (Vault, MinIO, Ceph)</li>
+</ul>
 
 
 
@@ -2151,15 +2686,31 @@
       
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
+          
+          <a href="../networking-service/Ch7.Cloud_Native_%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%82%B9/" class="md-footer__link md-footer__link--prev" aria-label="이전: Ch7. Cloud Native 네트워킹">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                Ch7. Cloud Native 네트워킹
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="IMPLEMENTATION_PLAN/" class="md-footer__link md-footer__link--next" aria-label="다음: 학습 계획">
+          <a href="Ch1.OpenStack_Keystone/" class="md-footer__link md-footer__link--next" aria-label="다음: Ch1. OpenStack Keystone">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 다음
               </span>
               <div class="md-ellipsis">
-                학습 계획
+                Ch1. OpenStack Keystone
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -2208,12 +2759,12 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "toc.follow", "toc.integrate"], "search": "assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": {"provider": "mike"}}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.code.copy", "content.code.annotate", "content.tabs.link", "content.tooltips", "toc.follow", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="javascripts/extra.js"></script>
+        <script src="../javascripts/extra.js"></script>
       
     
   </body>
