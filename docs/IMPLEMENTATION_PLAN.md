@@ -201,15 +201,15 @@ docs/
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: RBAC, ABAC, Casbin, 정책 엔진
 
-- [ ] **Ch4.Policy_Engine_OPA.md**
+- [x] **Ch4.Policy_Engine_OPA.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Open Policy Agent, Rego, Policy-as-Code
 
-- [ ] **Ch5.Secrets_Management_Vault.md**
+- [x] **Ch5.Secrets_Management_Vault.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: HashiCorp Vault, 동적 시크릿, 암호화 서비스
 
-- [ ] **Ch6.Service_Mesh_Security.md**
+- [x] **Ch6.Service_Mesh_Security.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: mTLS, SPIFFE/SPIRE, Zero Trust, Envoy
 
