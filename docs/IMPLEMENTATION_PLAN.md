@@ -225,15 +225,15 @@ docs/
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Ceph 컴포넌트, RADOS, CRUSH, RBD/CephFS/RGW
 
-- [ ] **Ch10.Ceph_운영_성능.md**
+- [x] **Ch10.Ceph_운영_성능.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: 클러스터 배포, 모니터링, 성능 최적화, 트러블슈팅
 
-- [ ] **Ch11.Block_Storage_Cinder.md**
+- [x] **Ch11.Block_Storage_Cinder.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Cinder 아키텍처, Volume Driver, QoS, Multi-backend
 
-- [ ] **Ch12.Storage_Lifecycle.md**
+- [x] **Ch12.Storage_Lifecycle.md**
   - 학습 목표, 핵심 개념, 실습 가이드, 예제 코드, 참고 자료
   - 주제: Storage Tiering, Lifecycle 정책, 압축, 비용 최적화
 
